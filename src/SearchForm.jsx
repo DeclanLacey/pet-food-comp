@@ -1,5 +1,5 @@
 import React from "react"
-import foodData from "./data/food.json"
+
 
 
 
@@ -8,17 +8,28 @@ function SearchForm() {
 
     return (
         <div>
-            
-        <form>
-            <p>Food One</p>
-            <input list=""> </input>
-            <input> </input>
-
-            <p>Food Two</p>
-            <input> </input>
-            <input> </input>
-        </form>
-            
+            <form>
+                <div>
+                    <label> Food One </label>
+                    <select> 
+                        <option value="">--Please Select Brand </option>
+                    </select>
+                    <select> 
+                        <option value="">--Please Select Food </option>
+                    </select>
+                    <input type="submit"></input>
+                </div>
+                <div>
+                    <label> Food Two </label>
+                    <select> 
+                        <option value="">--Please Select Brand </option>
+                    </select>
+                    <select> 
+                        <option value="">--Please Select Food </option>
+                    </select>
+                    <input type="submit"></input>
+                </div>
+            </form>
             
 
 
