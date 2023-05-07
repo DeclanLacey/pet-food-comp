@@ -1,0 +1,48 @@
+/* ////////// General Styling ///////////// */
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* ///////////////// Nav Styl/ing //////////////////// */
+
+.nav-container {
+    background-color: #d32139;
+    margin: 0px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+
+/* //////////////// Home page styling //////////////////////// */
+
+.home-page-container {
+    
+}
+
+.home-page-img {
+    
+}

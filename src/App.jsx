@@ -17,13 +17,16 @@ function App() {
     // console.log(chosenProduct[0])
     return (
         <div>
-            <div> 
-                <Link to="/"> Home </Link>
-                <Link to="/comparison"> Comparison </Link>
+            <div>
+                <div className="nav-container">
+                    <Link className="nav-item" to="/"> Home </Link>
+                    <Link className="nav-item" to="/comparison-form"> Comparison </Link>
+                </div>
+                
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route exact path="/comparison" element={<Comp />}/>
+                    <Route exact path="/comparison-form" element={<SearchForm />}/>
                 </Routes>
             </div>
         </div>
