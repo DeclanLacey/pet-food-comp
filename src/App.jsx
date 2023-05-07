@@ -1,7 +1,9 @@
 import React from "react"
 import foodData from "./data/food.json"
 import SearchForm from "./SearchForm"
-
+import Comp from "./comp"
+import Home from "./Home"
+import {Link, Routes, Route} from "react-router-dom"
 
 function App() {
     
@@ -15,7 +17,15 @@ function App() {
     // console.log(chosenProduct[0])
     return (
         <div>
-            <SearchForm />
+            <div> 
+                <Link to="/"> Home </Link>
+                <Link to="/comparison"> Comparison </Link>
+
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/comparison" element={<Comp />}/>
+                </Routes>
+            </div>
         </div>
     )
 }
