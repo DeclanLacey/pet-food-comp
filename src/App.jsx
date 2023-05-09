@@ -28,6 +28,11 @@ function App() {
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/comparison-form" element={<SearchForm />}/>
                 </Routes>
+
+                <footer className="footer-container">
+                    <p className="footer-content-top"> Food Comparison Tool </p>
+                    <p className="footer-content-bottom">© 2023 Declan Lacey</p>
+                </footer>
             </div>
         </div>
     )
