@@ -3,6 +3,7 @@ import foodData from "./data/food.json"
 import SearchForm from "./SearchForm"
 import Comp from "./comp"
 import Home from "./Home"
+import Catalog from "./Catalog"
 import {Link, Routes, Route} from "react-router-dom"
 
 function App() {
@@ -21,12 +22,14 @@ function App() {
                 <div className="nav-container">
                     <Link className="nav-item" to="/"> Home </Link>
                     <Link className="nav-item" to="/comparison-form"> Comparison </Link>
+                    <Link className="nav-item" to="/food-catalog"> Catalog </Link>
                 </div>
                 
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/comparison-form" element={<SearchForm />}/>
+                    <Route exact path="/food-catalog" element={<Catalog />}> </Route>
                 </Routes>
 
                 <footer className="footer-container">

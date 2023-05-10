@@ -1,11 +1,13 @@
 import React from "react";
 
-function Comp() {
+
+function Catalog() {
     return (
         <div>
-          
+           
         </div>
+
     )
 }
 
-export default Comp
+export default Catalog
