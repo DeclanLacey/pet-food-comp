@@ -154,12 +154,46 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    min-height: 650px;
     align-items: center;
 }
 
+.submit-btn {
+    margin-bottom: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: #fca311 ;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: color, transform, 400ms;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+
 .selection-container {
-    
+    display: flex;
+    flex-direction: column; 
+
+}
+
+.form-sub-label {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .search-form-sub-container {
@@ -171,14 +205,283 @@ body {
 }
 
 .form-input {
-    width: 200px;
+    width: 400px;
     text-align: center;
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 50px;
+    margin-bottom: 20px;
     border-radius: 20px;
     background-color: #14213d;
     color: white;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
+    cursor: pointer;
 }
+
+
+
+/* /////////////////// Temp ///////////////// */
+
+.comp-page-container {
+    padding-top: 50px;
+}
+
+.label-one-container {
+    /* Layout */
+    margin: 0.5em;
+    padding: 0.5em;
+    /* Typography */
+    font-family: sans-serif;
+    /* Graphics */
+    border: 0.25em solid black;
+  }
+
+.label-two-container {
+    /* Layout */
+    margin: 0.5em;
+    padding: 0.5em;
+    /* Typography */
+    font-family: sans-serif;
+    /* Graphics */
+    border: 0.25em solid black;
+}
+
+  .amount-per-serving .attribute {
+    /* Layout */
+    display: none;
+  }
+  
+  .percent-daily-value .attribute {
+    /* Layout */
+    display: none;
+  }
+  
+  .servings {
+    /* Layout */
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .servings-per-container .attribute {
+    text-transform: lowercase;
+  }
+  
+  .serving-size {
+    /* Layout */
+    padding-top: 0;
+  }
+  
+  .servings-heading {
+    /* Layout */
+    display: none;
+  }
+  
+  .daily-values-heading {
+    /* Layout */
+    display: none;
+  }
+  
+  .nutrients-declaration-requirement-heading {
+    /* Layout */
+    display: none;
+  }
+  
+  .nutrients-declaration-requirement li {
+    /* Layout */
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    /* Graphics */
+    border-top: 0.125em solid black;
+  }
+  .nutrients-declaration-requirement li:first-of-type {
+    border-top: 0;
+  }
+  
+  .daily-values,
+  .nutrients-declaration-requirement {
+    /* Graphics */
+    border-top: 1em solid black;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+  .daily-values ul,
+  .nutrients-declaration-requirement ul {
+    /* Layout */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .daily-values li,
+  .nutrients-declaration-requirement li {
+    /* Layout */
+    display: flex;
+  }
+  .daily-values li .heading,
+  .nutrients-declaration-requirement li .heading {
+    /* Layout */
+    display: flex;
+    white-space: nowrap;
+  }
+  .daily-values .percent-daily-value,
+  .nutrients-declaration-requirement .percent-daily-value {
+    /* Layout */
+    text-align: right;
+  }
+  .daily-values .amount-per-serving,
+  .nutrients-declaration-requirement .amount-per-serving {
+    /* Layout */
+    flex: 1 100%;
+    margin: 0 0.5em;
+  }
+  .daily-values .total-fat,
+  .nutrients-declaration-requirement .total-fat {
+    /* Layout */
+    display: block;
+  }
+  .daily-values .total-fat---cr,
+  .nutrients-declaration-requirement .total-fat---cr {
+    /* Layout */
+    display: flex;
+  }
+  .daily-values .total-carbohydrate,
+  .nutrients-declaration-requirement .total-carbohydrate {
+    /* Layout */
+    display: block;
+  }
+  .daily-values .total-carbohydrate---cr,
+  .nutrients-declaration-requirement .total-carbohydrate---cr {
+    /* Layout */
+    display: flex;
+  }
+  .daily-values .total-sugars,
+  .nutrients-declaration-requirement .total-sugars {
+    /* Layout */
+    display: block;
+    padding-bottom: 0;
+  }
+  .daily-values .total-sugars---cr,
+  .nutrients-declaration-requirement .total-sugars---cr {
+    /* Layout */
+    display: flex;
+  }
+  
+  .saturated-fat {
+    /* Layout */
+    padding-left: 1em;
+  }
+  
+  .trans-fat {
+    /* Layout */
+    padding-left: 1em;
+  }
+  
+  .dietary-fiber {
+    /* Layout */
+    padding-left: 1em;
+  }
+  
+  .total-sugars---cr {
+    /* Layout */
+    padding-left: 1em;
+  }
+  
+  .added-sugars-note {
+    /* Layout */
+    padding-left: 2em;
+    padding-top: 0.125rem;
+    /* Graphics */
+    border-top: 0.125em solid black;
+  }
+  
+  .serving-size {
+    /* Layout */
+    display: flex;
+  }
+  .serving-size .attribute {
+    /* Layout */
+    white-space: nowrap;
+    /* Typography */
+    font-weight: bold;
+  }
+  .serving-size .value {
+    /* Layout */
+    flex: 1 100%;
+    text-align: right;
+    /* Typography */
+    font-weight: bold;
+  }
+  .serving-size .or-preposition {
+    /* Layout */
+    display: none;
+  }
+ 
+  .serving-size .gram-unit:before {
+    content: "(";
+  }
+  .serving-size .gram-unit:after {
+    content: ")";
+  }
+  
+  .servings-per-container {
+    /* Layout */
+    display: flex;
+  }
+  .servings-per-container .value {
+    /* Layout */
+    margin-right: 0.25em;
+  }
+  .servings-per-container .attribute {
+    /* Layout */
+    order: 1;
+  }
+  
+  .percent-daily-value-note {
+    /* Layout */
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    text-align: right;
+    /* Typography */
+    font-weight: bold;
+    /* Graphics */
+    border-bottom: 0.125em solid black;
+  }
+  
+  .calories {
+    /* Layout */
+    display: grid;
+    grid-template: "a1 b1" "a2 b2";
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    /* Graphics */
+    border-bottom: 0.5em solid black;
+  }
+  .calories .heading {
+    /* Layout */
+    grid-area: a2;
+    align-self: end;
+    /* Typography */
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .calories .amount-per-serving {
+    /* Layout */
+    display: contents;
+    margin: 0;
+  }
+  .calories .amount-per-serving .attribute {
+    /* Layout */
+    display: block;
+    grid-area: a1;
+    /* Typography */
+    font-weight: bold;
+  }
+  .calories .amount-per-serving .value {
+    /* Layout */
+    grid-area: b2;
+    grid-row: b1/-1;
+    justify-self: right;
+    align-self: end;
+    /* Typography */
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  

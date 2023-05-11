@@ -29,7 +29,8 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/comparison-form" element={<SearchForm />}/>
-                    <Route exact path="/food-catalog" element={<Catalog />}> </Route>
+                    {/* <Route exact path="/food-catalog" element={<Catalog />}> </Route> */}
+                    <Route exact path="/food-catalog" element={<Comp />}> </Route>
                 </Routes>
 
                 <footer className="footer-container">
