@@ -16,6 +16,7 @@ function App() {
     // const selectedBrandProducts = selectedBrand.products
     // let chosenProduct = Object.values(selectedBrandProducts).filter(food => food["name"] === selectedProduct)
     // console.log(chosenProduct[0])
+    // this comment is a test
     return (
         <div>
             <div>
