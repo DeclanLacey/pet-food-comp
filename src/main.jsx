@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter as Router} from 'react-router-dom'
+import { FoodContextProvider } from './foodContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router> 
     <React.StrictMode>
-      <App />
+      <FoodContextProvider>
+        <App />
+      </FoodContextProvider>
     </React.StrictMode>
   </Router>
   ,
