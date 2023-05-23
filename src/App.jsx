@@ -1,27 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
 import foodData from "./data/food.json"
 import SearchForm from "./SearchForm"
 import Comp from "./comp"
 import Home from "./Home"
 import Catalog from "./Catalog"
 import {Link, Routes, Route} from "react-router-dom"
+import { FoodContext } from "./foodContext";
+
 
 function App() {
+
+    const {foodSelection, setFoodSelection} = useContext(FoodContext)
     
-    // let brandName = "Fromm"
-    // let results = Object.values(foodData).filter(brand => brand["brandName"] === brandName)
-    // const selectedBrand = results[0]
 
-    // const selectedProduct = "Fromm Adult Gold"
-    // const selectedBrandProducts = selectedBrand.products
-    // let chosenProduct = Object.values(selectedBrandProducts).filter(food => food["name"] === selectedProduct)
-    // console.log(chosenProduct[0])
-
-    // let foodData
-
-    // const pullData = (data) => {
-    //     foodData = data
-    // }
 
     return (
         <div>
@@ -73,3 +64,11 @@ export default App
 //     }
 
 // ]
+
+// ,
+//     {
+//         "brandName": "Royal Canin",
+//         "products": {
+
+//         }
+//     }

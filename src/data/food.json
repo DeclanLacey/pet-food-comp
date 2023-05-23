@@ -3,15 +3,16 @@
         "brandName": "Fromm",
         "products": [
             {
-                "name": "Fromm Adult Gold",
+                "name": "Adult Gold",
                 "ingredients": ["Chicken", "Rice", "Barley"]
             },
             {
-                "name": "Fromm Large Breed Adult Gold",
+                "name": "Large Breed Adult Gold",
                 "ingredients": ["Fish", "Rice", "Oats"]
             }
         ]
     },
+    
     {
         "brandName": "Royal Canin",
         "products": {
@@ -19,6 +20,8 @@
         }
     }
 ]
+
+
 
 
 

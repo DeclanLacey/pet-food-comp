@@ -1,10 +1,31 @@
 import React, { useContext } from "react";
 import { FoodContext } from "./foodContext";
+import foodData from "./data/food.json"
 
 function Comp() {
 
-    const {foodData, setFoodData} = useContext(FoodContext)
-    console.log(foodData)
+    const {foodSelection, setFoodSelection} = useContext(FoodContext)
+
+
+    let brandOne = Object.values(foodData).filter(brand => brand["brandName"] === foodSelection.brandOne)[0]
+    let brandOneProducts = brandOne.products
+    let productOneData = Object.values(brandOneProducts).filter(food => food["name"] === foodSelection.formulaOne)[0]
+    const foodOne = {
+
+    }
+
+    const foodTwo = {
+
+    }
+
+    // let brandName = "Fromm"
+    // let results = Object.values(foodData).filter(brand => brand["brandName"] === brandName)
+    // const selectedBrand = results[0]
+
+    // const selectedProduct = "Fromm Adult Gold"
+    // const selectedBrandProducts = selectedBrand.products
+    // let chosenProduct = Object.values(selectedBrandProducts).filter(food => food["name"] === selectedProduct)
+    // console.log(chosenProduct[0])
 
     return (
         <div className="comp-page-container">

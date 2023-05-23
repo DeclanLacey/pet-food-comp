@@ -2,17 +2,17 @@ import React, {useState} from "react"
 const FoodContext = React.createContext()
 
 function FoodContextProvider(props) {
-    const [foodData, setFoodData] = useState({
-        "brandOne": "",
-        "brandTwo": "",
-        "formulaOne": "",
-        "formulaTwo": ""
-    }
+    const [foodSelection, setFoodSelection] = useState({
+            "brandOne": "",
+            "brandTwo": "",
+            "formulaOne": "",
+            "formulaTwo": ""
+        }
     )
     
 
     return (
-        <FoodContext.Provider value={{foodData, setFoodData}}>
+        <FoodContext.Provider value={{foodSelection, setFoodSelection}}>
             {props.children}
         </FoodContext.Provider>
     )

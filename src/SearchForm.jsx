@@ -1,39 +1,73 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
 import { FoodContext } from "./foodContext";
+import foodData from "./data/food.json"
 
 function SearchForm() {
-
-    const {foodData, setFoodData} = useContext(FoodContext)
-
-    const navigate = useNavigate();
-
-    // const data = {
-    //     "brandOne": "",
-    //     "brandTwo": "",
-    //     "formulaOne": "",
-    //     "formulaTwo": ""
-    // }
     
-    // props.pullData(data)
+    const {foodSelection, setFoodSelection} = useContext(FoodContext)
+    const [currentSelections, setCurrentSelections] = useState({
+        "brandOneSelection": "",
+        "brandTwoSelection": ""
+    })
+    // const currentSelections = {
+    //     "brandOneSelection": "",
+    //     "brandTwoSelection": ""
+    // }
+
+    let productsOne
+    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
         const e = event.target
-        setFoodData({
+        setFoodSelection({
                 brandOne: e.brandOne.value,
                 brandTwo: e.brandTwo.value,
                 formulaOne: e.formulaOne.value,
                 formulaTwo: e.formulaTwo.value
             }
         )
-       
-        // data.brandOne = e.brandOne.value
-        // data.brandTwo = e.brandTwo.value 
-        // data.formulaOne = e.formulaOne.value 
-        // data.formulaTwo = e.formulaTwo.value
         navigate("/food-catalog")
       }
+
+    const brands = foodData.map((brand, index) => {
+        return (
+            <option key={index} value={brand.brandName}> {brand.brandName} </option>
+        )
+    })
+
+    function handleBrandOneChange(event) {
+
+        let brandOneSelection = event.target.value
+        let selectedBrandOne = Object.values(foodData).filter(brand => brand["brandName"] === brandOneSelection)[0]
+        let selectedBrandOneProducts = selectedBrandOne.products
+
+        productsOne = selectedBrandOneProducts.map((product, index) => {
+            return (
+                <option key={index} value={product.name}> {product.name} </option>
+            )
+        })
+
+        // for some reason the options above are not rendering into the screen, need to figure that out next
+
+        console.log(productsOne)
+
+        setCurrentSelections(prevData => {
+            return (
+                {
+                    ...prevData,
+                    brandOneSelection: brandOneSelection
+                }
+            )
+        })
+
+       
+    }
+
+  
+
+    
 
     return (
         <div className="form-page-container">
@@ -42,13 +76,13 @@ function SearchForm() {
                     <label className="form-label"> Food One </label>
                     <label className="form-sub-label"> Please Select the first food you would like to compare</label>
                     <div className="selection-container">
-                        <select className="form-input" name="brandOne"> 
+                        <select className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
                             <option value="">Please Select Brand </option>
-                            <option value="Fromm"> Fromm </option>
+                            {brands}
                         </select>
                         <select className="form-input" name="formulaOne"> 
                             <option value="">Please Select Formula </option>
-                            <option value="Gold Adult" > Gold Adult </option>
+                            {productsOne}
                         </select>
                     </div>
                 </div>
@@ -58,7 +92,7 @@ function SearchForm() {
                     <div className="selection-container">
                         <select className="form-input" name="brandTwo"> 
                             <option value="">Please Select Brand </option>
-                            <option value="Fromm"> Fromm </option>
+                            {brands}
                         </select>
                         <select className="form-input" name="formulaTwo"> 
                             <option value="">Please Select Formula </option>
