@@ -6,17 +6,18 @@ function Comp() {
 
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
 
+    let brandOne = Object.values(foodData).filter(
+        (brand) => brand.brandName === foodSelection.brandOne
+      )[0];
+      let brandOneProducts = brandOne?.products;
+      let productOneData = brandOneProducts
+        ? Object.values(brandOneProducts).filter(
+            (food) => food["name"] === foodSelection?.formulaOne
+          )[0]
+        : {};
 
-    let brandOne = Object.values(foodData).filter(brand => brand["brandName"] === foodSelection.brandOne)[0]
-    let brandOneProducts = brandOne.products
-    let productOneData = Object.values(brandOneProducts).filter(food => food["name"] === foodSelection.formulaOne)[0]
-    const foodOne = {
-
-    }
-
-    const foodTwo = {
-
-    }
+  
+   
 
     // let brandName = "Fromm"
     // let results = Object.values(foodData).filter(brand => brand["brandName"] === brandName)

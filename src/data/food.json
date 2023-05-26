@@ -15,9 +15,12 @@
     
     {
         "brandName": "Royal Canin",
-        "products": {
-
-        }
+        "products": [
+            {
+                "name": "Test",
+                "ingredients": ["Fish", "Rice", "Oats"]
+            }
+        ]
     }
 ]
 

@@ -3,20 +3,20 @@ import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
 import { FoodContext } from "./foodContext";
 import foodData from "./data/food.json"
 
+let productsOne
+
 function SearchForm() {
+
+    console.log("i rendered")
     
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
-    const [currentSelections, setCurrentSelections] = useState({
-        "brandOneSelection": "",
-        "brandTwoSelection": ""
-    })
-    // const currentSelections = {
-    //     "brandOneSelection": "",
-    //     "brandTwoSelection": ""
-    // }
+    const [currentSelections, setCurrentSelections] = useState(null)
 
-    let productsOne
     const navigate = useNavigate();
+
+   
+
+
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -39,35 +39,29 @@ function SearchForm() {
 
     function handleBrandOneChange(event) {
 
-        let brandOneSelection = event.target.value
-        let selectedBrandOne = Object.values(foodData).filter(brand => brand["brandName"] === brandOneSelection)[0]
-        let selectedBrandOneProducts = selectedBrandOne.products
+        let brandOneCurrentSelection = event.target.value
 
-        productsOne = selectedBrandOneProducts.map((product, index) => {
+        setCurrentSelections({
+                ...currentSelections,
+                brandOneSelection: brandOneCurrentSelection 
+        })
+
+        let brandOne = Object.values(foodData).filter(
+            (brand) => brand.brandName === brandOneCurrentSelection
+          )[0];
+          let brandOneProducts = brandOne?.products;
+
+        // productsOne below is not getting rendered in the JSX after a selection is made despite state being updated
+        
+        productsOne = brandOneProducts.map((product, index) => {
             return (
                 <option key={index} value={product.name}> {product.name} </option>
             )
         })
 
-        // for some reason the options above are not rendering into the screen, need to figure that out next
-
-        console.log(productsOne)
-
-        setCurrentSelections(prevData => {
-            return (
-                {
-                    ...prevData,
-                    brandOneSelection: brandOneSelection
-                }
-            )
-        })
 
        
     }
-
-  
-
-    
 
     return (
         <div className="form-page-container">
@@ -96,7 +90,7 @@ function SearchForm() {
                         </select>
                         <select className="form-input" name="formulaTwo"> 
                             <option value="">Please Select Formula </option>
-                            <option value="Gold Large Breed Adult" > Gold Large Breed Adult </option>
+                            <option value="Large Breed Adult Gold" > Gold Large Breed Adult </option>
                         </select>
                     </div>
                 </div>

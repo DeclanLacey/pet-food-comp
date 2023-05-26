@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import foodData from "./data/food.json"
 import SearchForm from "./SearchForm"
-import Comp from "./comp"
+import Comp from "./Comp"
 import Home from "./Home"
 import Catalog from "./Catalog"
 import {Link, Routes, Route} from "react-router-dom"
