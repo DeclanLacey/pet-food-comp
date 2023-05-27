@@ -6,16 +6,43 @@ function Comp() {
 
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
 
+   
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
-      )[0];
-      let brandOneProducts = brandOne?.products;
-      let productOneData = brandOneProducts
+        )[0];
+        let brandOneProducts = brandOne.products;
+        let productOneData = brandOneProducts
         ? Object.values(brandOneProducts).filter(
-            (food) => food["name"] === foodSelection?.formulaOne
-          )[0]
+            (food) => food["name"] === foodSelection.formulaOne
+            )[0]
         : {};
 
+    
+    const {name: nameOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
+
+
+    let brandTwo = Object.values(foodData).filter(
+        (brand) => brand.brandName === foodSelection.brandTwo
+        )[0];
+        let brandTwoProducts = brandTwo.products;
+        let productTwoData = brandTwoProducts
+        ? Object.values(brandTwoProducts).filter(
+            (food) => food["name"] === foodSelection.formulaTwo
+            )[0]
+        : {};
+
+    const {name: nameTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
+
+
+    // let brandOne = Object.values(foodData).filter(
+    //     (brand) => brand.brandName === foodSelection.brandOne
+    //   )[0];
+    //   let brandOneProducts = brandOne?.products;
+    //   let productOneData = brandOneProducts
+    //     ? Object.values(brandOneProducts).filter(
+    //         (food) => food["name"] === foodSelection?.formulaOne
+    //       )[0]
+    //     : {};
   
    
 
@@ -35,9 +62,9 @@ function Comp() {
 
             <div className="label-one-container">
                 <div>
-                    <h1 className="main-heading heading">  </h1>
+                    <h1 className="main-heading heading"> {foodSelection.brandOne} </h1>
                     {/* Place brand name above */}
-                    <h1 className="main-heading heading"> </h1>
+                    <h1 className="main-heading heading"> {nameOne} </h1>
                     {/* Place formula name above */}
                 </div>
                 <div>
@@ -48,7 +75,7 @@ function Comp() {
                             <div className="amount-per-serving">
                                 <span className="attribute">Amount Per Serving</span>
                                 {/* Place calorie count here */}
-                                <span className="value">418 kcal/cup</span>
+                                <span className="value">{kcalOne}kcal/cup</span>
                             </div>
                         </div>
                         <div className="percent-daily-value-note">% Value</div>
@@ -62,7 +89,8 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place protien % here */}
-                                        <span className="value">25%</span>
+                                        {proteinOne}
+                                        <span className="value"></span>
                                     </div>
                                 </div>
 
@@ -74,7 +102,8 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fat % here */}
-                                    <span className="value">16%</span>
+                                    {fatOne}
+                                    <span className="value"></span>
                                 </div>
                             </li>
                             <li className="sodium">
@@ -84,7 +113,8 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fiber % here */}
-                                    <span className="value">5.5%</span>
+                                    {fiberOne}
+                                    <span className="value"></span>
                                 </div>
                             </li>
                             <li className="total-carbohydrate">
@@ -95,7 +125,8 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place moisture % here */}
-                                        <span className="value">10%</span>
+                                        {moistureOne}
+                                        <span className="value"></span>
                                     </div>
                                 </div>
                             </li>
@@ -107,7 +138,8 @@ function Comp() {
                     </div>
                 </div>
                 <div>
-                    <div className="daily-value-note"> Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Brown Rice,Chicken Fat (preserved with mixed tocopherols),Menhaden Fish Meal,Dried Tomato Pomace,Whole Oats,White Rice,Dried Egg Product,Whole Barley,Chicken Liver,Potatoes,Dried Yeast,Cheese,Flaxseed,Salmon Oil (preserved with mixed tocopherols),Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Monocalcium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Chicory Root Extract, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,L-Tryptophan,Taurine,DL-Methionine,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product.. </div>
+                    {/* place ingredients here */}
+                    <div className="daily-value-note"> {ingredientsOne} </div>
                 </div>
             </div>
 
@@ -115,9 +147,9 @@ function Comp() {
 
             <div className="label-two-container">
                 <div>
-                    <h1 className="main-heading heading"> </h1>
+                    <h1 className="main-heading heading"> {foodSelection.brandTwo} </h1>
                     {/* Place brand name above */}
-                    <h1 className="main-heading heading"> </h1>
+                    <h1 className="main-heading heading"> {nameTwo} </h1>
                     {/* Place formula name above */}
                 </div>
                 <div>
@@ -128,7 +160,7 @@ function Comp() {
                             <div className="amount-per-serving">
                                 <span className="attribute">Amount Per Serving</span>
                                 {/* Place calorie count here */}
-                                <span className="value">418 kcal/cup</span>
+                                <span className="value"> {kcalTwo}kcal/cup</span>
                             </div>
                         </div>
                         <div className="percent-daily-value-note">% Value</div>
@@ -142,7 +174,8 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place protien % here */}
-                                        <span className="value">25%</span>
+                                        {proteinTwo}
+                                        <span className="value"></span>
                                     </div>
                                 </div>
 
@@ -154,7 +187,8 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fat % here */}
-                                    <span className="value">16%</span>
+                                    {fatTwo}
+                                    <span className="value"></span>
                                 </div>
                             </li>
                             <li className="sodium">
@@ -164,7 +198,8 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fiber % here */}
-                                    <span className="value">5.5%</span>
+                                    {fiberTwo}
+                                    <span className="value"></span>
                                 </div>
                             </li>
                             <li className="total-carbohydrate">
@@ -175,7 +210,8 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place moisture % here */}
-                                        <span className="value">10%</span>
+                                        {moistureTwo}
+                                        <span className="value"></span>
                                     </div>
                                 </div>
                             </li>
@@ -187,7 +223,7 @@ function Comp() {
                     </div>
                 </div>
                 <div>
-                    <div className="daily-value-note"> Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Brown Rice,Chicken Fat (preserved with mixed tocopherols),Menhaden Fish Meal,Dried Tomato Pomace,Whole Oats,White Rice,Dried Egg Product,Whole Barley,Chicken Liver,Potatoes,Dried Yeast,Cheese,Flaxseed,Salmon Oil (preserved with mixed tocopherols),Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Monocalcium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Chicory Root Extract, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,L-Tryptophan,Taurine,DL-Methionine,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product.. </div>
+                    <div className="daily-value-note"> {ingredientsTwo} </div>
                 </div>
             </div>
         </div>

@@ -4,19 +4,18 @@ import { FoodContext } from "./foodContext";
 import foodData from "./data/food.json"
 
 let productsOne
+let productsTwo
 
 function SearchForm() {
 
-    console.log("i rendered")
-    
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
     const [currentSelections, setCurrentSelections] = useState(null)
-
     const navigate = useNavigate();
-
-   
-
-
+    const brands = foodData.map((brand, index) => {
+        return (
+            <option key={index} value={brand.brandName}> {brand.brandName} </option>
+        )
+    })
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -31,36 +30,42 @@ function SearchForm() {
         navigate("/food-catalog")
       }
 
-    const brands = foodData.map((brand, index) => {
-        return (
-            <option key={index} value={brand.brandName}> {brand.brandName} </option>
-        )
-    })
-
     function handleBrandOneChange(event) {
 
-        let brandOneCurrentSelection = event.target.value
+        const brandOneCurrentSelection = event.target.value
+        let brandOne = Object.values(foodData).filter((brand) => brand.brandName === brandOneCurrentSelection)[0]
+        let brandOneProducts = brandOne.products;
 
         setCurrentSelections({
-                ...currentSelections,
-                brandOneSelection: brandOneCurrentSelection 
+            ...currentSelections,
+            brandOneSelection: brandOneCurrentSelection 
         })
-
-        let brandOne = Object.values(foodData).filter(
-            (brand) => brand.brandName === brandOneCurrentSelection
-          )[0];
-          let brandOneProducts = brandOne?.products;
-
-        // productsOne below is not getting rendered in the JSX after a selection is made despite state being updated
         
         productsOne = brandOneProducts.map((product, index) => {
             return (
                 <option key={index} value={product.name}> {product.name} </option>
             )
         })
-
-
        
+    }
+
+    function handleBrandTwoChange(event) {
+        
+        const brandTwoCurrentSelection = event.target.value
+        let brandTwo = Object.values(foodData).filter((brand) => brand.brandName === brandTwoCurrentSelection)[0]
+        let brandTwoProducts = brandTwo.products
+
+        setCurrentSelections({
+            ...currentSelections,
+            brandTwoSelection: brandTwoCurrentSelection
+        })
+
+        productsTwo = brandTwoProducts.map((product, index) => {
+            return (
+                <option key={index} value={product.name}> {product.name} </option>
+            )
+        })
+
     }
 
     return (
@@ -84,13 +89,13 @@ function SearchForm() {
                     <label className="form-label"> Food Two </label>
                     <label className="form-sub-label"> Please select the second food you would like to compare</label>
                     <div className="selection-container">
-                        <select className="form-input" name="brandTwo"> 
+                        <select className="form-input" name="brandTwo" onChange={handleBrandTwoChange}> 
                             <option value="">Please Select Brand </option>
                             {brands}
                         </select>
                         <select className="form-input" name="formulaTwo"> 
                             <option value="">Please Select Formula </option>
-                            <option value="Large Breed Adult Gold" > Gold Large Breed Adult </option>
+                            {productsTwo}
                         </select>
                     </div>
                 </div>
