@@ -19,16 +19,16 @@ function App() {
             <div>
                 <div className="nav-container">
                     <Link className="nav-item" to="/"> Home </Link>
-                    <Link className="nav-item" to="/comparison-form"> Comparison </Link>
+                    <Link className="nav-item" to="/search-form"> Comparison </Link>
                     <Link className="nav-item" to="/food-catalog"> Catalog </Link>
                 </div>
                 
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route exact path="/comparison-form" element={<SearchForm />}/>
+                    <Route exact path="/search-form" element={<SearchForm />}/>
                     {/* <Route exact path="/food-catalog" element={<Catalog />}> </Route> */}
-                    <Route exact path="/food-catalog" element={<Comp />}> </Route>
+                    <Route exact path="/comp" element={<Comp />}> </Route>
                 </Routes>
 
                 <footer className="footer-container">

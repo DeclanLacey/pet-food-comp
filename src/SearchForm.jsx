@@ -27,7 +27,7 @@ function SearchForm() {
                 formulaTwo: e.formulaTwo.value
             }
         )
-        navigate("/food-catalog")
+        navigate("/comp")
       }
 
     function handleBrandOneChange(event) {
@@ -75,11 +75,11 @@ function SearchForm() {
                     <label className="form-label"> Food One </label>
                     <label className="form-sub-label"> Please Select the first food you would like to compare</label>
                     <div className="selection-container">
-                        <select className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
+                        <select required className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
                             <option value="">Please Select Brand </option>
                             {brands}
                         </select>
-                        <select className="form-input" name="formulaOne"> 
+                        <select required className="form-input" name="formulaOne" > 
                             <option value="">Please Select Formula </option>
                             {productsOne}
                         </select>
@@ -89,11 +89,11 @@ function SearchForm() {
                     <label className="form-label"> Food Two </label>
                     <label className="form-sub-label"> Please select the second food you would like to compare</label>
                     <div className="selection-container">
-                        <select className="form-input" name="brandTwo" onChange={handleBrandTwoChange}> 
+                        <select required className="form-input" name="brandTwo" onChange={handleBrandTwoChange} > 
                             <option value="">Please Select Brand </option>
                             {brands}
                         </select>
-                        <select className="form-input" name="formulaTwo"> 
+                        <select required className="form-input" name="formulaTwo"> 
                             <option value="">Please Select Formula </option>
                             {productsTwo}
                         </select>

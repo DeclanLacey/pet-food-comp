@@ -1,11 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect} from "react";
 import { FoodContext } from "./foodContext";
 import foodData from "./data/food.json"
+import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
+
 
 function Comp() {
 
+    const navigate = useNavigate()
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
 
+
+ 
+    ///////////// Store the context data in local storage so the page does not break when you reload, and this might also allow you to repopulate the search fields if you go back to the form
    
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
@@ -16,7 +22,7 @@ function Comp() {
             (food) => food["name"] === foodSelection.formulaOne
             )[0]
         : {};
-
+        
     
     const {name: nameOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
 
