@@ -61,9 +61,9 @@ function Comp() {
 
             <div className="label-one-container">
                 <div>
-                    <h1 className="main-heading heading"> {foodSelection.brandOne} </h1>
+                    <h1 className="main-heading heading brandName"> {foodSelection.brandOne} </h1>
                     {/* Place brand name above */}
-                    <h1 className="main-heading heading"> {nameOne} </h1>
+                    <h1 className="main-heading heading formulaName"> {nameOne} </h1>
                     {/* Place formula name above */}
                 </div>
                 <div>
@@ -88,7 +88,7 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place protien % here */}
-                                        {proteinOne}
+                                        {proteinOne}%
                                         <span className="value"></span>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fat % here */}
-                                    {fatOne}
+                                    {fatOne}%
                                     <span className="value"></span>
                                 </div>
                             </li>
@@ -112,7 +112,7 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fiber % here */}
-                                    {fiberOne}
+                                    {fiberOne}%
                                     <span className="value"></span>
                                 </div>
                             </li>
@@ -124,7 +124,7 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place moisture % here */}
-                                        {moistureOne}
+                                        {moistureOne}%
                                         <span className="value"></span>
                                     </div>
                                 </div>
@@ -146,9 +146,9 @@ function Comp() {
 
             <div className="label-two-container">
                 <div>
-                    <h1 className="main-heading heading"> {foodSelection.brandTwo} </h1>
+                    <h1 className="main-heading heading brandName"> {foodSelection.brandTwo} </h1>
                     {/* Place brand name above */}
-                    <h1 className="main-heading heading"> {nameTwo} </h1>
+                    <h1 className="main-heading heading formulaName"> {nameTwo} </h1>
                     {/* Place formula name above */}
                 </div>
                 <div>
@@ -173,7 +173,7 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place protien % here */}
-                                        {proteinTwo}
+                                        {proteinTwo}%
                                         <span className="value"></span>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fat % here */}
-                                    {fatTwo}
+                                    {fatTwo}%
                                     <span className="value"></span>
                                 </div>
                             </li>
@@ -197,7 +197,7 @@ function Comp() {
                                 </div>
                                 <div className="percent-daily-value">
                                     {/* Place fiber % here */}
-                                    {fiberTwo}
+                                    {fiberTwo}%
                                     <span className="value"></span>
                                 </div>
                             </li>
@@ -209,7 +209,7 @@ function Comp() {
                                     </div>
                                     <div className="percent-daily-value">
                                         {/* Place moisture % here */}
-                                        {moistureTwo}
+                                        {moistureTwo}%
                                         <span className="value"></span>
                                     </div>
                                 </div>

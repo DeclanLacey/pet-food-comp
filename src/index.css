@@ -225,6 +225,17 @@ body {
     padding-top: 50px;
 }
 
+.brandName {
+  font-size: 2.6em;
+  text-decoration: underline;
+  margin-bottom: 0px;
+}
+
+.formulaName {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
 .label-one-container {
     /* Layout */
     margin: 0.5em;
@@ -485,3 +496,9 @@ body {
     font-weight: bold;
   }
   
+
+/* ///////////////////////// Catalog page styling ////////////////////////////// */
+
+.catalog-container {
+  padding-top: 60px;
+}

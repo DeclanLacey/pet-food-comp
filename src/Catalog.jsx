@@ -9,17 +9,94 @@ import foodData from "./data/food.json"
 
 const brands = foodData.map((brand, index) => {
     const productsList = brand.products
+    const brandName = brand.brandName
 
-    
-
-    ////////////////////////////////// This is working now! Now you just need to return the
-    ///////////////////////////////// right css (the nutrition label thing with the info plugged in)
+    ///////////// Need to figure out how to sort this data next
 
     function mapProducts() {
         const products = productsList.map((product, index) => {
+            const {name, protein, fat, fiber, moisture, kcal, ingredients} = product
             return (
-                <div>
-                    <h1> {product.name}</h1>
+                <div className="label-one-container">
+                    <div>
+                        <h1 className="main-heading heading brandName"> {brandName}  </h1>
+                        {/* Place brand name above */}
+                        <h1 className="main-heading heading formulaName"> {name}  </h1>
+                        {/* Place formula name above */}
+                    </div>
+                    <div>
+                        <div className="daily-values">
+                            <h2 className="daily-values-heading heading">Daily Values</h2>
+                            <div className="calories">
+                                <div className="heading">Calories</div>
+                                <div className="amount-per-serving">
+                                    <span className="attribute">Amount Per Serving</span>
+                                    {/* Place calorie count here */}
+                                    <span className="value"> {kcal}kcal/cup</span>
+                                </div>
+                            </div>
+                            <div className="percent-daily-value-note">% Value</div>
+                            <ul className="nutrients">
+                                <li className="total-fat">
+
+                                    <div className="total-fat---cr">
+                                        <div className="heading">Crude Protien</div>
+                                        <div className="amount-per-serving">
+                                            {/* Placeholder */}
+                                        </div>
+                                        <div className="percent-daily-value">
+                                            {/* Place protien % here */}
+                                            {protein}%
+                                            <span className="value"></span>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li className="cholesterol">
+                                    <div className="heading">Crude Fat</div>
+                                    <div className="amount-per-serving">
+                                        {/* Placeholder */}
+                                    </div>
+                                    <div className="percent-daily-value">
+                                        {/* Place fat % here */}
+                                        {fat}%
+                                        <span className="value"></span>
+                                    </div>
+                                </li>
+                                <li className="sodium">
+                                    <div className="heading">Crude Fiber</div>
+                                    <div className="amount-per-serving">
+                                        {/* Placeholder */}
+                                    </div>
+                                    <div className="percent-daily-value">
+                                        {/* Place fiber % here */}
+                                        {fiber}%
+                                        <span className="value"></span>
+                                    </div>
+                                </li>
+                                <li className="total-carbohydrate">
+                                    <div className="total-carbohydrate---cr">
+                                        <div className="heading">Moisture</div>
+                                        <div className="amount-per-serving">
+                                            {/* Placeholder */}
+                                        </div>
+                                        <div className="percent-daily-value">
+                                            {/* Place moisture % here */}
+                                            {moisture}%
+                                            <span className="value"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div className="nutrients-declaration-requirement">
+                            {/* Placeholder */}
+                        </div>
+                    </div>
+                    <div>
+                        <div className="daily-value-note"> {ingredients} </div>
+                    </div>
                 </div>
             )
         })
@@ -31,110 +108,11 @@ const brands = foodData.map((brand, index) => {
             {mapProducts()}
         </div>
     )
-
-    // for (let i = 0; i < productsList.length; i++) {
-    //     const {name, protein, fat, fiber, moisture, kcal, ingredients} = productsList[i]
-    //     // console.log(name)
-    //     //////////////////////////
-    //     /// this works now and shows every food, but for some reason when i return something it skips some of the food
-    //     ///////////////////////////
-    // }
-    // for (let product of productsList) {
-    //     // console.log(product)
-    //     const {name, protein, fat, fiber, moisture, kcal, ingredients} = product
-        
-    //     return (
-    //         <div className="label-one-container">
-    //             <div>
-    //                 <h1 className="main-heading heading"> {name}  </h1>
-    //                 {/* Place brand name above */}
-    //                 <h1 className="main-heading heading">  </h1>
-    //                 {/* Place formula name above */}
-    //             </div>
-    //             <div>
-    //                 <div className="daily-values">
-    //                     <h2 className="daily-values-heading heading">Daily Values</h2>
-    //                     <div className="calories">
-    //                         <div className="heading">Calories</div>
-    //                         <div className="amount-per-serving">
-    //                             <span className="attribute">Amount Per Serving</span>
-    //                             {/* Place calorie count here */}
-    //                             <span className="value"> kcal/cup</span>
-    //                         </div>
-    //                     </div>
-    //                     <div className="percent-daily-value-note">% Value</div>
-    //                     <ul className="nutrients">
-    //                         <li className="total-fat">
-
-    //                             <div className="total-fat---cr">
-    //                                 <div className="heading">Crude Protien</div>
-    //                                 <div className="amount-per-serving">
-    //                                     {/* Placeholder */}
-    //                                 </div>
-    //                                 <div className="percent-daily-value">
-    //                                     {/* Place protien % here */}
-    //                                     <span className="value"></span>
-    //                                 </div>
-    //                             </div>
-
-    //                         </li>
-    //                         <li className="cholesterol">
-    //                             <div className="heading">Crude Fat</div>
-    //                             <div className="amount-per-serving">
-    //                                 {/* Placeholder */}
-    //                             </div>
-    //                             <div className="percent-daily-value">
-    //                                 {/* Place fat % here */}
-    //                                 <span className="value"></span>
-    //                             </div>
-    //                         </li>
-    //                         <li className="sodium">
-    //                             <div className="heading">Crude Fiber</div>
-    //                             <div className="amount-per-serving">
-    //                                 {/* Placeholder */}
-    //                             </div>
-    //                             <div className="percent-daily-value">
-    //                                 {/* Place fiber % here */}
-    //                                 <span className="value"></span>
-    //                             </div>
-    //                         </li>
-    //                         <li className="total-carbohydrate">
-    //                             <div className="total-carbohydrate---cr">
-    //                                 <div className="heading">Moisture</div>
-    //                                 <div className="amount-per-serving">
-    //                                     {/* Placeholder */}
-    //                                 </div>
-    //                                 <div className="percent-daily-value">
-    //                                     {/* Place moisture % here */}
-    //                                     <span className="value"></span>
-    //                                 </div>
-    //                             </div>
-    //                         </li>
-                            
-    //                     </ul>
-    //                 </div>
-    //                 <div className="nutrients-declaration-requirement">
-    //                     {/* Placeholder */}
-    //                 </div>
-    //             </div>
-    //             <div>
-    //                 <div className="daily-value-note">  </div>
-    //             </div>
-    //         </div>
-    //     )
-    // }
 })
-    
-    
-        
-    
-  
-
-
 
 function Catalog() {
     return (
-        <div>
+        <div className="catalog-container">
             {brands}
         </div>
 

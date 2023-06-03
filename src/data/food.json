@@ -4,20 +4,20 @@
         "products": [
             {
                 "name": "Adult Gold",
-                "protein": "25%",
-                "fat": "16%",
-                "fiber": "5.5%",
-                "moisture": "10%",
-                "kcal": "418",
+                "protein": 25,
+                "fat": 16,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 418,
                 "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, chicken fat (preserved with mixed tocopherols), menhaden fish meal, dried tomato pomace, whole oats, white rice, dried egg product, whole barley, chicken liver, potatoes, dried yeast, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), salt, carrots, duck, lamb, sweet potatoes, celery, alfalfa meal, monocalcium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], chicory root extract, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, l-tryptophan, taurine, dl-methionine, sodium selenite, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
             },
             {
                 "name": "Large Breed Adult Gold",
-                "protein": "23%",
-                "fat": "12%",
-                "fiber": "5.5%",
-                "moisture": "10%",
-                "kcal": "377",
+                "protein": 23,
+                "fat": 12,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 377,
                 "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
             }
         ]
