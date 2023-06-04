@@ -1,17 +1,48 @@
 import React from "react";
 import foodData from "./data/food.json"
+import { render } from "react-dom";
 
 
 // i think a good idea here would be to show all of the data but then allow the user to also
 // sort the data based of certain things (highes/lowest kcal, highest protein, ect.)
+
+let combinedBrands = []
+
+/////// This function combines all of the foods into one array so they can be sorted
+function combineFoodBrands() {
+    foodData.map((brand, index) => {
+        const productsList = brand.products
+        for (const product of productsList) {
+            combinedBrands.push(product)
+        }
+    })
+}
+combineFoodBrands()
+
+
+
+/////////////////// This function returns the sorted food
+////////// You will want to pass in the form data submitted by the user to this
+///////// function so it can correctly sort the data
+function renderSortedData() {
+    function sortJSON(arr, key, asc=true) {
+        return arr.sort((a, b) => {
+            let x = a[key];
+            let y = b[key];
+            if (asc) { return ((x < y) ? -1 : ((x > y) ? 1 : 0)); }
+            else { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
+          });
+    }
+    let output = sortJSON(combinedBrands, "protein", false)
+    return output
+}
+
 
 
 
 const brands = foodData.map((brand, index) => {
     const productsList = brand.products
     const brandName = brand.brandName
-
-    ///////////// Need to figure out how to sort this data next
 
     function mapProducts() {
         const products = productsList.map((product, index) => {

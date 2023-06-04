@@ -28,7 +28,15 @@
         "products": [
             {
                 "name": "Test",
-                "ingredients": ["Fish", "Rice", "Oats"]
+                "protein": 20
+            },
+            {
+                "name": "Test Two",
+                "protein": 35
+            },
+            {
+                "name": "Test Three",
+                "protein": 30
             }
         ]
     }
