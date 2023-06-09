@@ -20,6 +20,11 @@ function combineFoodBrands() {
 combineFoodBrands()
 
 
+//////////// I need to figure out a way to make sure that it only sorts the data when something is chosen in the
+///// form. I am thinking maybe i will have it just render all of the food to start and then a different function will run
+////// when the form is submitted
+
+
 
 /////////////////// This function returns the sorted food
 ////////// You will want to pass in the form data submitted by the user to this
