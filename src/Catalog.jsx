@@ -18,15 +18,16 @@ function combineFoodBrands() {
 combineFoodBrands()
 
 
-//////////// I need to figure out a way to make sure that it only sorts the data when something is chosen in the
-///// form. I am thinking maybe i will have it just render all of the food to start and then a different function will run
-////// when the form is submitted
 
 
 
-/////////////////// This function returns the sorted food
-////////// You will want to pass in the form data submitted by the user to this
-///////// function so it can correctly sort the data
+/////////////////////////////////////////
+////////////// Next i need to allow the user to choose cat or dog and render the correct data in this file
+////////////////////////////////////////
+
+
+
+
 function renderSortedData(selectedAnswerOne, selectedAnswerTwo) {
     function sortJSON(arr, key, asc=true) {
         return arr.sort((a, b) => {
