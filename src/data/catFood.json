@@ -4,7 +4,8 @@
         "products": [
             {
                 "brandName": "Fromm",
-                "name": "Adult Gold",
+                "name": "Adult",
+                "type": "cat",
                 "protein": 25,
                 "fat": 16,
                 "fiber": 5.5,
@@ -14,7 +15,8 @@
             },
             {
                 "brandName": "Fromm",
-                "name": "Large Breed Adult Gold",
+                "name": "Game Bird",
+                "type": "cat",
                 "protein": 23,
                 "fat": 12,
                 "fiber": 5.5,
@@ -30,25 +32,19 @@
         "products": [
             {
                 "brandName":"Royal Canin",
-                "name": "Test",
+                "name": "Test cat",
                 "protein": 35
             },
             {
                 "brandName":"Royal Canin",
-                "name": "Test Two",
+                "name": "Test Two cat",
                 "protein": 30
             },
             {
                 "brandName":"Royal Canin",
-                "name": "Test Three",
+                "name": "Test Three cat",
                 "protein": 35
             }
         ]
     }
 ]
-
-
-
-
-
-
