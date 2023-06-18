@@ -1,5 +1,5 @@
 import React, { useContext, useEffect} from "react";
-import { FoodContext } from "./foodContext";
+import { FoodContext } from "./context/foodContext";
 import dogFoodData from "./data/dogFood.json"
 import catFoodData from "./data/catFood.json"
 import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';

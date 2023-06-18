@@ -3,9 +3,10 @@ import React, { useContext } from "react"
 import SearchForm from "./SearchForm"
 import Comp from "./Comp"
 import Home from "./Home"
+import FoodCatalogSelection from "./FoodCatalogSelection"
 import Catalog from "./Catalog"
 import {Link, Routes, Route} from "react-router-dom"
-import { FoodContext } from "./foodContext";
+import { FoodContext } from "./context/foodContext";
 
 
 function App() {
@@ -16,26 +17,27 @@ function App() {
 
     return (
         <div>
-            <div>
+            <div className="main-container">
                 <div className="nav-container">
                     <Link className="nav-item" to="/"> Home </Link>
                     <Link className="nav-item" to="/search-form"> Comparison </Link>
-                    <Link className="nav-item" to="/food-catalog"> Catalog </Link>
+                    <Link className="nav-item" to="/food-catalog-selection"> Catalog </Link>
                 </div>
                 
-
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/search-form" element={<SearchForm />}/>
+                    <Route exact path="/food-catalog-selection" element={<FoodCatalogSelection/>}> </Route>
                     <Route exact path="/food-catalog" element={<Catalog />}> </Route>
                     <Route exact path="/comp" element={<Comp />}> </Route>
                 </Routes>
-
-                <footer className="footer-container">
-                    <p className="footer-content-top"> Food Comparison Tool </p>
-                    <p className="footer-content-bottom">© 2023 Declan Lacey</p>
-                </footer>
+                
             </div>
+
+            <footer className="footer-container" >
+                <p className="footer-content-top"> Food Comparison Tool </p>
+                <p className="footer-content-bottom">© 2023 Declan Lacey</p>
+            </footer>
         </div>
     )
 }

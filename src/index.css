@@ -11,6 +11,9 @@ body {
     background-color: whitesmoke;
 }
 
+
+
+
 /* ///////////////// Nav Styl/ing //////////////////// */
 
 .nav-container {
@@ -46,6 +49,7 @@ body {
 
 /* ////////////////// Footer styling //////////////////////////// */
 
+
 .footer-container {
     background-color: #14213d;
     height: 130px;
@@ -55,6 +59,7 @@ body {
     align-items: center;
     font-size: 12px;
     color: whitesmoke;
+    
 }
 
 .footer-content-top {
@@ -222,11 +227,33 @@ body {
 
 /* ////////////////// Catalog Page styling //////////////////////// */
 
-.catalog-form {
+.extraMargin {
+  margin-top: 60px;
+}
+
+.catalog-form-lower {
   display: flex;
   width: 100%;
   justify-content: space-around;
   font-size: 1.4em;
+  margin-top: 10px;
+}
+
+.catalog-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.catalog-form-upper {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+  gap: 10px;
 }
 
 .catalog-form-container {
@@ -247,11 +274,24 @@ body {
   gap: 10px;
 }
 
-
-
 .catalog-btn {
   width: 100px;
   height: 35px;
+  margin-left: 10px;
+}
+
+.catalog-container {
+  padding-top: 90px;
+}
+
+
+
+
+/* ////////////////////// Catalog selection page styling //////////////////// */
+
+.food-catalog-selection-container {
+  padding-top: 70px;
+  
 }
 
 
@@ -533,8 +573,3 @@ body {
   }
   
 
-/* ///////////////////////// Catalog page styling ////////////////////////////// */
-
-.catalog-container {
-  padding-top: 60px;
-}

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
-import { FoodContext } from "./foodContext";
+import { FoodContext } from "./context/foodContext";
 import dogFoodData from "./data/dogFood.json"
 import catFoodData from "./data/catFood.json"
 
@@ -39,12 +39,12 @@ function SearchForm() {
     }
 
     function handleAnimalChange(event) {
-        setCurrentAnimialSelection(event.target.value)
         if (event.target.value === "cat") {
             foodData = catFoodData
         }else if (event.target.value === "dog") {
             foodData = dogFoodData
         }
+        setCurrentAnimialSelection(event.target.value)
     }
 
     function handleBrandOneChange(event) {
