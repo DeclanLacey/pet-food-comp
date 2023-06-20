@@ -1,8 +1,9 @@
-import { AnimalSelectionContext } from "./context/animalSelectionContext"
-import React, { useState, useEffect, useContext } from "react";
-import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
+import { AnimalSelectionContext } from "../context/animalSelectionContext"
+import React, {useContext } from "react";
+import {useNavigate} from 'react-router-dom';
+import "../style/animalSelectionComp.css"
 
-function FoodCatalogSelection() {
+function AnimalSelectionComp() {
 
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
     const navigate = useNavigate();
@@ -10,11 +11,12 @@ function FoodCatalogSelection() {
     function handleSubmit(event) {
         event.preventDefault();
         setAnimalSelection(event.target.animalSelectionForm.value)
-        navigate("/food-catalog")
+        navigate("/search-form")
     }
 
     return(
         <div className="food-catalog-selection-container">
+            <h1> Comparison Animal Selection</h1>
             <form onSubmit={handleSubmit} >
                 <select required name="animalSelectionForm"> 
                     <option value=""> -- Please Select Animal </option>
@@ -27,4 +29,4 @@ function FoodCatalogSelection() {
     )
 }
 
-export default FoodCatalogSelection
+export default AnimalSelectionComp

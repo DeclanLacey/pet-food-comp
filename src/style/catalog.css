@@ -1,0 +1,60 @@
+
+
+/* ////////////////// Catalog Page styling //////////////////////// */
+
+.extraMargin {
+    margin-top: 60px;
+  }
+  
+  .catalog-form-lower {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1.4em;
+    margin-top: 10px;
+  }
+  
+  .catalog-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .catalog-form-upper {
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    gap: 10px;
+  }
+  
+  .catalog-form-container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .catalog-select {
+    font-size: .9em;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .catalog-form-selection-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .catalog-btn {
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+  }
+  
+  .catalog-container {
+    padding-top: 90px;
+  }

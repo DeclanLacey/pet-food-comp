@@ -1,8 +1,11 @@
 import React, { useContext, useState } from "react"
-import {Link, Routes, Route, useNavigate, Navigate} from 'react-router-dom';
-import { FoodContext } from "./context/foodContext";
-import dogFoodData from "./data/dogFood.json"
-import catFoodData from "./data/catFood.json"
+import {useNavigate} from 'react-router-dom';
+import { FoodContext } from "../context/foodContext";
+import dogFoodData from "../data/dogFood.json"
+import catFoodData from "../data/catFood.json"
+import { AnimalSelectionContext } from "../context/animalSelectionContext";
+import "../style/searchForm.css"
+
 
 let productsOne
 let productsTwo
@@ -11,9 +14,13 @@ let foodData = null
 function SearchForm() {
 
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
+    const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
 
-    const [animalSelection, setCurrentAnimialSelection] = useState(null)
-
+    if(animalSelection === "dog") {
+        foodData = dogFoodData
+    }else if (animalSelection === "cat") {
+        foodData = catFoodData
+    }
 
     const [currentSelections, setCurrentSelections] = useState(null)
     const navigate = useNavigate();
@@ -36,15 +43,7 @@ function SearchForm() {
             }
         )
         navigate("/comp")
-    }
-
-    function handleAnimalChange(event) {
-        if (event.target.value === "cat") {
-            foodData = catFoodData
-        }else if (event.target.value === "dog") {
-            foodData = dogFoodData
-        }
-        setCurrentAnimialSelection(event.target.value)
+        
     }
 
     function handleBrandOneChange(event) {
@@ -90,12 +89,6 @@ function SearchForm() {
             <form className="search-form" onSubmit={handleSubmit}>
     
                 <div className="search-form-sub-container">
-                <label> What kind of animal do you have?</label>
-                <select required onChange={handleAnimalChange} name="animalType">
-                    <option value=""> -- Dog or Cat?</option>
-                    <option value="dog"> Dog </option>
-                    <option value="cat"> Cat </option>
-                </select>
                     <label className="form-label"> Food One </label>
                     <label className="form-sub-label"> Please Select the first food you would like to compare</label>
                     <div className="selection-container">
@@ -125,9 +118,6 @@ function SearchForm() {
                 </div>
                 <input className="submit-btn compare-btn" type="submit" value="Compare"></input>
             </form>
-            
-
-
         </div>
     )
 }

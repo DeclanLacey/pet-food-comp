@@ -1,0 +1,74 @@
+
+
+/* ///////////////////// Search Form Page Styling //////////////////////////// */
+
+.search-form {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 650px;
+    align-items: center;
+}
+
+.compare-btn {
+  margin-bottom: 30px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.submit-btn {
+    background-color: #fca311 ;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: color, transform, 400ms;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+
+.selection-container {
+    display: flex;
+    flex-direction: column; 
+
+}
+
+.form-sub-label {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.search-form-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.form-input {
+    width: 400px;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #14213d;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}

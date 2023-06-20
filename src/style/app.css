@@ -1,0 +1,69 @@
+
+/* //////////////////// Full page styling ///////////////////// */
+
+body {
+    display: grid;
+    grid-template-columns: 80px, 1fr, 150px;
+    background-color: red;
+}
+
+.full-page-container {
+    grid-row: 2;
+}
+
+/* //////////////////// Nav styling ///////////////////// */
+
+.nav-container {
+    background-color: #14213d;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform, text-decoration, 400ms;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+
+/* ////////////////// Footer styling //////////////////////////// */
+
+
+.footer-container {
+    background-color: #14213d;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: whitesmoke;
+    
+}
+
+.footer-content-top {
+    margin-bottom: 0px;
+    margin-top: 45px;
+}
+
+.footer-content-bottom {
+    margin-top: 0px;
+}

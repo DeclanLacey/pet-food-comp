@@ -1,7 +1,9 @@
 import React, { useState, useContext } from "react";
-import dogFoodData from "./data/dogFood.json"
-import catFoodData from "./data/catFood.json"
-import { AnimalSelectionContext } from "./context/animalSelectionContext";
+import dogFoodData from "../data/dogFood.json"
+import catFoodData from "../data/catFood.json"
+import { AnimalSelectionContext } from "../context/animalSelectionContext";
+import "../style/catalog.css"
+
 
 
 /////////// Initializing variables upon page load

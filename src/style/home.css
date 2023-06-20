@@ -1,0 +1,39 @@
+
+
+/* //////////////// Home page styling //////////////////////// */
+
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.title-container {
+    /* border: 1px solid red; */
+}
+
+.home-page-button {
+    background-color: #fca311 ;
+    text-decoration: none;
+    color: white;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform, color, 400ms;
+}
+
+.home-page-button:hover {
+    transform: scale(1.1);
+    color: black;
+}
