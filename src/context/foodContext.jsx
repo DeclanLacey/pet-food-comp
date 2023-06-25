@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react"
 
 const FoodContext = React.createContext()
 function FoodContextProvider(props) {
-    // const [foodSelection, setFoodSelection] = useState(null)
+    
     function getInitalContext() {
         const foodSelection = localStorage.getItem("foodSelection")
         if(!foodSelection) {

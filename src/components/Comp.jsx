@@ -1,20 +1,22 @@
 import React, { useContext} from "react";
 import { FoodContext } from "../context/foodContext";
+import { AnimalSelectionContext } from "../context/animalSelectionContext";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import "../style/comp.css"
 
 
+
 function Comp() {
 
-    const {foodSelection, setFoodSelection} = useContext(FoodContext)
     let foodData = null
-    if (foodSelection.animalType === "cat") {
+    const {foodSelection, setFoodSelection} = useContext(FoodContext)
+    const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
+    if (animalSelection === "cat") {
         foodData = catFoodData
-    }else if (foodSelection.animalType === "dog") {
+    }else if (animalSelection === "dog") {
         foodData = dogFoodData
     }
-
 
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
@@ -38,28 +40,6 @@ function Comp() {
             )[0]
         : {};
     const {name: nameTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
-
-
-    // let brandOne = Object.values(foodData).filter(
-    //     (brand) => brand.brandName === foodSelection.brandOne
-    //   )[0];
-    //   let brandOneProducts = brandOne?.products;
-    //   let productOneData = brandOneProducts
-    //     ? Object.values(brandOneProducts).filter(
-    //         (food) => food["name"] === foodSelection?.formulaOne
-    //       )[0]
-    //     : {};
-  
-   
-
-    // let brandName = "Fromm"
-    // let results = Object.values(foodData).filter(brand => brand["brandName"] === brandName)
-    // const selectedBrand = results[0]
-
-    // const selectedProduct = "Fromm Adult Gold"
-    // const selectedBrandProducts = selectedBrand.products
-    // let chosenProduct = Object.values(selectedBrandProducts).filter(food => food["name"] === selectedProduct)
-    // console.log(chosenProduct[0])
 
     return (
         <div className="comp-page-container">

@@ -35,7 +35,6 @@ function SearchForm() {
         event.preventDefault();
         const e = event.target
         setFoodSelection({
-                animalType: e.animalType.value,
                 brandOne: e.brandOne.value,
                 brandTwo: e.brandTwo.value,
                 formulaOne: e.formulaOne.value,
