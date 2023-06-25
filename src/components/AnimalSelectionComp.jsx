@@ -16,7 +16,7 @@ function AnimalSelectionComp() {
 
     return(
         <div className="food-catalog-selection-container">
-            <h1> Comparison Animal Selection</h1>
+            {/* <h1> Comparison Animal Selection</h1>
             <form onSubmit={handleSubmit} >
                 <select required name="animalSelectionForm"> 
                     <option value=""> -- Please Select Animal </option>
@@ -24,6 +24,12 @@ function AnimalSelectionComp() {
                     <option value="cat"> Cat </option>
                 </select>
                 <input type="submit"/>
+            </form> */}
+
+            <form> 
+                <img src="src\assets\cat.jpg" />
+                <img src="src\assets\dog.jpg" />
+
             </form>
         </div>
     )

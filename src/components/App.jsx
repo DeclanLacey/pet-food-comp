@@ -33,7 +33,7 @@ function App() {
             </div>
 
             <footer className="footer-container" >
-                <p className="footer-content-top"> Food Comparison Tool </p>
+                <p className="footer-content-top"> THE Pet Food Index </p>
                 <p className="footer-content-bottom">© 2023 Declan Lacey</p>
             </footer>
         </div>
