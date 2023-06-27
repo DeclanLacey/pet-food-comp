@@ -10,9 +10,6 @@ import "../style/app.css"
 
 function App() {
 
-
-    /////////////// trying to figure out why this stupid shit wont style correctly
-
     return (
         <div id="full-page-container" >
             <div className="nav-container">

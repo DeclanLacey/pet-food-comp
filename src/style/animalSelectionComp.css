@@ -1,8 +1,126 @@
 
 
-.food-catalog-selection-container {
+.food-comp-selection-container {
     padding-top: 70px;
-    
-  }
+    text-align: center;
+}
 
-  
+.food-comp-form-selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image {
+  height: 300px;
+  border: 2px solid #a22c29;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 350ms;
+  cursor: pointer;
+  box-shadow: -4px 4px 15px black;
+}
+
+.form-image:hover {
+  transform: scale(1.1);
+}
+
+.food-comp-selection-title {
+  font-size: 2.2em;
+}
+
+.form-selection-subtitle {
+  margin-bottom: 5px;
+}
+
+.form-selection-subtitle-directions {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.selected {
+  border: 6px solid #a22c29;
+}
+
+.radio-container label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.radio-button {
+  height: 378px;
+  appearance: none;
+  position: relative;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 320px;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: -393px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label > img {
+  border: 6px solid #a22c29;
+}
+
+input[type="radio"]:checked:hover + label > img {
+  transform: scale(1.1);
+}
+
+input[type="radio"]:hover + label > img {
+  transform: scale(1.1);
+}
+
+.label-container {
+  height: 400px;
+  width: 400px;
+}
+
+.form-submit-btn {
+  background-color: #a22c29 ;
+  text-decoration: none;
+  color: white;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border: none;
+  transform: scale(1);
+  transition: transform, color, 400ms;
+}
+
+.form-submit-btn:hover {
+  transform: scale(1.1);
+}
+
+/* input[type="radio"] + label > img {
+  border: 1px rgb(0, 0, 0);
+  padding: 10px;
+  transition: 500ms all;
+} */
