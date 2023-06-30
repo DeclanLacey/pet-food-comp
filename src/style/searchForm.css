@@ -3,11 +3,11 @@
 /* ///////////////////// Search Form Page Styling //////////////////////////// */
 
 .search-form {
-    padding-top: 70px;
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 650px;
+    min-height: 750px;
     align-items: center;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .submit-btn {
-    background-color: #fca311 ;
+    background-color: #a22c29 ;
     border: none;
     border-radius: 20px;
     color: white;
@@ -28,11 +28,12 @@
     cursor: pointer;
     transform: scale(1);
     transition: color, transform, 400ms;
+    margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 .submit-btn:hover {
     transform: scale(1.1);
-    color: black;
 }
 
 
@@ -66,9 +67,11 @@
     height: 50px;
     margin-bottom: 20px;
     border-radius: 20px;
-    background-color: #14213d;
+    background-color: #edf2f4;
     color: white;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
     cursor: pointer;
+    color: black;
+    box-shadow: -5px 5px 2px #a22c29;
 }

@@ -1,0 +1,41 @@
+.comp-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.label-one-container {
+    max-width: 450px;
+    
+}
+
+.label-two-container {
+    max-width: 450px;
+}
+
+.selection-num-container {
+    text-align: center;
+
+}
+
+.selection-num-container p {
+    letter-spacing: 3px;
+    color: #a22c29;
+}
+
+.name-symbol-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.symbol-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.symbol-container img {
+    height: 80px;
+    
+}

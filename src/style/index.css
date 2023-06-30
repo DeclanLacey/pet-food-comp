@@ -14,7 +14,7 @@ body {
 /* /////////////////// Food Info container styling ///////////////// */
 
 .comp-page-container {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .brandName {
@@ -36,6 +36,8 @@ body {
     font-family: sans-serif;
     /* Graphics */
     border: 0.25em solid black;
+    margin-bottom: 80px;
+    margin-top: 30px;
   }
 
 .label-two-container {
@@ -46,6 +48,9 @@ body {
     font-family: sans-serif;
     /* Graphics */
     border: 0.25em solid black;
+    margin-bottom: 80px;
+    margin-top: 30px;
+
 }
 
   .amount-per-serving .attribute {

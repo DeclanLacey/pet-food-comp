@@ -27,7 +27,7 @@ function Comp() {
             (food) => food["name"] === foodSelection.formulaOne
             )[0]
         : {};
-    const {name: nameOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
+    const {name: nameOne, grainStatus: grainStatusOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
 
 
     let brandTwo = Object.values(foodData).filter(
@@ -39,19 +39,33 @@ function Comp() {
             (food) => food["name"] === foodSelection.formulaTwo
             )[0]
         : {};
-    const {name: nameTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
+    const {name: nameTwo, grainStatus: grainStatusTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
 
     return (
         <div className="comp-page-container">
 
 {/* ////////////////////////////////////// FOOD ONE ///////////////////////////////////////// */}
-
+            
             <div className="label-one-container">
-                <div>
-                    <h1 className="main-heading heading brandName"> {foodSelection.brandOne} </h1>
-                    {/* Place brand name above */}
-                    <h1 className="main-heading heading formulaName"> {nameOne} </h1>
-                    {/* Place formula name above */}
+                <div className="selection-num-container">
+                    <p> SELECTION ONE</p>
+                </div>
+                <div className="name-symbol-container">
+                    <div className="label-names-container">
+                        <h1 className="main-heading heading brandName"> {foodSelection.brandOne} </h1>
+                        {/* Place brand name above */}
+                        <h1 className="main-heading heading formulaName"> {nameOne} </h1>
+                        {/* Place formula name above */}
+                    </div>
+
+                    <div className="symbol-container">
+                        {
+                            grainStatusOne === "grain" ? <img src="src\assets\grain-in.jpg" /> :<img src="src\assets\grain-free-2.jpg" />
+                        }
+                        {
+                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                        }
+                    </div>
                 </div>
                 <div>
                     <div className="daily-values">
@@ -132,12 +146,27 @@ function Comp() {
 {/* ///////////////////////////// FOOD TWO ///////////////////////////////////////// */}
 
             <div className="label-two-container">
-                <div>
-                    <h1 className="main-heading heading brandName"> {foodSelection.brandTwo} </h1>
-                    {/* Place brand name above */}
-                    <h1 className="main-heading heading formulaName"> {nameTwo} </h1>
-                    {/* Place formula name above */}
+                <div className="selection-num-container">
+                    <p>SELECTION TWO</p>
                 </div>
+                <div className="name-symbol-container">
+                    <div className="label-names-container">
+                        <h1 className="main-heading heading brandName"> {foodSelection.brandTwo} </h1>
+                        {/* Place brand name above */}
+                        <h1 className="main-heading heading formulaName"> {nameTwo} </h1>
+                        {/* Place formula name above */}
+                    </div>
+                    
+                    <div className="symbol-container">
+                        {
+                            grainStatusTwo === "grain" ? <img src="src\assets\grain-in.jpg" /> : <img src="src\assets\grain-free-2.jpg" />
+                        }
+                        {
+                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                        }
+                    </div>
+                </div>
+                
                 <div>
                     <div className="daily-values">
                         <h2 className="daily-values-heading heading">Daily Values</h2>

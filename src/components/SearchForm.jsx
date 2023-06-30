@@ -92,11 +92,11 @@ function SearchForm() {
                     <label className="form-sub-label"> Please Select the first food you would like to compare</label>
                     <div className="selection-container">
                         <select required className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
-                            <option value="">Please Select Brand </option>
+                            <option value=""> Brand </option>
                             {brands}
                         </select>
                         <select required className="form-input" name="formulaOne" > 
-                            <option value="">Please Select Formula </option>
+                            <option value=""> Formula </option>
                             {productsOne}
                         </select>
                     </div>
@@ -106,11 +106,11 @@ function SearchForm() {
                     <label className="form-sub-label"> Please select the second food you would like to compare</label>
                     <div className="selection-container">
                         <select required className="form-input" name="brandTwo" onChange={handleBrandTwoChange} > 
-                            <option value="">Please Select Brand </option>
+                            <option value=""> Brand </option>
                             {brands}
                         </select>
                         <select required className="form-input" name="formulaTwo"> 
-                            <option value="">Please Select Formula </option>
+                            <option value=""> Formula </option>
                             {productsTwo}
                         </select>
                     </div>

@@ -12,6 +12,7 @@ function App() {
 
     return (
         <div id="full-page-container" >
+            
             <div className="nav-container">
                 <Link className="nav-item" to="/"> Home </Link>
                 <Link className="nav-item" to="/animal-selection-comp"> Comparison </Link>
