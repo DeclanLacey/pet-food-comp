@@ -10,20 +10,44 @@ function AnimalSelectionCatalog() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        setAnimalSelection(event.target.animalSelectionForm.value)
+        setAnimalSelection(event.target.radioAnimalSelection.value)
         navigate("/food-catalog")
     }
 
     return(
-        <div className="food-catalog-selection-container">
-            <h1> Catalog Animal Selection</h1>
-            <form onSubmit={handleSubmit} >
-                <select required name="animalSelectionForm"> 
-                    <option value=""> -- Please Select Animal </option>
-                    <option value="dog"> Dog </option>
-                    <option value="cat"> Cat </option>
-                </select>
-                <input type="submit"/>
+        // <div className="food-catalog-selection-container">
+        //     <h1> Pet food catalog </h1>
+        //     <form onSubmit={handleSubmit} >
+        //         <select required name="animalSelectionForm"> 
+        //             <option value=""> -- Please Select Animal </option>
+        //             <option value="dog"> Dog </option>
+        //             <option value="cat"> Cat </option>
+        //         </select>
+        //         <input type="submit"/>
+        //     </form>
+        // </div>
+
+        <div className="food-comp-selection-container">
+            <h1 className="food-comp-selection-title"> Pet Food Catalog </h1>
+            <h3 className="form-selection-subtitle"> What kind of animal do you have?</h3>
+            <p className="form-selection-subtitle-directions"> Please select below</p>
+            <form className="form" onSubmit={handleSubmit} >
+            <div className="food-comp-form-selection-container">
+                <div className="radio-container">
+                    <input required type="radio" name="radioAnimalSelection" value="dog" className="radio-button" />
+                    <label className="label-container">
+                        <img className="form-image" src="src\assets\dog.jpg" alt="cat-selection-picture" />
+                    </label>
+                </div>
+                
+                <div className="radio-container">
+                    <input type="radio" name="radioAnimalSelection" value="cat" className="radio-button" />
+                    <label className="label-container">
+                        <img className="form-image" src="src\assets\cat.jpg" alt="dog-selection-picture"/>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" className="form-submit-btn" />
             </form>
         </div>
     )

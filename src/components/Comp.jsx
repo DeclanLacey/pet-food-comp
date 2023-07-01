@@ -18,6 +18,7 @@ function Comp() {
         foodData = dogFoodData
     }
 
+    
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
         )[0];
@@ -28,6 +29,8 @@ function Comp() {
             )[0]
         : {};
     const {name: nameOne, grainStatus: grainStatusOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
+    const ingredientsOneFirstHalf = ingredientsOne.slice(0, ingredientsOne.length/2)
+    const ingredientsOneSecondHalf = ingredientsOne.slice(ingredientsOne.length/ 2, ingredientsOne.length)
 
 
     let brandTwo = Object.values(foodData).filter(
@@ -40,6 +43,41 @@ function Comp() {
             )[0]
         : {};
     const {name: nameTwo, grainStatus: grainStatusTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
+    const ingredientsTwoFirstHalf = ingredientsTwo.slice(0, ingredientsTwo.length/2)
+    const ingredientsTwoSecondHalf = ingredientsTwo.slice(ingredientsTwo.length/ 2, ingredientsTwo.length)
+
+
+    function hideOrShowIngredientsOne() {
+        let dots = document.getElementById("dotsOne");
+        let moreText = document.getElementById("moreOne");
+        let btnText = document.getElementById("showMoreBtnOne");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Show more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Show less";
+          moreText.style.display = "inline";
+        }
+    }
+
+    function hideOrShowIngredientsTwo() {
+        let dots = document.getElementById("dotsTwo");
+        let moreText = document.getElementById("moreTwo");
+        let btnText = document.getElementById("showMoreBtnTwo");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Show more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Show less";
+          moreText.style.display = "inline";
+        }
+    }
 
     return (
         <div className="comp-page-container">
@@ -139,7 +177,10 @@ function Comp() {
                 </div>
                 <div>
                     {/* place ingredients here */}
-                    <div className="daily-value-note"> {ingredientsOne} </div>
+                    <div className="daily-value-note"> 
+                        {ingredientsOneFirstHalf} <span id="dotsOne"> ...</span> <span id="moreOne"> {ingredientsOneSecondHalf} </span>
+                    </div>
+                    <button onClick={hideOrShowIngredientsOne} id="showMoreBtnOne"> Show More </button>
                 </div>
             </div>
 
@@ -238,7 +279,10 @@ function Comp() {
                     </div>
                 </div>
                 <div>
-                    <div className="daily-value-note"> {ingredientsTwo} </div>
+                    <div className="daily-value-note"> 
+                        {ingredientsTwoFirstHalf} <span id="dotsTwo"> ...</span> <span id="moreTwo"> {ingredientsTwoSecondHalf} </span>
+                    </div>
+                    <button onClick={hideOrShowIngredientsTwo} id="showMoreBtnTwo"> Show More </button>
                 </div>
             </div>
         </div>

@@ -5,8 +5,72 @@
 .extraMargin {
     margin-top: 60px;
   }
+
+.catalog-form {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 80px;
+}
+
+.catalog-form-selection-container select {
+  margin-left: 15px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.catalog-form-selection-container {
+  font-size: 1.3em;
+}
+
+.catalog-submit-btn {
+  background-color: #a22c29;
+  text-decoration: none;
+  color: white;
+  width: 110px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: .8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform, color, 400ms;
+  border: none;
+}
+
+.catalog-submit-btn:hover {
+  transform: scale(1.1)
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.food-container-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.food-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   
-  .catalog-form-lower {
+  /* .catalog-form-lower {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -19,7 +83,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
   }
   
   .catalog-form-upper {
@@ -41,11 +104,13 @@
   .catalog-select {
     font-size: .9em;
     font-family: 'Noto Sans', sans-serif;
+    height: 30px;
   }
   
   .catalog-form-selection-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
   }
   
@@ -57,4 +122,19 @@
   
   .catalog-container {
     padding-top: 90px;
+    
   }
+
+  .catalog-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .food-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */

@@ -38,6 +38,9 @@ body {
     border: 0.25em solid black;
     margin-bottom: 80px;
     margin-top: 30px;
+    min-width: 450px;
+    min-height: 760px;
+
   }
 
 .label-two-container {
@@ -50,7 +53,8 @@ body {
     border: 0.25em solid black;
     margin-bottom: 80px;
     margin-top: 30px;
-
+    min-width: 450px;
+    min-height: 760px;
 }
 
   .amount-per-serving .attribute {

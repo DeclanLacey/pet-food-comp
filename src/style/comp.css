@@ -4,6 +4,33 @@
     justify-content: space-around;
 }
 
+
+#showMoreBtnOne, #showMoreBtnTwo {
+    width: 120px;
+    height: 30px;
+    font-size: 1em;
+    margin-top: 10px;
+    border: none;
+    background-color: #a22c29;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: transform 300ms;
+}
+
+#showMoreBtnOne:hover, #showMoreBtnTwo:hover {
+    transform: scale(1.1);
+}
+
+#moreOne {
+    display: none;
+}
+
+#moreTwo {
+    display: none;
+}
+
 .label-one-container {
     max-width: 450px;
     
