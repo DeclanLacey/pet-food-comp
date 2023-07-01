@@ -119,8 +119,37 @@ input[type="radio"]:hover + label > img {
   transform: scale(1.1);
 }
 
-/* input[type="radio"] + label > img {
-  border: 1px rgb(0, 0, 0);
-  padding: 10px;
-  transition: 500ms all;
-} */
+@media screen and (min-width: 1150px) {
+    .form-submit-btn {
+      width: 200px;
+      height: 45px;
+    }
+
+    .form-image {
+     height: 550px;
+    }
+
+    .label-container {
+      height: 550px;
+      width: 550px;
+    }
+
+    .food-comp-selection-title {
+      font-size: 2.5em;
+    }
+
+    .form-selection-subtitle {
+      font-size: 1.2em;
+    }
+
+    .form-submit-btn {
+      margin-top: 20px;
+    }
+
+    .radio-button {
+      height: 550px;
+      width: 450px;
+      margin-bottom: -580px;
+    }
+    
+}

@@ -46,7 +46,7 @@
 }
 
 .home-page-info-content {
-    text-indent: 20px;
+    text-indent: 25px;
     font-size: 1.1em;
     line-height: 30px;
     padding: 10px
@@ -78,4 +78,19 @@
 
 .home-page-button:hover {
     transform: scale(1.1);
+}
+
+@media screen and (min-width: 1000px) {
+    .home-page-container {
+    }
+
+    .home-page-info-title {
+        font-size: 2em;
+    }
+
+    .home-page-info-content {
+        font-size: 1.6em;
+        line-height: 38px;
+        max-width: 1000px;
+    }
 }
