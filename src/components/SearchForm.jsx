@@ -86,33 +86,34 @@ function SearchForm() {
     return (
         <div className="form-page-container">
             <form className="search-form" onSubmit={handleSubmit}>
-    
-                <div className="search-form-sub-container">
-                    <label className="form-label"> Food One </label>
-                    <label className="form-sub-label"> Please Select the first food you would like to compare</label>
-                    <div className="selection-container">
-                        <select required className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
-                            <option value=""> Brand </option>
-                            {brands}
-                        </select>
-                        <select required className="form-input" name="formulaOne" > 
-                            <option value=""> Formula </option>
-                            {productsOne}
-                        </select>
+                <div className="search-form-selection-section-container">
+                    <div className="search-form-sub-container">
+                        <label className="form-label"> Food One </label>
+                        <label className="form-sub-label"> Please Select the first food you would like to compare</label>
+                        <div className="selection-container">
+                            <select required className="form-input" name="brandOne" onChange={handleBrandOneChange}> 
+                                <option value=""> Brand </option>
+                                {brands}
+                            </select>
+                            <select required className="form-input" name="formulaOne" > 
+                                <option value=""> Formula </option>
+                                {productsOne}
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div className="search-form-sub-container">
-                    <label className="form-label"> Food Two </label>
-                    <label className="form-sub-label"> Please select the second food you would like to compare</label>
-                    <div className="selection-container">
-                        <select required className="form-input" name="brandTwo" onChange={handleBrandTwoChange} > 
-                            <option value=""> Brand </option>
-                            {brands}
-                        </select>
-                        <select required className="form-input" name="formulaTwo"> 
-                            <option value=""> Formula </option>
-                            {productsTwo}
-                        </select>
+                    <div className="search-form-sub-container">
+                        <label className="form-label"> Food Two </label>
+                        <label className="form-sub-label"> Please select the second food you would like to compare</label>
+                        <div className="selection-container">
+                            <select required className="form-input" name="brandTwo" onChange={handleBrandTwoChange} > 
+                                <option value=""> Brand </option>
+                                {brands}
+                            </select>
+                            <select required className="form-input" name="formulaTwo"> 
+                                <option value=""> Formula </option>
+                                {productsTwo}
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <input className="submit-btn compare-btn" type="submit" value="Compare"></input>
