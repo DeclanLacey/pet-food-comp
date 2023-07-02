@@ -15,17 +15,6 @@ function AnimalSelectionCatalog() {
     }
 
     return(
-        // <div className="food-catalog-selection-container">
-        //     <h1> Pet food catalog </h1>
-        //     <form onSubmit={handleSubmit} >
-        //         <select required name="animalSelectionForm"> 
-        //             <option value=""> -- Please Select Animal </option>
-        //             <option value="dog"> Dog </option>
-        //             <option value="cat"> Cat </option>
-        //         </select>
-        //         <input type="submit"/>
-        //     </form>
-        // </div>
 
         <div className="food-comp-selection-container">
             <h1 className="food-comp-selection-title"> Pet Food Catalog </h1>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext, useEffect } from "react"
 import SearchForm from "./SearchForm"
 import Comp from "./Comp"
 import Home from "./Home"
@@ -6,37 +6,71 @@ import Catalog from "./Catalog"
 import AnimalSelectionCatalog from "./AnimalSelectionCatalog"
 import AnimalSelectionComp from "./AnimalSelectionComp"
 import {Link, Routes, Route} from "react-router-dom"
+import { DarkModeContext } from "../context/darkModeContext"
 import "../style/app.css"
 
 function App() {
+
+ 
+    const {darkModeStatus, setDarkModeStatus} = useContext(DarkModeContext)
+
+    useEffect(() => {
+        const navigationEl = document.getElementById("nav")
+        const navItemsEl = document.querySelectorAll(".nav-item")
+        const footerEl = document.getElementById("footer")
+
+        if(darkModeStatus) {
+            document.getElementById("dark-mode-checkbox").checked = true
+        }
+
+        if (!darkModeStatus) {
+            document.body.classList.remove("dark-mode-main")
+            navigationEl.classList.remove("nav-container-dark-mode")
+            navItemsEl.forEach((el) => {
+                el.classList.remove("nav-item-dark-mode")
+            })
+            footerEl.classList.remove("footer-container-dark-mode")
+            
+        }else {
+            document.body.classList.add("dark-mode-main")
+            navigationEl.classList.add("nav-container-dark-mode")
+            navItemsEl.forEach((el) => {
+                el.classList.add("nav-item-dark-mode")
+            })
+            footerEl.classList.add("footer-container-dark-mode")
+        }
+    }, [darkModeStatus])
+
 
     function closeBurgerMenu() {
         let menuItems = document.getElementsByClassName("menu-items")
         menuItems.style.transform = translateX(0)
     }
 
+    function changeDarkMode() {
+        setDarkModeStatus(prevState => !prevState)
+    }
+
+
     return (
         <div id="full-page-container" >
-            
-            <div className="nav-container">
-                <div className="regular-navbar">
+
+            <div className="nav-container" id="nav">
+                <div className="regular-navbar" >
                     <Link className="nav-item" to="/"> Home </Link>
                     <Link className="nav-item" to="/animal-selection-comp"> Comparison </Link>
                     <Link className="nav-item" to="/animal-selection-catalog"> Catalog </Link>
                 </div>
 
-                <div class="navbar">
-                    <div class="container nav-sub-container">
-                        <input class="checkbox" type="checkbox" name="" id="" />
-                        <div class="hamburger-lines">
-                            <span class="line line1"></span>
-                            <span class="line line2"></span>
-                            <span class="line line3"></span>
+                <div className="navbar">
+                    <div className="container nav-sub-container">
+                        <input className="checkbox" type="checkbox" name="" id="" />
+                        <div className="hamburger-lines">
+                            <span className="line line1"></span>
+                            <span className="line line2"></span>
+                            <span className="line line3"></span>
                         </div>  
-                    <div class="logo">
-                        
-                    </div>
-                        <div class="menu-items">
+                        <div className="menu-items">
                             <Link onClick={closeBurgerMenu} className="nav-item" to="/"> Home </Link>
                             <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-comp"> Comparison </Link>
                             <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-catalog"> Catalog </Link>
@@ -44,12 +78,9 @@ function App() {
                     </div>
                 </div>
 
-
-
-                
                 <div className='toggle-switch'>
                     <label className="toggle-label">
-                        <input className="toggle-input" type='checkbox' />
+                        <input id="dark-mode-checkbox" className="toggle-input" onChange={changeDarkMode} type='checkbox' />
                         <span className='slider'></span>
                     </label>
                 </div>
@@ -66,7 +97,7 @@ function App() {
                 </Routes>
             </div>
 
-            <footer className="footer-container" >
+            <footer className="footer-container" id="footer" >
                 <p className="footer-content-top"> THE Pet Food Index </p>
                 <p className="footer-content-bottom">© 2023 Declan Lacey</p>
             </footer>

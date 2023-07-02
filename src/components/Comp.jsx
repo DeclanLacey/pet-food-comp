@@ -98,10 +98,10 @@ function Comp() {
 
                     <div className="symbol-container">
                         {
-                            grainStatusOne === "grain" ? <img src="src\assets\grain-in.jpg" /> :<img src="src\assets\grain-free-2.jpg" />
+                            grainStatusOne === "grain" ? <img src="src\assets\grain-in.png" /> :<img src="src\assets\grain-free.png" />
                         }
                         {
-                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
                         }
                     </div>
                 </div>
@@ -200,10 +200,10 @@ function Comp() {
                     
                     <div className="symbol-container">
                         {
-                            grainStatusTwo === "grain" ? <img src="src\assets\grain-in.jpg" /> : <img src="src\assets\grain-free-2.jpg" />
+                            grainStatusTwo === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
                         }
                         {
-                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
                         }
                     </div>
                 </div>

@@ -96,10 +96,10 @@ function Catalog() {
                             
                             <div className="symbol-container">
                                 {
-                                    grainStatus === "grain" ? <img src="src\assets\grain-in.jpg" /> : <img src="src\assets\grain-free-2.jpg" />
+                                    grainStatus === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
                                 }
                                 {
-                                    animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                                    animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
                                 }
                             </div>
                         </div>
@@ -205,10 +205,10 @@ function Catalog() {
                                 
                                 <div className="symbol-container">
                                     {
-                                        grainStatus === "grain" ? <img src="src\assets\grain-in.jpg" /> : <img src="src\assets\grain-free-2.jpg" />
+                                        grainStatus === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
                                     }
                                     {
-                                        animalSelection === "dog" ? <img src="src\assets\dog-cartoon.jpg" /> : <img src="src\assets\cat-cartoon.jpg" />
+                                        animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
                                     }
                                 </div>
                             </div>
