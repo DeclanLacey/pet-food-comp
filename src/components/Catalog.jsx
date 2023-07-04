@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
+import {useNavigate} from 'react-router-dom';
+
 import "../style/catalog.css"
 
 
@@ -13,6 +15,9 @@ let sortedBrands = null
 
 function Catalog() {
 
+    window.scrollTo(0, 0);
+
+    const navigate = useNavigate()
     const [formSelection, setFormSelection] = useState(null)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
     foodData = null
@@ -79,12 +84,11 @@ function Catalog() {
         ///// Output of sorted products
         let output = sortJSON(combinedBrands, selectedAnswerOne, selectedAnswerTwo)
 
-
     
         sortedBrands = output.map((product, index) => {
             const {brandName, name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product
             return (
-                
+                    
                     <div className="label-one-container" key={index}>
                         <div className="name-symbol-container">
                             <div className="label-names-container">
@@ -315,9 +319,16 @@ function Catalog() {
         renderSortedData(selectionOne, selectionTwo)
     }
 
+    function goBackOnePage() {
+        navigate(-1)
+    }
+
     return (
 
         <div className="catalog-container" >
+            <div className="arrow-container">
+                <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
+            </div>
             <div>
                 <form onSubmit={handleSubmit} className="catalog-form" >
                     <div className="catalog-form-selection-container">

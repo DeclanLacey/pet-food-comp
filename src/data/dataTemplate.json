@@ -1,0 +1,17 @@
+{
+    "brandName": "brandNameHere",
+    "products": [
+        {
+            "brandName": "brandNameHere",
+            "name": "formulaNameHere",
+            "type": "animalType",
+            "grainStatus": "grainStatusHere",
+            "protein": 0,
+            "fat": 0,
+            "fiber": 0,
+            "moisture": 0,
+            "kcal": 0,
+            "ingredients": "ingredientsHere"
+        }
+    ]
+}

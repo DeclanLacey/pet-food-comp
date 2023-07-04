@@ -4,46 +4,129 @@
         "products": [
             {
                 "brandName": "Fromm",
-                "name": "Adult",
+                "name": "Adult Gold",
                 "type": "cat",
-                "protein": 25,
-                "fat": 16,
-                "fiber": 5.5,
+                "grainStatus": "grain",
+                "protein": 32,
+                "fat": 18,
+                "fiber": 4.5,
                 "moisture": 10,
-                "kcal": 418,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, chicken fat (preserved with mixed tocopherols), menhaden fish meal, dried tomato pomace, whole oats, white rice, dried egg product, whole barley, chicken liver, potatoes, dried yeast, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), salt, carrots, duck, lamb, sweet potatoes, celery, alfalfa meal, monocalcium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], chicory root extract, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, l-tryptophan, taurine, dl-methionine, sodium selenite, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
+                "kcal": 395,
+                "ingredients": "Chicken,Chicken Meal,Pearled Barley,White Rice,Salmon Meal,Chicken Fat (preserved with mixed tocopherols),Dried Tomato Pomace,Dried Egg Product,Potatoes,Duck,Salmon Oil (preserved with mixed tocopherols),Cheese,Flaxseed,Brewers Dried Yeast, Chicken Liver,Alfalfa Meal,DL-Methionine, Vitamins [Potassium Chloride, Choline Chloride, Vitamin E Supplement, Niacin Supplement, Ascorbic Acid, Calcium Carbonate, Pyridoxine Hydrochloride, Vitamin A Supplement, Folic Acid, Calcium Pantothenate, Thiamine Mononitrate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Chicken Cartilage,Chicory Root Extract,Salt,Monosodium Phosphate, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,Sodium Selenite,Taurine,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
             },
             {
                 "brandName": "Fromm",
-                "name": "Game Bird",
+                "name": "Indoor Cat Gold",
                 "type": "cat",
-                "protein": 23,
-                "fat": 12,
-                "fiber": 5.5,
+                "grainStatus": "grain",
+                "protein": 32,
+                "fat": 15,
+                "fiber": 4,
                 "moisture": 10,
-                "kcal": 377,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
+                "kcal": 389,
+                "ingredients": "Chicken,Chicken Meal,Brown Rice,Pearled Barley,Oatmeal,Salmon Meal,Dried Egg Product,Chicken Liver,Dried Tomato Pomace,Chicken Fat (preserved with mixed tocopherols),Salmon Oil (preserved with mixed tocopherols),Miscanthus Grass,Duck,Flaxseed,Psyllium Seed Husk,Dried Beet Pulp,Brewers Dried Yeast, Natural Flavor,Dehydrated Alfalfa Meal, DL-Methionine, Vitamins [Potassium Chloride, Choline Chloride, Vitamin E Supplement, Niacin Supplement, Folic Acid, Ascorbic Acid, Calcium Carbonate, Pyridoxine Hydrochloride, Vitamin A Supplement, Calcium Pantothenate, Thiamine Mononitrate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Salt,Cranberries,Dried Kelp,Chicken Cartilage,Chicory Root Extract,L-Carnitine,Sorbic Acid (Preservative), Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Yucca Schidigera Extract,Sodium Selenite,Taurine, Dried Lactobacillus casei Fermentation Product, Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Healthy Weight Gold",
+                "type": "cat",
+                "grainStatus": "grain",
+                "protein": 30,
+                "fat": 11,
+                "fiber": 6,
+                "moisture": 10,
+                "kcal": 348,
+                "ingredients": "Chicken,Chicken Meal,Pearled Barley,White Rice,Salmon Meal,Dried Tomato Pomace,Potatoes,Oatmeal,Duck,Dried Egg Product,Chicken Fat (preserved with mixed tocopherols),Millet,Cheese,Miscanthus Grass,Salmon Oil (preserved with mixed tocopherols),Brewers Dried Yeast, Flaxseed,Oat Hulls,Chicken Liver,Alfalfa Meal,DL-Methionine, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Niacin Supplement, Ascorbic Acid, Calcium Carbonate, Pyridoxine Hydrochloride, Vitamin A Supplement, Folic Acid, Calcium Pantothenate, Thiamine Mononitrate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Chicken Cartilage,Chicory Root Extract,Salt,Monosodium Phosphate, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], L-Carnitine,Sorbic Acid (Preservative),Yucca Schidigera Extract,Sodium Selenite,Taurine,Probiotics,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Kitten Gold",
+                "type": "cat",
+                "grainStatus": "grain",
+                "protein": 34,
+                "fat": 20,
+                "fiber": 3.5,
+                "moisture": 10,
+                "kcal": 437,
+                "ingredients": "Chicken,Chicken Meal,Pearled Barley,White Rice,Salmon Meal,Chicken Fat (preserved with mixed tocopherols),Dried Egg Product,Dried Tomato Pomace,Salmon Oil (preserved with mixed tocopherols),Duck,Potatoes,Cheese,Flaxseed,Brewers Dried Yeast, Chicken Liver,Alfalfa Meal,DL-Methionine,Potassium Chloride,Probiotics, Vitamins [Choline Chloride, Vitamin E Supplement, Niacin Supplement, Ascorbic Acid, Calcium Carbonate, Pyridoxine Hydrochloride, Vitamin A Supplement, Folic Acid, Calcium Pantothenate, Thiamine Mononitrate, Riboflavin Supplement, Vitamin D3 Supplement, Biotin, Vitamin B12 Supplement], Chicken Cartilage,Chicory Root Extract,Salt,Monosodium Phosphate, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,Sodium Selenite,Taurine,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
             }
         ]
     },
     
     {
-        "brandName": "Royal Canin",
+        "brandName": "Farmina",
         "products": [
             {
-                "brandName":"Royal Canin",
-                "name": "Test cat",
-                "protein": 35
+                "brandName": "Farmina",
+                "name": "N&D Digestion",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 33,
+                "fat": 21.50,
+                "fiber": 1.90,
+                "moisture": 8,
+                "kcal": 408,
+                "ingredients": "Lamb, Dehydrated Lamb, Pea Starch, Chicken Fat, Quinoa Seed, Dried Whole Eggs, Linseed, Dehydrated Herring, Herring Oil, Dried Fennel, Dried Mint, Inulin, Fructooligosaccharide, Yeast Extract, Psyllium Seed Husk, Potassium Chloride, Brewers Dried Yeast, Salt, Calcium Sulfate Dihydrate, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Thiamine Mononitrate, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, Aloe Vera Gel Concentrate, Green Tea Extract, Rosemary Extract, Mixed Tocopherols (a Preservative)"
             },
             {
-                "brandName":"Royal Canin",
-                "name": "Test Two cat",
-                "protein": 30
+                "brandName": "Farmina",
+                "name": "N&D Skin & Coat Herring",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 30,
+                "fat": 16,
+                "fiber": 2.5,
+                "moisture": 8,
+                "kcal": 385,
+                "ingredients": "Herring, Dehydrated Herring, Pea Starch, Herring Oil, Quinoa Seed, Linseed, Dried Coconut, Turmeric, Inulin, Fructooligosaccharide, Yeast Extract, Psyllium Seed Husk, Calcium Carbonate, Dicalcium Phosphate, Calcium Sulfate Dihydrate, Potassium Chloride, Salt, Brewers Dried Yeast, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Thiamine Mononitrate, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, Aloe Vera Gel Concentrate, Green Tea Extract, Rosemary Extract, Mixed Tocopherols (a Preservative)"
             },
             {
-                "brandName":"Royal Canin",
-                "name": "Test Three cat",
-                "protein": 35
+                "brandName": "Farmina",
+                "name": "N&D Skin & Coat Quail",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 30,
+                "fat": 16,
+                "fiber": 2.30,
+                "moisture": 8,
+                "kcal": 390,
+                "ingredients": "Quail, Dehydrated Quail, Pea Starch, Herring Oil, Quinoa Seed, Linseed, Dried Coconut, Turmeric, Inulin, Fructooligosaccharide, Yeast Extract, Psyllium Seed Husk, Calcium Carbonate, Dicalcium Phosphate, Calcium Sulfate Dihydrate, Potassium Chloride, Salt, Brewers Dried Yeast, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Thiamine Mononitrate, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, Aloe Vera Gel Concentrate, Green Tea Extract, Rosemary Extract, Mixed Tocopherols (a Preservative)"
+            },
+            {
+                "brandName": "Farmina",
+                "name": "N&D Urinary Duck",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 33,
+                "fat": 16.50,
+                "fiber": 2.10,
+                "moisture": 8,
+                "kcal": 391,
+                "ingredients": "Boneless Duck, Dehydrated Duck, Pea Starch, Chicken Fat, Quinoa Seed, Dried Whole Eggs, Dehydrated Herring, Herring Oil, Dried Cranberry, Chamomile, Fructooligosaccharide, Yeast Extract, Psyllium Seed Husk, Calcium Carbonate, Potassium Chloride, Brewers Dried Yeast, Salt, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Thiamine Mononitrate, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, Aloe Vera Gel Concentrate, Green Tea Extract, Rosemary Extract, Mixed Tocopherols (a Preservative)"
+            },
+            {
+                "brandName": "Farmina",
+                "name": "N&D Weight Management Lamb",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 40,
+                "fat": 9,
+                "fiber": 10,
+                "moisture": 8,
+                "kcal": 318,
+                "ingredients": "Lamb, Dehydrated Lamb, Pea Starch, Dried Whole Eggs, Pea Fiber, Chicken Fat, Quinoa Seed, Herring, Dehydrated Herring, Herring Oil, Linseed, Dried Broccoli, Dried Asparagus, Dried Carrot, Suncured Alfalfa Meal, Inulin, Fructooligosaccharide, Yeast Extract, Psyllium Seed Husk, Potassium Chloride, Salt, Calcium Sulfate Dihydrate, Brewers Dried Yeast, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Calcium Pantothenate, Riboflavin, Pyridoxine Hydrochloride, Thiamine Mononitrate, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, Aloe Vera Gel Concentrate, Green Tea Extract, Rosemary Extract, Mixed Tocopherols (a Preservative)"
+            },
+            {
+                "brandName": "Farmina",
+                "name": "N&D Neutered",
+                "type": "cat",
+                "grainStatus": "grain free",
+                "protein": 35,
+                "fat": 10,
+                "fiber": 6.5,
+                "moisture": 8,
+                "kcal": 333,
+                "ingredients": "Duck, Dehydrated Duck, Sweet Potatoes, Dried Beet Pulp, Dehydrated Herring, Quinoa Seed, Dried Whole Eggs, Chicken Fat, Pea Fiber, Linseed, Herring Oil, Dried Broccoli, Dried Asparagus, Fructooligosaccharide, Yeast Extract, Brewers Dried Yeast, Psyllium Seed Husk, Calcium Sulfate Dihydrate, Potassium Chloride,Salt, Vitamin a Supplement, Vitamin D3 Supplement, Vitamin E Supplement, Ascorbic Acid, Niacin, Pantothenic Acid, Riboflavin, Pyridoxine Hydrochloride, Thiamine Hydrochloride, Biotin, Folic Acid, Vitamin B12 Supplement, Choline Chloride, Beta-carotene, Zinc Methionine Hydroxy Analogue Chelate, Manganese Methionine Hydroxy Analogue Chelate, Ferrous Glycine, Copper Methionine Hydroxy Analogue Chelate, Dl-methionine, Taurine, L-carnitine, Mixed Tocopherols (a Preservative)"
             }
         ]
     }

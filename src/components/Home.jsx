@@ -3,6 +3,9 @@ import {Link} from "react-router-dom"
 import "../style/home.css"
 
 function Home() {
+
+    window.scrollTo(0, 0);
+
     return (
         <div className="home-page-container">
             <div className="title-container">

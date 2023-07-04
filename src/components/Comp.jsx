@@ -1,6 +1,7 @@
 import React, { useContext} from "react";
 import { FoodContext } from "../context/foodContext";
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
+import {useNavigate} from 'react-router-dom';
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import "../style/comp.css"
@@ -9,7 +10,10 @@ import "../style/comp.css"
 
 function Comp() {
 
+    window.scrollTo(0, 0);
+
     let foodData = null
+    const navigate = useNavigate();
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
     if (animalSelection === "cat") {
@@ -79,11 +83,17 @@ function Comp() {
         }
     }
 
+    function goBackOnePage() {
+        navigate(-1)
+    }
+
     return (
         <div className="comp-page-container">
 
 {/* ////////////////////////////////////// FOOD ONE ///////////////////////////////////////// */}
-            
+            <div className="arrow-container">
+                <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
+            </div>
             <div className="label-one-container">
                 <div className="selection-num-container">
                     <p> SELECTION ONE</p>

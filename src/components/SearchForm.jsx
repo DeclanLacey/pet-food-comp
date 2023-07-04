@@ -13,6 +13,8 @@ let foodData = null
 
 function SearchForm() {
 
+    window.scrollTo(0, 0);
+
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
 
@@ -20,6 +22,10 @@ function SearchForm() {
         foodData = dogFoodData
     }else if (animalSelection === "cat") {
         foodData = catFoodData
+    }
+
+    function goBackOnePage() {
+        navigate(-1)
     }
 
     const [currentSelections, setCurrentSelections] = useState(null)
@@ -85,6 +91,9 @@ function SearchForm() {
 
     return (
         <div className="form-page-container">
+            <div className="arrow-container">
+                <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
+            </div>
             <form className="search-form" onSubmit={handleSubmit}>
                 <div className="search-form-selection-section-container">
                     <div className="search-form-sub-container">

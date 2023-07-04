@@ -1,3 +1,4 @@
+
 [
     {
         "brandName": "Fromm",
@@ -6,13 +7,25 @@
                 "brandName": "Fromm",
                 "name": "Adult Gold",
                 "type": "dog",
-                "grainStatus": "grain free",
+                "grainStatus": "grain",
                 "protein": 25,
                 "fat": 16,
                 "fiber": 5.5,
                 "moisture": 10,
                 "kcal": 418,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, chicken fat (preserved with mixed tocopherols), menhaden fish meal, dried tomato pomace, whole oats, white rice, dried egg product, whole barley, chicken liver, potatoes, dried yeast, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), salt, carrots, duck, lamb, sweet potatoes, celery, alfalfa meal, monocalcium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], chicory root extract, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, l-tryptophan, taurine, dl-methionine, sodium selenite, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
+                "ingredients": "Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Brown Rice,Chicken Fat (preserved with mixed tocopherols),Menhaden Fish Meal,Dried Tomato Pomace,Whole Oats,White Rice,Dried Egg Product,Whole Barley,Chicken Liver,Potatoes,Dried Yeast,Cheese,Flaxseed,Salmon Oil (preserved with mixed tocopherols),Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Monocalcium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Biotin, Pyridoxine Hydrochloride, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Chicory Root Extract, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,L-Tryptophan,Taurine,DL-Methionine,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Adult Gold Ancient Grains",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 26,
+                "fat": 16,
+                "fiber": 6,
+                "moisture": 10,
+                "kcal": 400,
+                "ingredients": "Chicken,Chicken Meal,Whole Grain Sorghum,Chicken Broth,Whole Barley,Whole Oats,Pearled Barley,Chicken Fat (preserved with mixed tocopherols),Menhaden Fish Meal,Dried Tomato Pomace,Dried Egg Product,Dried Yeast,Buckwheat,Spelt,Millet,Chicken Liver,Cheese,Salmon Oil (preserved with mixed tocopherols),Quinoa,Flaxseed,Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Monocalcium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Chicory Root Extract,Minerals,Sodium Selenite,Probiotics, Minerals [Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,L-Tryptophan,Taurine,DL-Methionine,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
             },
             {
                 "brandName": "Fromm",
@@ -24,35 +37,229 @@
                 "fiber": 5.5,
                 "moisture": 10,
                 "kcal": 377,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
+                "ingredients": "Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Brown Rice,White Rice,Dried Tomato Pomace,Whole Oats,Whole Barley,Menhaden Fish Meal,Chicken Liver,Dried Egg Product,Chicken Fat (preserved with mixed tocopherols),Potatoes,Cheese,Flaxseed,Salmon Oil (preserved with mixed tocopherols),Dried Yeast,Carrots,Salt,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Monosodium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Calcium Sulfate,Chicory Root Extract,Taurine, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,DL-Methionine,Sodium Selenite,L-Tryptophan,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Small Breed Adult Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 26,
+                "fat": 17,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 425,
+                "ingredients": "Chicken,Chicken Meal,Oatmeal,Pearled Barley,Chicken Broth,Brown Rice,Menhaden Fish Meal,Chicken Fat (preserved with mixed tocopherols),Dried Tomato Pomace,Dried Egg Product,Whole Oats,Salmon Oil (preserved with mixed tocopherols),Whole Barley,Dried Yeast,Chicken Liver,Cheese,Flaxseed,White Rice,Potatoes,Carrots,Salt,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Monosodium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Taurine,Chicory Root Extract, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Yucca Schidigera Extract,Sorbic Acid (Preservative),DL-Methionine,L-Tryptophan,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Weight Management Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 25,
+                "fat": 10,
+                "fiber": 10,
+                "moisture": 10,
+                "kcal": 334,
+                "ingredients": "Turkey Liver,Chicken Meal,Turkey Broth,Oatmeal,Pearled Barley,Menhaden Fish Meal,Whole Oats,Dried Tomato Pomace,Whitefish,Whole Barley,Brown Rice,Millet,White Rice,Oat Hulls,Flaxseed,Pea Fiber,Dried Yeast,Salmon Oil (preserved with mixed tocopherols),Chicken Fat (preserved with mixed tocopherols),Dried Egg Product,Potatoes,Salt,Sweet Potatoes,Carrots,Celery,Cheese,Alfalfa Meal, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Taurine,Chicory Root Extract,Sorbic Acid (Preservative),Monosodium Phosphate, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Yucca Schidigera Extract,L-Carnitine,DL-Methionine,L-Tryptophan,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Large Breed Weight Management Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 24,
+                "fat": 10,
+                "fiber": 10,
+                "moisture": 10,
+                "kcal": 315,
+                "ingredients": "Turkey Liver,Turkey Broth,Chicken Meal,Oatmeal,Pearled Barley,Dried Tomato Pomace,Brown Rice,White Rice,Whitefish,Menhaden Fish Meal,Whole Oats,Whole Barley,Millet,Flaxseed,Dried Egg Product,Chicken Fat (preserved with mixed tocopherols),Salmon Oil (preserved with mixed tocopherols),Miscanthus Grass,Oat Hulls,Potatoes,Dried Yeast,Cheese,Carrots,Sweet Potatoes,Celery,Salt, Vitamins [Potassium Chloride, Choline Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Taurine,Chicory Root Extract,Alfalfa Meal,Sorbic Acid (Preservative),Calcium Sulfate, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Chicken Cartilage,L-Carnitine,Yucca Schidigera Extract,Sodium Selenite,L-Tryptophan,DL-Methionine,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Reduced Activity & Senior Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 23,
+                "fat": 11,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 368,
+                "ingredients": "Chicken,Chicken Meal,Chicken Broth,Oat Groats,Pearled Barley,Brown Rice,Potatoes,Millet,Dried Tomato Pomace,Menhaden Fish Meal,Whole Oats,Chicken Liver,White Rice,Whole Barley,Salmon Oil (preserved with mixed tocopherols),Chicken Fat (preserved with mixed tocopherols),Dried Yeast,Cheese,Flaxseed,Dried Egg Product,Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal,Chicken Cartilage,Monosodium Phosphate, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Chicory Root Extract,Yucca Schidigera Extract, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Taurine,L-Tryptophan,DL-Methionine,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Puppy Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 27,
+                "fat": 18,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 420,
+                "ingredients": "Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Menhaden Fish Meal,Brown Rice,Chicken Fat (preserved with mixed tocopherols),Dried Tomato Pomace,Potatoes,Dried Egg Product,Whole Oats,Salmon Oil (preserved with mixed tocopherols),Dried Yeast,Whole Barley,Chicken Liver,Cheese,Flaxseed,Carrots,Duck,Lamb,Sweet Potatoes,Salt,Celery,Alfalfa Meal, Vitamins [Choline Chloride, Potassium Chloride, Vitamin E Supplement, Calcium Carbonate, Ascorbic Acid, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Monosodium Phosphate,DL-Methionine,Chicory Root Extract,Taurine, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Chicken Cartilage,Sorbic Acid (Preservative),L-Tryptophan,Yucca Schidigera Extract,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
+            },
+            {
+                "brandName": "Fromm",
+                "name": "Large Breed Puppy Gold",
+                "type": "dog",
+                "grainStatus": "grain",
+                "protein": 26,
+                "fat": 14,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 384,
+                "ingredients": "Chicken,Chicken Meal,Chicken Broth,Oatmeal,Pearled Barley,Brown Rice,Potatoes,Menhaden Fish Meal,Dried Tomato Pomace,Chicken Fat (preserved with mixed tocopherols),Dried Egg Product,Chicken Liver,Whole Oats,Dried Yeast,Flaxseed,Whole Barley,Cheese,Salmon Oil (preserved with mixed tocopherols),Salt,Carrots,Duck,Lamb,Sweet Potatoes,Celery,Alfalfa Meal, Vitamins [Potassium Chloride, Vitamin E Supplement, Ascorbic Acid, Calcium Carbonate, Riboflavin Supplement, Niacin Supplement, Calcium Pantothenate, Vitamin A Supplement, Vitamin D3 Supplement, Pyridoxine Hydrochloride, Biotin, Vitamin B12 Supplement, Thiamine Mononitrate, Folic Acid],Monosodium Phosphate,DL-Methionine,Chicory Root Extract,Calcium Sulfate,Taurine,Choline Chloride,Chicken Cartilage, Minerals [Zinc Sulfate, Manganese Sulfate, Ferrous Sulfate, Magnesium Sulfate, Zinc Proteinate, Ferrous Proteinate, Manganese Proteinate, Copper Sulfate, Magnesium Proteinate, Copper Proteinate, Calcium Iodate], Sorbic Acid (Preservative),Yucca Schidigera Extract,L-Tryptophan,Sodium Selenite,Dried Lactobacillus paracasei Fermentation Product,Dried Lactobacillus reuteri Fermentation Product,Dried Lactobacillus acidophilus Fermentation Product,Dried Lactobacillus plantarum Fermentation Product"
             }
         ]
     },
     
     {
-        "brandName": "Royal Canin",
+        "brandName": "Zignature",
         "products": [
             {
-                "brandName":"Royal Canin",
-                "name": "Test dog",
-                "protein": 35,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
-
-            },
-            {
-                "brandName":"Royal Canin",
-                "name": "Test Two dog",
+                "brandName": "Zignature",
+                "name": "Pork Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
                 "protein": 30,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
-
-                
+                "fat": 15,
+                "fiber": 4,
+                "moisture": 10,
+                "kcal": 405,
+                "ingredients": "Pork, Pork Meal, Peas, Pea Flour, Chickpeas, Pork Fat (Preserved With Mixed Tocopherols), Natural Flavor, Flaxseed, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Potassium Chloride, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Taurine, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
             },
             {
-                "brandName":"Royal Canin",
-                "name": "Test Three dog",
-                "protein": 35,
-                "ingredients": "Chicken, chicken meal, chicken broth, oatmeal, pearled barley, brown rice, white rice, dried tomato pomace, whole oats, whole barley, menhaden fish meal, chicken liver, dried egg product, chicken fat (preserved with mixed tocopherols), potatoes, cheese, flaxseed, salmon oil (preserved with mixed tocopherols), dried yeast, carrots, salt, duck, lamb, sweet potatoes, celery, alfalfa meal, monosodium phosphate, Vitamins [choline chloride, potassium chloride, Vitamin E supplement, ascorbic acid, calcium carbonate, riboflavin supplement, niacin supplement, calcium pantothenate, Vitamin A supplement, Vitamin D3 supplement, pyridoxine hydrochloride, biotin, Vitamin B12 supplement, thiamine mononitrate, folic acid], calcium sulfate, chicory root extract, taurine, Minerals [zinc sulfate, manganese sulfate, ferrous sulfate, magnesium sulfate, zinc proteinate, ferrous proteinate, manganese proteinate, copper sulfate, magnesium proteinate, copper proteinate, calcium iodate], sorbic acid (preservative), yucca schidigera extract, dl-methionine, sodium selenite, l-tryptophan, dried Lactobacillus paracasei fermentation product, dried Lactobacillus reuteri fermentation product, dried Lactobacillus acidophilus fermentation product, dried Lactobacillus plantarum fermentation product."
-
+                "brandName": "Zignature",
+                "name": "Goat Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 26,
+                "fat": 10,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 385,
+                "ingredients": "Goat, Goat Meal, Peas, Pea Flour, Chickpeas, Sunflower Oil, Natural Flavor, Flaxseed, Dehydrated Alfalfa Meal, Dicalcium Phosphate, Calcium Carbonate, Salt, Potassium Chloride, Choline Chloride, Taurine, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Salmon Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 29,
+                "fat": 14.5,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 405,
+                "ingredients": "Salmon, Salmon Meal, Peas, Pea Flour, Chickpeas, Sunflower Oil, Flaxseed, Dehydrated Alfalfa Meal, Natural Flavor, Dicalcium Phosphate, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Potassium Chloride, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Catfish Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 30.5,
+                "fat": 13,
+                "fiber": 4.5,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Catfish, Catfish Meal, Peas, Pea Flour, Chickpeas, Sunflower Oil, Natural Flavor, Flaxseed, Salt, Calcium Carbonate, Choline Chloride, Tricalcium Phosphate, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Taurine, Potassium Chloride, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Venison Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 28,
+                "fat": 13,
+                "fiber": 6,
+                "moisture": 10,
+                "kcal": 385,
+                "ingredients": "Venison, Venison Meal, Chickpeas, Peas, Chickpea Flour, Natural Flavor, Sunflower Oil, Flaxseed, Dehydrated Alfalfa Meal, Salt, Choline Chloride, Dicalcium Phosphate, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols (Preservative), Potassium Chloride, L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Kangaroo Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 26.5,
+                "fat": 13,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Kangaroo, Kangaroo Meal, Peas, Pea Flour, Chickpeas, Sunflower Oil, Flaxseed, Dehydrated Alfalfa Meal, Lentils, Natural Flavor, Pea Protein, Calcium Carbonate, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Potassium Chloride, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Whitefish Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 28.5,
+                "fat": 13,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Whitefish, Whitefish Meal, Peas, Pea Flour, Chickpeas, Sunflower Oil, Flaxseed, Dehydrated Alfalfa Meal, Natural Flavor, Salt, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Choline Chloride, Potassium Chloride, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Zssential Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 32,
+                "fat": 17,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 405,
+                "ingredients": "Turkey, Turkey Meal, Salmon, Lamb Meal, Chickpeas, Peas, Chickpea Flour, Pea Flour, Duck Meal, Flaxseed, Dehydrated Alfalfa Meal, Turkey Fat (Preserved With Mixed Tocopherols), Natural Flavor, Salt, Potassium Chloride, Dicalcium Phosphate, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Salmon Oil, Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols, Choline Chloride, L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtillis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Duck Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 29.5,
+                "fat": 13.5,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Duck, Duck Meal, Chickpeas, Peas, Chickpea Flour, Sunflower Oil, Natural Flavor, Flaxseed, Dehydrated Alfalfa Meal, Dicalcium Phosphate, Salt, Choline Chloride, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Potassium Chloride, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Marine Microalgae Oil, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Lamb Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 28.5,
+                "fat": 15,
+                "fiber": 5.5,
+                "moisture": 10,
+                "kcal": 405,
+                "ingredients": "Lamb, Lamb Meal, Chickpeas, Peas, Flaxseed, Sunflower Oil, Natural Flavor, Dehydrated Alfalfa Meal, Salt, Choline Chloride, Potassium Chloride, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Marine Microalgae Oil, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Turkey Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 32,
+                "fat": 14.5,
+                "fiber": 4,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Turkey, Turkey Meal, Chickpeas, Peas, Flaxseed, Natural Flavor, Turkey Fat (Preserved With Mixed Tocopherols), Dicalcium Phosphate, Salt, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Vitamin D3 Supplement, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Potassium Chloride, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Marine Microalgae Oil, Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtillis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
+            },
+            {
+                "brandName": "Zignature",
+                "name": "Trout & Salmon Meal Formula",
+                "type": "dog",
+                "grainStatus": "grain free",
+                "protein": 31,
+                "fat": 14,
+                "fiber": 5,
+                "moisture": 10,
+                "kcal": 395,
+                "ingredients": "Trout, Salmon Meal, Chickpeas, Peas, Sunflower Oil, Dehydrated Alfalfa Meal, Natural Flavor, Salmon Oil, Flaxseed, Potassium Chloride, Calcium Carbonate, Tricalcium Phosphate, Choline Chloride, Salt, Vitamins (Vitamin E Supplement, Vitamin a Supplement, Niacinamide, D-calcium Pantothenate, Riboflavin, Thiamine Mononitrate, Vitamin B12 Supplement, Pyridoxine Hydrochloride, Folic Acid, Biotin), Taurine, Minerals (Zinc Proteinate, Iron Proteinate, Copper Proteinate, Sodium Selenite, Manganese Proteinate, Calcium Iodate), Mixed Tocopherols (Preservative), L-carnitine, Rosemary Extract, Dried Bacillus Coagulans Fermentation Product, Dried Bacillus Subtilis Fermentation Product, Dried Bifidobacterium Bifidum Fermentation Product."
             }
         ]
     }

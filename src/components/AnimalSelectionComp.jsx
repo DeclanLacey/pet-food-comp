@@ -3,7 +3,10 @@ import React, {useContext } from "react";
 import {useNavigate} from 'react-router-dom';
 import "../style/animalSelectionComp.css"
 
+
 function AnimalSelectionComp() {
+    
+    window.scrollTo(0, 0);
 
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
     const navigate = useNavigate();

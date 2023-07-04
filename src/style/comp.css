@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 30px;
 }
 
 
@@ -66,3 +67,45 @@
     height: 80px;
     
 }
+
+/* ///////////////// Arrow button styling //////////////// */
+
+
+.arrow-container {
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 60px;
+    position: absolute;
+  }
+  
+  .arrow-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    background: transparent;
+    border: 0;
+    border-left: 10px groove #a22c29;
+    border-bottom: 10px groove #a22c29;
+    cursor: pointer;
+  }
+  .arrow-button:before {
+    position: absolute;
+    left: 0;
+    top: calc(20px - 3px * 1.5);
+    clip-path: polygon(0 50%, calc(10px / 2) 0, 100% 0, 100% 100%, calc(10px / 2) 100%);
+    width: calc(30px * 1.2);
+    height: 0;
+    border-top: 10px groove #a22c29;
+    transform-origin: 0 50%;
+    transform: rotate(-45deg);
+    content: '';
+  }
+  
+  button:hover  { opacity: 0.75;}
+  button:active { opacity: 0.5; }
+  
+  .left  { transform: rotate(  45deg); }

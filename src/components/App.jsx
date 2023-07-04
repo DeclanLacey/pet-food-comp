@@ -57,9 +57,9 @@ function App() {
 
             <div className="nav-container" id="nav">
                 <div className="regular-navbar" >
-                    <Link className="nav-item" to="/"> Home </Link>
-                    <Link className="nav-item" to="/animal-selection-comp"> Comparison </Link>
-                    <Link className="nav-item" to="/animal-selection-catalog"> Catalog </Link>
+                    <Link className="nav-item" to="/">Home</Link>
+                    <Link className="nav-item" to="/animal-selection-comp">Comparison</Link>
+                    <Link className="nav-item" to="/animal-selection-catalog">Catalog</Link>
                 </div>
 
                 <div className="navbar">
@@ -71,9 +71,9 @@ function App() {
                             <span className="line line3"></span>
                         </div>  
                         <div className="menu-items">
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/"> Home </Link>
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-comp"> Comparison </Link>
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-catalog"> Catalog </Link>
+                            <Link onClick={closeBurgerMenu} className="nav-item" to="/">Home</Link>
+                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-comp">Comparison</Link>
+                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-catalog">Catalog</Link>
                         </div>
                     </div>
                 </div>
