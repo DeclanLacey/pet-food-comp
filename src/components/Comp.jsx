@@ -108,10 +108,10 @@ function Comp() {
 
                     <div className="symbol-container">
                         {
-                            grainStatusOne === "grain" ? <img src="src\assets\grain-in.png" /> :<img src="src\assets\grain-free.png" />
+                            grainStatusOne === "grain" ? <img src="grain-in.png" /> :<img src="grain-free.png" />
                         }
                         {
-                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
+                            animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
                         }
                     </div>
                 </div>
@@ -119,11 +119,11 @@ function Comp() {
                     <div className="daily-values">
                         <h2 className="daily-values-heading heading">Daily Values</h2>
                         <div className="calories">
-                            <div className="heading">Calories</div>
+                            <div className="heading" id="calories-heading">Calories</div>
                             <div className="amount-per-serving">
                                 <span className="attribute">Amount Per Serving</span>
                                 {/* Place calorie count here */}
-                                <span className="value">{kcalOne}kcal/cup</span>
+                                <span className="value" id="calories-value">{kcalOne}kcal/cup</span>
                             </div>
                         </div>
                         <div className="percent-daily-value-note">% Value</div>
@@ -210,10 +210,10 @@ function Comp() {
                     
                     <div className="symbol-container">
                         {
-                            grainStatusTwo === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
+                            grainStatusTwo === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
                         }
                         {
-                            animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
+                            animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
                         }
                     </div>
                 </div>
@@ -222,11 +222,11 @@ function Comp() {
                     <div className="daily-values">
                         <h2 className="daily-values-heading heading">Daily Values</h2>
                         <div className="calories">
-                            <div className="heading">Calories</div>
+                            <div className="heading" id="calories-heading">Calories</div>
                             <div className="amount-per-serving">
                                 <span className="attribute">Amount Per Serving</span>
                                 {/* Place calorie count here */}
-                                <span className="value"> {kcalTwo}kcal/cup</span>
+                                <span id="calories-value" className="value "> {kcalTwo}kcal/cup</span>
                             </div>
                         </div>
                         <div className="percent-daily-value-note">% Value</div>

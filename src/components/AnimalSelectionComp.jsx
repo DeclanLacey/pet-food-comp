@@ -17,11 +17,9 @@ function AnimalSelectionComp() {
         navigate("/search-form")
     }
 
-  
-
     return(
         <div className="food-comp-selection-container">
-                <h1 className="food-comp-selection-title"> Head to head comparison </h1>
+                <h1 className="food-comp-selection-title"> Head to head pet food comparison </h1>
                 <h3 className="form-selection-subtitle"> What kind of animal do you have?</h3>
                 <p className="form-selection-subtitle-directions"> Please select below</p>
             <form className="form" onSubmit={handleSubmit} >
@@ -29,14 +27,14 @@ function AnimalSelectionComp() {
                     <div className="radio-container">
                         <input required type="radio" name="radioAnimalSelection" value="dog" className="radio-button" />
                         <label className="label-container">
-                            <img className="form-image" src="src\assets\dog.jpg" alt="cat-selection-picture" />
+                            <img className="form-image" src="dog-min.webp" alt="cat-selection-picture" />
                         </label>
                     </div>
                     
                     <div className="radio-container">
                         <input type="radio" name="radioAnimalSelection" value="cat" className="radio-button" />
                         <label className="label-container">
-                            <img className="form-image" src="src\assets\cat.jpg" alt="dog-selection-picture"/>
+                            <img className="form-image" src="cat-min.webp" alt="dog-selection-picture"/>
                         </label>
                     </div>
                 </div>

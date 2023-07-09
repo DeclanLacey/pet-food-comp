@@ -3,7 +3,6 @@ import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
 import {useNavigate} from 'react-router-dom';
-
 import "../style/catalog.css"
 
 
@@ -11,6 +10,7 @@ import "../style/catalog.css"
 /////////// Initializing variables upon page load
 let foodData = null
 let combinedBrands = []
+let combinedBrandsFood = []
 let sortedBrands = null
 
 function Catalog() {
@@ -38,11 +38,30 @@ function Catalog() {
                 combinedBrands.push(product)
             }
         })
+        combinedBrands.map((food, index) => {
+            const ingredients = food.ingredients
+            food.ingredients = ingredients.toString().split(",")            
+        })
     }
     ////////// Making sure food data is a truthy value before the above function is ran
     if (foodData) {
         combineFoodBrands()
     }
+
+    function createAnchorTags(ingredients) {
+        const anchorTags = []
+        for (let i = 0; i < ingredients.length; i++) {
+            const link = `https://www.google.com/search?q=${ingredients[i]}`
+            if (i + 2 > ingredients.length) {
+                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}. </a>)
+            }else {
+                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}, </a>)
+            }
+        }
+        return anchorTags
+    }
+
+    
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -100,10 +119,10 @@ function Catalog() {
                             
                             <div className="symbol-container">
                                 {
-                                    grainStatus === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
+                                    grainStatus === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
                                 }
                                 {
-                                    animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
+                                    animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
                                 }
                             </div>
                         </div>
@@ -111,11 +130,11 @@ function Catalog() {
                             <div className="daily-values">
                                 <h2 className="daily-values-heading heading">Daily Values</h2>
                                 <div className="calories">
-                                    <div className="heading">Calories</div>
+                                    <div className="heading" id="calories-heading">Calories</div>
                                     <div className="amount-per-serving">
                                         <span className="attribute">Amount Per Serving</span>
                                         {/* Place calorie count here */}
-                                        <span className="value"> {kcal}kcal/cup</span>
+                                        <span className="value" id="calories-value"> {kcal}kcal/cup</span>
                                     </div>
                                 </div>
                                 <div className="percent-daily-value-note">% Value</div>
@@ -178,7 +197,9 @@ function Catalog() {
                             </div>
                         </div>
                         <div>
-                            <div className="daily-value-note"> {ingredients} </div>
+                            <div className="daily-value-note"> 
+                                {createAnchorTags(ingredients)}
+                            </div>
                             
                         </div>
                     </div>                
@@ -194,7 +215,7 @@ function Catalog() {
         const brandName = brand.brandName
         function mapProducts() {
             const products = productsList.map((product, index) => {
-                const {name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product                
+                const {name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product              
                 return (
                         <div className="label-one-container" key={index}>
                             
@@ -209,10 +230,10 @@ function Catalog() {
                                 
                                 <div className="symbol-container">
                                     {
-                                        grainStatus === "grain" ? <img src="src\assets\grain-in.png" /> : <img src="src\assets\grain-free.png" />
+                                        grainStatus === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
                                     }
                                     {
-                                        animalSelection === "dog" ? <img src="src\assets\dog-cartoon.png" /> : <img src="src\assets\cat-cartoon.png" />
+                                        animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
                                     }
                                 </div>
                             </div>
@@ -220,11 +241,11 @@ function Catalog() {
                                 <div className="daily-values">
                                     <h2 className="daily-values-heading heading">Daily Values</h2>
                                     <div className="calories">
-                                        <div className="heading">Calories</div>
+                                        <div className="heading" id="calories-heading">Calories</div>
                                         <div className="amount-per-serving">
                                             <span className="attribute">Amount Per Serving</span>
                                             {/* Place calorie count here */}
-                                            <span className="value"> {kcal}kcal/cup</span>
+                                            <span className="value" id="calories-value"> {kcal}kcal/cup</span>
                                         </div>
                                     </div>
                                     <div className="percent-daily-value-note">% Value</div>
@@ -287,7 +308,9 @@ function Catalog() {
                                 </div>
                             </div>
                             <div>
-                                <div className="daily-value-note"> {ingredients} </div>
+                                <div className="daily-value-note"> 
+                                    {createAnchorTags(ingredients)}
+                                </div>
                             </div>
                         </div>
                 )

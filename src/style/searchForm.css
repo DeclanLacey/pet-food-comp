@@ -169,3 +169,19 @@
         font-size: 1.7em;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .compare-btn {
+        font-size: 18px;
+        height: 40px;
+        width: 170px;
+    }
+    
+    .form-input {
+        width: 280px;
+    }
+
+    .form-sub-label {
+        font-size: 13px;
+    }
+}

@@ -28,14 +28,14 @@ function AnimalSelectionCatalog() {
                 <div className="radio-container">
                     <input required type="radio" name="radioAnimalSelection" value="dog" className="radio-button" />
                     <label className="label-container">
-                        <img className="form-image" src="src\assets\dog.jpg" alt="cat-selection-picture" />
+                        <img className="form-image" src="dog-min.webp" alt="cat-selection-picture" />
                     </label>
                 </div>
                 
                 <div className="radio-container">
                     <input type="radio" name="radioAnimalSelection" value="cat" className="radio-button" />
                     <label className="label-container">
-                        <img className="form-image" src="src\assets\cat.jpg" alt="dog-selection-picture"/>
+                        <img className="form-image" src="cat-min.webp" alt="dog-selection-picture"/>
                     </label>
                 </div>
             </div>

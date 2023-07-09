@@ -141,6 +141,7 @@ body {
 
 /* /////////////////// Food Info container styling ///////////////// */
 
+
 .comp-page-container {
     padding-top: 80px;
 }
@@ -154,6 +155,12 @@ body {
 .formulaName {
   margin-top: 10px;
   font-weight: 400;
+  max-width: 300px;
+}
+
+.ingredient-link {
+  color: white;
+  text-decoration: none;
 }
 
 .label-one-container {
@@ -260,11 +267,13 @@ body {
     /* Layout */
     display: flex;
     white-space: nowrap;
+    font-size: 1.3em;
   }
   .daily-values .percent-daily-value,
   .nutrients-declaration-requirement .percent-daily-value {
     /* Layout */
     text-align: right;
+    font-size: 1.3em;
   }
   .daily-values .amount-per-serving,
   .nutrients-declaration-requirement .amount-per-serving {
@@ -373,6 +382,8 @@ body {
     /* Layout */
     order: 1;
   }
+
+  
   
   .percent-daily-value-note {
     /* Layout */
@@ -424,5 +435,32 @@ body {
     font-size: 2.5em;
     font-weight: bold;
   }
+
+  #calories-value {
+    font-size: 2.2em;
+  }
+  
+  #calories-heading {
+    font-size: 2.2em
+  }
+  
   
 
+@media screen and (max-width: 550px) {
+  .label-one-container {
+    min-width: 320px;
+    max-width: 360px;
+    font-size: .8em;
+    min-height: 600px;
+  }
+  .label-two-container {
+    min-width: 320px;
+    max-width: 360px;
+    font-size: .8em;
+    min-height: 600px;
+  }
+
+  .formulaName {
+    max-width: 240px;
+  }
+}
