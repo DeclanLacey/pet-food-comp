@@ -1,7 +1,8 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect} from "react";
 import { FoodContext } from "../context/foodContext";
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
 import {useNavigate} from 'react-router-dom';
+import { DarkModeContext } from "../context/darkModeContext";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import "../style/comp.css"
@@ -16,6 +17,21 @@ function Comp() {
     const navigate = useNavigate();
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
+    const {darkModeStatus, setDarkModeStatus} = useContext(DarkModeContext)
+
+    useEffect(() => {
+        const ingredientsEl = document.querySelectorAll(".ingredient-link")
+        if(!darkModeStatus) {
+            ingredientsEl.forEach((el) => {
+                el.classList.remove("ingredients-dark-mode")
+            })
+        }else {
+            ingredientsEl.forEach((el) => {
+                el.classList.add("ingredients-dark-mode")
+            })
+        }
+    }, []) 
+
     if (animalSelection === "cat") {
         foodData = catFoodData
     }else if (animalSelection === "dog") {
@@ -25,66 +41,40 @@ function Comp() {
     
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
-        )[0];
-        let brandOneProducts = brandOne.products;
-        let productOneData = brandOneProducts
-        ? Object.values(brandOneProducts).filter(
-            (food) => food["name"] === foodSelection.formulaOne
-            )[0]
-        : {};
-    const {name: nameOne, grainStatus: grainStatusOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
-    const ingredientsOneFirstHalf = ingredientsOne.slice(0, ingredientsOne.length/2)
-    const ingredientsOneSecondHalf = ingredientsOne.slice(ingredientsOne.length/ 2, ingredientsOne.length)
+    )[0];
+    let brandOneProducts = brandOne.products;
+    let productOneData = brandOneProducts ? Object.values(brandOneProducts).filter(
+        (food) => food["name"] === foodSelection.formulaOne
+    )[0] : {};
+    let {name: nameOne, grainStatus: grainStatusOne, protein: proteinOne, fat: fatOne, fiber: fiberOne, moisture: moistureOne, kcal: kcalOne, ingredients: ingredientsOne} = productOneData
+    ingredientsOne = ingredientsOne.toString().split(",")
 
 
     let brandTwo = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandTwo
-        )[0];
-        let brandTwoProducts = brandTwo.products;
-        let productTwoData = brandTwoProducts
-        ? Object.values(brandTwoProducts).filter(
-            (food) => food["name"] === foodSelection.formulaTwo
-            )[0]
-        : {};
-    const {name: nameTwo, grainStatus: grainStatusTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
-    const ingredientsTwoFirstHalf = ingredientsTwo.slice(0, ingredientsTwo.length/2)
-    const ingredientsTwoSecondHalf = ingredientsTwo.slice(ingredientsTwo.length/ 2, ingredientsTwo.length)
-
-
-    function hideOrShowIngredientsOne() {
-        let dots = document.getElementById("dotsOne");
-        let moreText = document.getElementById("moreOne");
-        let btnText = document.getElementById("showMoreBtnOne");
-      
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Show more";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Show less";
-          moreText.style.display = "inline";
-        }
-    }
-
-    function hideOrShowIngredientsTwo() {
-        let dots = document.getElementById("dotsTwo");
-        let moreText = document.getElementById("moreTwo");
-        let btnText = document.getElementById("showMoreBtnTwo");
-      
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Show more";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Show less";
-          moreText.style.display = "inline";
-        }
-    }
+    )[0];
+    let brandTwoProducts = brandTwo.products;
+    let productTwoData = brandTwoProducts? Object.values(brandTwoProducts).filter(
+        (food) => food["name"] === foodSelection.formulaTwo
+    )[0] : {};
+    let {name: nameTwo, grainStatus: grainStatusTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
+    ingredientsTwo = ingredientsTwo.toString().split(",")
 
     function goBackOnePage() {
         navigate(-1)
+    }
+
+    function createAnchorTags(ingredients) {
+        const anchorTags = []
+        for (let i = 0; i < ingredients.length; i++) {
+            const link = `https://www.google.com/search?q=${ingredients[i]}`
+            if (i + 2 > ingredients.length) {
+                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}. </a>)
+            }else {
+                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}, </a>)
+            }
+        }
+        return anchorTags
     }
 
     return (
@@ -188,9 +178,8 @@ function Comp() {
                 <div>
                     {/* place ingredients here */}
                     <div className="daily-value-note"> 
-                        {ingredientsOneFirstHalf} <span id="dotsOne"> ...</span> <span id="moreOne"> {ingredientsOneSecondHalf} </span>
+                        {createAnchorTags(ingredientsOne)}
                     </div>
-                    <button onClick={hideOrShowIngredientsOne} id="showMoreBtnOne"> Show More </button>
                 </div>
             </div>
 
@@ -290,9 +279,8 @@ function Comp() {
                 </div>
                 <div>
                     <div className="daily-value-note"> 
-                        {ingredientsTwoFirstHalf} <span id="dotsTwo"> ...</span> <span id="moreTwo"> {ingredientsTwoSecondHalf} </span>
+                        {createAnchorTags(ingredientsTwo)}
                     </div>
-                    <button onClick={hideOrShowIngredientsTwo} id="showMoreBtnTwo"> Show More </button>
                 </div>
             </div>
         </div>

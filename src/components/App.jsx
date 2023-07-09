@@ -18,6 +18,8 @@ function App() {
         const navigationEl = document.getElementById("nav")
         const navItemsEl = document.querySelectorAll(".nav-item")
         const footerEl = document.getElementById("footer")
+        const ingredientsEl = document.querySelectorAll(".ingredient-link")
+
 
         if(darkModeStatus) {
             document.getElementById("dark-mode-checkbox").checked = true
@@ -29,6 +31,9 @@ function App() {
             navItemsEl.forEach((el) => {
                 el.classList.remove("nav-item-dark-mode")
             })
+            ingredientsEl.forEach((el) => {
+                el.classList.remove("ingredients-dark-mode")
+            })
             footerEl.classList.remove("footer-container-dark-mode")
             
         }else {
@@ -36,6 +41,9 @@ function App() {
             navigationEl.classList.add("nav-container-dark-mode")
             navItemsEl.forEach((el) => {
                 el.classList.add("nav-item-dark-mode")
+            })
+            ingredientsEl.forEach((el) => {
+                el.classList.add("ingredients-dark-mode")
             })
             footerEl.classList.add("footer-container-dark-mode")
         }

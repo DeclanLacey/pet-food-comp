@@ -15,7 +15,9 @@
   height: 80px;
 }
 
-
+.ingredients-dark-mode {
+  color: white;
+}
 
 .catalog-form-selection-container select {
   margin-left: 15px;

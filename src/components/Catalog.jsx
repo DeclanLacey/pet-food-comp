@@ -1,8 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
 import {useNavigate} from 'react-router-dom';
+import { DarkModeContext } from "../context/darkModeContext";
 import "../style/catalog.css"
 
 
@@ -20,8 +21,23 @@ function Catalog() {
     const navigate = useNavigate()
     const [formSelection, setFormSelection] = useState(null)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
+    const {darkModeStatus, setDarkModeStatus} = useContext(DarkModeContext)
     foodData = null
     combinedBrands = []
+
+    useEffect(() => {
+        const ingredientsEl = document.querySelectorAll(".ingredient-link")
+        if(!darkModeStatus) {
+            ingredientsEl.forEach((el) => {
+                el.classList.remove("ingredients-dark-mode")
+            })
+        }else {
+            ingredientsEl.forEach((el) => {
+                el.classList.add("ingredients-dark-mode")
+            })
+        }
+    }, []) 
+
 
 /////////// This is setting the data to the correct data based on the animalSelection context
     if(animalSelection === "dog") {
