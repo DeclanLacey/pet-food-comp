@@ -180,6 +180,8 @@ function Comp() {
                     <div className="daily-value-note"> 
                         {createAnchorTags(ingredientsOne)}
                     </div>
+                    <p className="ingredients-instructions"> *Click any ingredient for more information</p>
+
                 </div>
             </div>
 
@@ -281,6 +283,8 @@ function Comp() {
                     <div className="daily-value-note"> 
                         {createAnchorTags(ingredientsTwo)}
                     </div>
+                    <p className="ingredients-instructions"> *Click any ingredient for more information</p>
+
                 </div>
             </div>
         </div>

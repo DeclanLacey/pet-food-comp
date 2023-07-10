@@ -13,13 +13,14 @@
   align-items: center;
   gap: 30px;
   height: 80px;
+  
 }
 
 .ingredients-dark-mode {
   color: white;
 }
 
-.catalog-form-selection-container select {
+.catalog-select {
   margin-left: 15px;
   height: 40px;
   width: 100px;
@@ -30,6 +31,11 @@
 
 .catalog-form-selection-container {
   font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
 }
 
 .catalog-submit-btn {
@@ -73,8 +79,13 @@
   align-items: center;
 }
 
+.wide-select {
+  width: 180px;
+}
+
+
 @media screen and (max-width: 550px) {
-  .catalog-form-selection-container select {
+  .catalog-select {
     width: 80px;
   }
 
@@ -90,5 +101,9 @@
 
   .catalog-form {
     gap: 15px;
+  }
+
+  .wide-select {
+    width: 130px;
   }
 }

@@ -395,6 +395,10 @@ body {
     font-size: 1.1em;
   }
 
+  .ingredients-instructions {
+    font-size: .85em;
+    margin-bottom: 0px;
+  }
   
   .ingredients-dark-mode {
     color: white !important;

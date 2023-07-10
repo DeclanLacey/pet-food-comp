@@ -36,7 +36,7 @@ function Catalog() {
                 el.classList.add("ingredients-dark-mode")
             })
         }
-    }, []) 
+    }) 
 
 
 /////////// This is setting the data to the correct data based on the animalSelection context
@@ -77,29 +77,9 @@ function Catalog() {
         return anchorTags
     }
 
-    
-
-////////////////////////////////////////////////////////////////////////////////////////////
-
-    function hideOrShowIngredients() {
-        let dots = document.getElementById("dots");
-        let moreText = document.getElementById("more");
-        let btnText = document.getElementById("showMoreBtn");
-    
-        if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Show more";
-        moreText.style.display = "none";
-        } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Show less";
-        moreText.style.display = "inline";
-        }
-    }
-
 
 ////////// This function renders the sorted data based on the selection made
-    function renderSortedData(selectedAnswerOne, selectedAnswerTwo) {
+    function renderSortedData(selectedAnswerOne, selectedAnswerTwo, selectedAnswerThree) {
         function sortJSON(arr, key, asc=true) {
             return arr.sort((a, b) => {
                 let x = a[key];
@@ -118,6 +98,17 @@ function Catalog() {
 
         ///// Output of sorted products
         let output = sortJSON(combinedBrands, selectedAnswerOne, selectedAnswerTwo)
+
+
+        
+        output = output.map((food, index) => {
+            if (food.ingredients.includes(selectedAnswerThree)) {
+
+            }else {
+                return food
+            }
+        })
+        output = output.filter(food => food != undefined)
 
     
         sortedBrands = output.map((product, index) => {
@@ -216,6 +207,8 @@ function Catalog() {
                             <div className="daily-value-note"> 
                                 {createAnchorTags(ingredients)}
                             </div>
+                            <p className="ingredients-instructions"> *Click any ingredient for more information</p>
+
                             
                         </div>
                     </div>                
@@ -327,6 +320,7 @@ function Catalog() {
                                 <div className="daily-value-note"> 
                                     {createAnchorTags(ingredients)}
                                 </div>
+                                <p className="ingredients-instructions"> *Click any ingredient for more information</p>
                             </div>
                         </div>
                 )
@@ -349,13 +343,15 @@ function Catalog() {
         event.preventDefault();
         const selectionOne = event.target.selectionOne.value 
         const selectionTwo = event.target.selectionTwo.value
+        const selectionThree = event.target.selectionThree.value
 
         setFormSelection({
             formSelectionOne: selectionOne,
-            formSelectionTwo: selectionTwo
+            formSelectionTwo: selectionTwo,
+            formSelectionThree: selectionThree
         })
 
-        renderSortedData(selectionOne, selectionTwo)
+        renderSortedData(selectionOne, selectionTwo, selectionThree)
     }
 
     function goBackOnePage() {
@@ -371,20 +367,35 @@ function Catalog() {
             <div>
                 <form onSubmit={handleSubmit} className="catalog-form" >
                     <div className="catalog-form-selection-container">
-                        <label> Sort by: </label>
-                        <select required name="selectionOne" className="catalog-select">
-                            <option value="" > -- Select</option>
-                            <option value="kcal"> Kcal </option>
-                            <option value="protein"> Protein</option>
-                            <option value="fat"> Fat </option>
-                            <option value="fiber"> Fiber </option>
-                            <option value="moisture"> Moisture </option>
-                        </select>
-                        <select required name="selectionTwo" className="catalog-select">
-                            <option value="" > -- Select</option>
-                            <option value={false} > High - Low </option>
-                            <option value={true}> Low - High </option>
-                        </select>
+                        <div>
+                            <label> Sort by: </label>
+                            <select required name="selectionOne" className="catalog-select">
+                                <option value="" > -- Select</option>
+                                <option value="kcal"> Kcal </option>
+                                <option value="protein"> Protein</option>
+                                <option value="fat"> Fat </option>
+                                <option value="fiber"> Fiber </option>
+                                <option value="moisture"> Moisture </option>
+                            </select>
+                            <select required name="selectionTwo" className="catalog-select">
+                                <option value="" > -- Select</option>
+                                <option value={false} > High - Low </option>
+                                <option value={true}> Low - High </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label> Without: </label>
+                            <select name="selectionThree" className="catalog-select wide-select">
+                                <option value=""> -- Select </option>
+                                <option value="Chicken">Chicken</option>
+                                <option value="Beef">Beef</option>
+                                <option value="Lamb">Lamb</option>
+                                <option value="Pork">Pork</option>
+                                <option value="Salmon">Salmon</option>
+                                <option value="Trout">Trout</option>
+                                <option value="Whitefish">Whitefish</option>
+                            </select>
+                        </div>
                     </div>
                     <div className="catalog-form-submit-container">
                         <input type="submit" className="catalog-submit-btn"/>
