@@ -79,7 +79,7 @@ function Catalog() {
 
 
 ////////// This function renders the sorted data based on the selection made
-    function renderSortedData(selectedAnswerOne, selectedAnswerTwo, selectedAnswerThree) {
+    function renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection)  {
         function sortJSON(arr, key, asc=true) {
             return arr.sort((a, b) => {
                 let x = a[key];
@@ -90,27 +90,32 @@ function Catalog() {
         }
 
         ////// Making sure selectedAnswerTwo is converted to a boolean
-        if (selectedAnswerTwo === "true") {
-            selectedAnswerTwo = true
+        if (sortBySelectionOrder === "true") {
+            sortBySelectionOrder = true
         }else {
-            selectedAnswerTwo = false
+            sortBySelectionOrder = false
         }
 
         ///// Output of sorted products
-        let output = sortJSON(combinedBrands, selectedAnswerOne, selectedAnswerTwo)
+        let output = sortJSON(combinedBrands, sortBySelectionValue, sortBySelectionOrder)
 
 
         
         output = output.map((food, index) => {
-            if (food.ingredients.includes(selectedAnswerThree)) {
+            if (food.ingredients.includes(ingredientSelection)) {
 
             }else {
                 return food
             }
         })
         output = output.filter(food => food != undefined)
+        if (!grainStatusSelection) {
 
-    
+        }else {
+            output = output.filter(food => food.grainStatus === grainStatusSelection)
+        }
+        
+        
         sortedBrands = output.map((product, index) => {
             const {brandName, name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product
             return (
@@ -341,17 +346,19 @@ function Catalog() {
 ////////// Handles the submit of the sorting form
     function handleSubmit(event) {
         event.preventDefault();
-        const selectionOne = event.target.selectionOne.value 
-        const selectionTwo = event.target.selectionTwo.value
-        const selectionThree = event.target.selectionThree.value
+        const sortBySelectionValue = event.target.sortBySelectionValue.value 
+        const sortBySelectionOrder = event.target.sortBySelectionOrder.value
+        const ingredientSelection = event.target.ingredientSelection.value
+        const grainStatusSelection = event.target.grainStatusSelection.value
 
         setFormSelection({
-            formSelectionOne: selectionOne,
-            formSelectionTwo: selectionTwo,
-            formSelectionThree: selectionThree
+            sortBySelectionOne: sortBySelectionValue,
+            sortBySelectionTwo: sortBySelectionOrder,
+            ingredientSelection: ingredientSelection,
+            grainStatusSelection: grainStatusSelection
         })
 
-        renderSortedData(selectionOne, selectionTwo, selectionThree)
+        renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection )
     }
 
     function goBackOnePage() {
@@ -369,7 +376,7 @@ function Catalog() {
                     <div className="catalog-form-selection-container">
                         <div>
                             <label> Sort by: </label>
-                            <select required name="selectionOne" className="catalog-select">
+                            <select required name="sortBySelectionValue" className="catalog-select">
                                 <option value="" > -- Select</option>
                                 <option value="kcal"> Kcal </option>
                                 <option value="protein"> Protein</option>
@@ -377,7 +384,7 @@ function Catalog() {
                                 <option value="fiber"> Fiber </option>
                                 <option value="moisture"> Moisture </option>
                             </select>
-                            <select required name="selectionTwo" className="catalog-select">
+                            <select required name="sortBySelectionOrder" className="catalog-select">
                                 <option value="" > -- Select</option>
                                 <option value={false} > High - Low </option>
                                 <option value={true}> Low - High </option>
@@ -385,7 +392,7 @@ function Catalog() {
                         </div>
                         <div>
                             <label> Without: </label>
-                            <select name="selectionThree" className="catalog-select wide-select">
+                            <select name="ingredientSelection" className="catalog-select wide-select">
                                 <option value=""> -- Select </option>
                                 <option value="Chicken">Chicken</option>
                                 <option value="Beef">Beef</option>
@@ -395,6 +402,16 @@ function Catalog() {
                                 <option value="Trout">Trout</option>
                                 <option value="Whitefish">Whitefish</option>
                             </select>
+                        </div>
+                        <div>
+                            <label className="grain-status-checkbox-label">Grain</label>
+                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value="grain"/>
+
+                            <label className="grain-status-checkbox-label">Grain Free</label>
+                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value="grain free"/>
+                        
+                            <label>Both</label>
+                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value=""/>
                         </div>
                     </div>
                     <div className="catalog-form-submit-container">
