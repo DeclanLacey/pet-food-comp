@@ -29,6 +29,8 @@
   border-radius: 20px;
 }
 
+
+
 .catalog-form-selection-container {
   font-size: 1.3em;
   display: flex;
@@ -90,7 +92,6 @@
 .grain-status-checkbox {
   margin-right: 10px;
 }
-
 
 @media screen and (max-width: 550px) {
   .catalog-select {

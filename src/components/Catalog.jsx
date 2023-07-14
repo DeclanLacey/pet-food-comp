@@ -4,9 +4,8 @@ import catFoodData from "../data/catFood.json"
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
 import {useNavigate} from 'react-router-dom';
 import { DarkModeContext } from "../context/darkModeContext";
+import FoodLabel from "./foodlabel";
 import "../style/catalog.css"
-
-
 
 /////////// Initializing variables upon page load
 let foodData = null
@@ -17,7 +16,6 @@ let sortedBrands = null
 function Catalog() {
 
     window.scrollTo(0, 0);
-
     const navigate = useNavigate()
     const [formSelection, setFormSelection] = useState(null)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
@@ -25,6 +23,7 @@ function Catalog() {
     foodData = null
     combinedBrands = []
 
+    //// Making sure the dark mode is still in effect when the page is loaded
     useEffect(() => {
         const ingredientsEl = document.querySelectorAll(".ingredient-link")
         if(!darkModeStatus) {
@@ -39,14 +38,14 @@ function Catalog() {
     }) 
 
 
-/////////// This is setting the data to the correct data based on the animalSelection context
+    /////////// This is choosing the correct data based on the animalSelection context
     if(animalSelection === "dog") {
         foodData = dogFoodData
     }else if (animalSelection === "cat") {
         foodData = catFoodData
     }
 
-/////// This function combines all of the foods into one array so they can be sorted
+    /////// This function combines all of the foods into one array so they can be sorted
     function combineFoodBrands() {
         foodData.map((brand, index) => {
             const productsList = brand.products
@@ -64,21 +63,8 @@ function Catalog() {
         combineFoodBrands()
     }
 
-    function createAnchorTags(ingredients) {
-        const anchorTags = []
-        for (let i = 0; i < ingredients.length; i++) {
-            const link = `https://www.google.com/search?q=${ingredients[i]}`
-            if (i + 2 > ingredients.length) {
-                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}. </a>)
-            }else {
-                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}, </a>)
-            }
-        }
-        return anchorTags
-    }
 
-
-////////// This function renders the sorted data based on the selection made
+    ////////// This function renders the sorted data based on the selection made
     function renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection)  {
         function sortJSON(arr, key, asc=true) {
             return arr.sort((a, b) => {
@@ -88,7 +74,6 @@ function Catalog() {
                 else { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
             });
         }
-
         ////// Making sure selectedAnswerTwo is converted to a boolean
         if (sortBySelectionOrder === "true") {
             sortBySelectionOrder = true
@@ -96,11 +81,10 @@ function Catalog() {
             sortBySelectionOrder = false
         }
 
+
         ///// Output of sorted products
         let output = sortJSON(combinedBrands, sortBySelectionValue, sortBySelectionOrder)
-
-
-        
+        /// Changing the output depending on the selections made by the user in the form
         output = output.map((food, index) => {
             if (food.ingredients.includes(ingredientSelection)) {
 
@@ -116,114 +100,27 @@ function Catalog() {
         }
         
         
+        /// Mapping over the sorted brands to render them
         sortedBrands = output.map((product, index) => {
             const {brandName, name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product
             return (
-                    
-                    <div className="label-one-container" key={index}>
-                        <div className="name-symbol-container">
-                            <div className="label-names-container">
-                                <h1 className="main-heading heading brandName"> {brandName} </h1>
-                                {/* Place brand name above */}
-                                <h1 className="main-heading heading formulaName"> {name} </h1>
-                                {/* Place formula name above */}
-                            </div>
-                            
-                            <div className="symbol-container">
-                                {
-                                    grainStatus === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
-                                }
-                                {
-                                    animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
-                                }
-                            </div>
-                        </div>
-                        <div>
-                            <div className="daily-values">
-                                <h2 className="daily-values-heading heading">Daily Values</h2>
-                                <div className="calories">
-                                    <div className="heading" id="calories-heading">Calories</div>
-                                    <div className="amount-per-serving">
-                                        <span className="attribute">Amount Per Serving</span>
-                                        {/* Place calorie count here */}
-                                        <span className="value" id="calories-value"> {kcal}kcal/cup</span>
-                                    </div>
-                                </div>
-                                <div className="percent-daily-value-note">% Value</div>
-                                <ul className="nutrients">
-                                    <li className="total-fat">
-
-                                        <div className="total-fat---cr">
-                                            <div className="heading">Crude Protien</div>
-                                            <div className="amount-per-serving">
-                                                {/* Placeholder */}
-                                            </div>
-                                            <div className="percent-daily-value">
-                                                {/* Place protien % here */}
-                                                {protein}%
-                                                <span className="value"></span>
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                    <li className="cholesterol">
-                                        <div className="heading">Crude Fat</div>
-                                        <div className="amount-per-serving">
-                                            {/* Placeholder */}
-                                        </div>
-                                        <div className="percent-daily-value">
-                                            {/* Place fat % here */}
-                                            {fat}%
-                                            <span className="value"></span>
-                                        </div>
-                                    </li>
-                                    <li className="sodium">
-                                        <div className="heading">Crude Fiber</div>
-                                        <div className="amount-per-serving">
-                                            {/* Placeholder */}
-                                        </div>
-                                        <div className="percent-daily-value">
-                                            {/* Place fiber % here */}
-                                            {fiber}%
-                                            <span className="value"></span>
-                                        </div>
-                                    </li>
-                                    <li className="total-carbohydrate">
-                                        <div className="total-carbohydrate---cr">
-                                            <div className="heading">Moisture</div>
-                                            <div className="amount-per-serving">
-                                                {/* Placeholder */}
-                                            </div>
-                                            <div className="percent-daily-value">
-                                                {/* Place moisture % here */}
-                                                {moisture}%
-                                                <span className="value"></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div className="nutrients-declaration-requirement">
-                                {/* Placeholder */}
-                            </div>
-                        </div>
-                        <div>
-                            <div className="daily-value-note"> 
-                                {createAnchorTags(ingredients)}
-                            </div>
-                            <p className="ingredients-instructions"> *Click any ingredient for more information</p>
-
-                            
-                        </div>
-                    </div>                
+                <FoodLabel 
+                    brand={brandName}
+                    name={name}
+                    grainStatus={grainStatus}
+                    protein={protein}
+                    fat={fat}
+                    fiber={fiber}
+                    moisture={moisture}
+                    kcal={kcal}
+                    ingredients={ingredients}
+                    key={index}
+                />
             )
         })
     }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-///////// This renders the unsorted brands upon the inital load of the page
+    ///////// This renders the unsorted brands upon the inital load of the page
     const brands = foodData ? foodData.map((brand, index) => {
         const productsList = brand.products
         const brandName = brand.brandName
@@ -231,103 +128,18 @@ function Catalog() {
             const products = productsList.map((product, index) => {
                 const {name, grainStatus, protein, fat, fiber, moisture, kcal, ingredients} = product              
                 return (
-                        <div className="label-one-container" key={index}>
-                            
-
-                            <div className="name-symbol-container">
-                                <div className="label-names-container">
-                                    <h1 className="main-heading heading brandName"> {brandName} </h1>
-                                    {/* Place brand name above */}
-                                    <h1 className="main-heading heading formulaName"> {name} </h1>
-                                    {/* Place formula name above */}
-                                </div>
-                                
-                                <div className="symbol-container">
-                                    {
-                                        grainStatus === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
-                                    }
-                                    {
-                                        animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
-                                    }
-                                </div>
-                            </div>
-                            <div>
-                                <div className="daily-values">
-                                    <h2 className="daily-values-heading heading">Daily Values</h2>
-                                    <div className="calories">
-                                        <div className="heading" id="calories-heading">Calories</div>
-                                        <div className="amount-per-serving">
-                                            <span className="attribute">Amount Per Serving</span>
-                                            {/* Place calorie count here */}
-                                            <span className="value" id="calories-value"> {kcal}kcal/cup</span>
-                                        </div>
-                                    </div>
-                                    <div className="percent-daily-value-note">% Value</div>
-                                    <ul className="nutrients">
-                                        <li className="total-fat">
-
-                                            <div className="total-fat---cr">
-                                                <div className="heading">Crude Protien</div>
-                                                <div className="amount-per-serving">
-                                                    {/* Placeholder */}
-                                                </div>
-                                                <div className="percent-daily-value">
-                                                    {/* Place protien % here */}
-                                                    {protein}%
-                                                    <span className="value"></span>
-                                                </div>
-                                            </div>
-
-                                        </li>
-                                        <li className="cholesterol">
-                                            <div className="heading">Crude Fat</div>
-                                            <div className="amount-per-serving">
-                                                {/* Placeholder */}
-                                            </div>
-                                            <div className="percent-daily-value">
-                                                {/* Place fat % here */}
-                                                {fat}%
-                                                <span className="value"></span>
-                                            </div>
-                                        </li>
-                                        <li className="sodium">
-                                            <div className="heading">Crude Fiber</div>
-                                            <div className="amount-per-serving">
-                                                {/* Placeholder */}
-                                            </div>
-                                            <div className="percent-daily-value">
-                                                {/* Place fiber % here */}
-                                                {fiber}%
-                                                <span className="value"></span>
-                                            </div>
-                                        </li>
-                                        <li className="total-carbohydrate">
-                                            <div className="total-carbohydrate---cr">
-                                                <div className="heading">Moisture</div>
-                                                <div className="amount-per-serving">
-                                                    {/* Placeholder */}
-                                                </div>
-                                                <div className="percent-daily-value">
-                                                    {/* Place moisture % here */}
-                                                    {moisture}%
-                                                    <span className="value"></span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                                <div className="nutrients-declaration-requirement">
-                                    {/* Placeholder */}
-                                </div>
-                            </div>
-                            <div>
-                                <div className="daily-value-note"> 
-                                    {createAnchorTags(ingredients)}
-                                </div>
-                                <p className="ingredients-instructions"> *Click any ingredient for more information</p>
-                            </div>
-                        </div>
+                    <FoodLabel 
+                        brand={brandName}
+                        name={name}
+                        grainStatus={grainStatus}
+                        protein={protein}
+                        fat={fat}
+                        fiber={fiber}
+                        moisture={moisture}
+                        kcal={kcal}
+                        ingredients={ingredients}
+                        key={index}
+                    /> 
                 )
             })
             return products
@@ -340,10 +152,8 @@ function Catalog() {
         )
     }) : []
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-////////// Handles the submit of the sorting form
+    ////////// Handles the submit of the sorting form
     function handleSubmit(event) {
         event.preventDefault();
         const sortBySelectionValue = event.target.sortBySelectionValue.value 
@@ -361,6 +171,8 @@ function Catalog() {
         renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection )
     }
 
+
+    /// gives functionality to the back arrow built into the page
     function goBackOnePage() {
         navigate(-1)
     }

@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import { DarkModeContext } from "../context/darkModeContext";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
+import FoodLabel from "./foodlabel";
 import "../style/comp.css"
 
 
@@ -12,13 +13,14 @@ import "../style/comp.css"
 function Comp() {
 
     window.scrollTo(0, 0);
-
     let foodData = null
     const navigate = useNavigate();
     const {foodSelection, setFoodSelection} = useContext(FoodContext)
     const {animalSelection, setAnimalSelection} = useContext(AnimalSelectionContext)
     const {darkModeStatus, setDarkModeStatus} = useContext(DarkModeContext)
 
+
+    //// Making sure dark mode is still in effect when loading the page
     useEffect(() => {
         const ingredientsEl = document.querySelectorAll(".ingredient-link")
         if(!darkModeStatus) {
@@ -32,13 +34,16 @@ function Comp() {
         }
     }, []) 
 
+
+    ///Choosing the right set of data depending on the user selection
     if (animalSelection === "cat") {
         foodData = catFoodData
     }else if (animalSelection === "dog") {
         foodData = dogFoodData
     }
 
-    
+
+    /// Sorting the data to find the first food and finding/storing that objects data in the variables below
     let brandOne = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandOne
     )[0];
@@ -50,6 +55,7 @@ function Comp() {
     ingredientsOne = ingredientsOne.toString().split(",")
 
 
+    /// Sorting the data to find the second food and finding/storing that objects data in the variables below
     let brandTwo = Object.values(foodData).filter(
         (brand) => brand.brandName === foodSelection.brandTwo
     )[0];
@@ -60,233 +66,85 @@ function Comp() {
     let {name: nameTwo, grainStatus: grainStatusTwo, protein: proteinTwo, fat: fatTwo, fiber: fiberTwo, moisture: moistureTwo, kcal: kcalTwo, ingredients: ingredientsTwo} = productTwoData
     ingredientsTwo = ingredientsTwo.toString().split(",")
 
+    
+    /// Gives functionality to the arrow back button that is built into the website
     function goBackOnePage() {
         navigate(-1)
     }
 
-    function createAnchorTags(ingredients) {
-        const anchorTags = []
-        for (let i = 0; i < ingredients.length; i++) {
-            const link = `https://www.google.com/search?q=${ingredients[i]}`
-            if (i + 2 > ingredients.length) {
-                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}. </a>)
-            }else {
-                anchorTags.push(<a href={link} key={i} className="ingredient-link" target="_blank"> {ingredients[i]}, </a>)
-            }
-        }
-        return anchorTags
-    }
-
     return (
         <div className="comp-page-container">
-
-{/* ////////////////////////////////////// FOOD ONE ///////////////////////////////////////// */}
             <div className="arrow-container">
                 <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
             </div>
-            <div className="label-one-container">
-                <div className="selection-num-container">
-                    <p> SELECTION ONE</p>
-                </div>
-                <div className="name-symbol-container">
-                    <div className="label-names-container">
-                        <h1 className="main-heading heading brandName"> {foodSelection.brandOne} </h1>
-                        {/* Place brand name above */}
-                        <h1 className="main-heading heading formulaName"> {nameOne} </h1>
-                        {/* Place formula name above */}
+            {/* ////////////////////////////////////// FOOD ONE ///////////////////////////////////////// */}
+            <FoodLabel 
+                brand={foodSelection.brandOne}
+                name={nameOne}
+                grainStatus={grainStatusOne}
+                protein={proteinOne}
+                fat={fatOne}
+                fiber={fiberOne}
+                moisture={moistureOne}
+                kcal={kcalOne}
+                ingredients={ingredientsOne}
+                selectionNum={"ONE"}
+            />
+            <div className="overview-container">
+                <h3 className="overview-title"> Quick Overview</h3>
+                <div className="overview-comparison-container">
+                    <div className="overview-food-titles-container">
+                        <h3 className="overview-food-title"> Food One</h3>
+                        <img className="vs-img" src="vs-img.png" />
+                        <h3 className="overview-food-title"> Food Two</h3>
                     </div>
-
-                    <div className="symbol-container">
-                        {
-                            grainStatusOne === "grain" ? <img src="grain-in.png" /> :<img src="grain-free.png" />
-                        }
-                        {
-                            animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
-                        }
-                    </div>
-                </div>
-                <div>
-                    <div className="daily-values">
-                        <h2 className="daily-values-heading heading">Daily Values</h2>
-                        <div className="calories">
-                            <div className="heading" id="calories-heading">Calories</div>
-                            <div className="amount-per-serving">
-                                <span className="attribute">Amount Per Serving</span>
-                                {/* Place calorie count here */}
-                                <span className="value" id="calories-value">{kcalOne}kcal/cup</span>
-                            </div>
+                    <div className="overview-info-section-container">
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {kcalOne}/cup </p>
+                            <p> Kcal </p>
+                            <p className="overview-data"> {kcalTwo}/cup </p>
                         </div>
-                        <div className="percent-daily-value-note">% Value</div>
-                        <ul className="nutrients">
-                            <li className="total-fat">
-
-                                <div className="total-fat---cr">
-                                    <div className="heading">Crude Protien</div>
-                                    <div className="amount-per-serving">
-                                        {/* Placeholder */}
-                                    </div>
-                                    <div className="percent-daily-value">
-                                        {/* Place protien % here */}
-                                        {proteinOne}%
-                                        <span className="value"></span>
-                                    </div>
-                                </div>
-
-                            </li>
-                            <li className="cholesterol">
-                                <div className="heading">Crude Fat</div>
-                                <div className="amount-per-serving">
-                                    {/* Placeholder */}
-                                </div>
-                                <div className="percent-daily-value">
-                                    {/* Place fat % here */}
-                                    {fatOne}%
-                                    <span className="value"></span>
-                                </div>
-                            </li>
-                            <li className="sodium">
-                                <div className="heading">Crude Fiber</div>
-                                <div className="amount-per-serving">
-                                    {/* Placeholder */}
-                                </div>
-                                <div className="percent-daily-value">
-                                    {/* Place fiber % here */}
-                                    {fiberOne}%
-                                    <span className="value"></span>
-                                </div>
-                            </li>
-                            <li className="total-carbohydrate">
-                                <div className="total-carbohydrate---cr">
-                                    <div className="heading">Moisture</div>
-                                    <div className="amount-per-serving">
-                                        {/* Placeholder */}
-                                    </div>
-                                    <div className="percent-daily-value">
-                                        {/* Place moisture % here */}
-                                        {moistureOne}%
-                                        <span className="value"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            
-                        </ul>
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {grainStatusOne === "grain" ? "Yes" : "No"} </p>
+                            <p> Grain </p>
+                            <p className="overview-data"> {grainStatusTwo === "grain" ? "Yes" : "No"} </p>
+                        </div>
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {proteinOne}% </p>
+                            <p> Protein </p>
+                            <p className="overview-data"> {proteinTwo}% </p>
+                        </div>
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {fatOne}% </p>
+                            <p> Fat </p>
+                            <p className="overview-data"> {fatTwo}% </p>
+                        </div>
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {fiberOne}% </p>
+                            <p> Fiber </p>
+                            <p className="overview-data"> {fiberTwo}% </p>
+                        </div>
+                        <div className="overview-info-container">
+                            <p className="overview-data"> {moistureOne}% </p>
+                            <p> Moisture </p>
+                            <p className="overview-data"> {moistureTwo}% </p>
+                        </div>
                     </div>
-                    <div className="nutrients-declaration-requirement">
-                        {/* Placeholder */}
-                    </div>
-                </div>
-                <div>
-                    {/* place ingredients here */}
-                    <div className="daily-value-note"> 
-                        {createAnchorTags(ingredientsOne)}
-                    </div>
-                    <p className="ingredients-instructions"> *Click any ingredient for more information</p>
-
                 </div>
             </div>
-
-{/* ///////////////////////////// FOOD TWO ///////////////////////////////////////// */}
-
-            <div className="label-two-container">
-                <div className="selection-num-container">
-                    <p>SELECTION TWO</p>
-                </div>
-                <div className="name-symbol-container">
-                    <div className="label-names-container">
-                        <h1 className="main-heading heading brandName"> {foodSelection.brandTwo} </h1>
-                        {/* Place brand name above */}
-                        <h1 className="main-heading heading formulaName"> {nameTwo} </h1>
-                        {/* Place formula name above */}
-                    </div>
-                    
-                    <div className="symbol-container">
-                        {
-                            grainStatusTwo === "grain" ? <img src="grain-in.png" /> : <img src="grain-free.png" />
-                        }
-                        {
-                            animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
-                        }
-                    </div>
-                </div>
-                
-                <div>
-                    <div className="daily-values">
-                        <h2 className="daily-values-heading heading">Daily Values</h2>
-                        <div className="calories">
-                            <div className="heading" id="calories-heading">Calories</div>
-                            <div className="amount-per-serving">
-                                <span className="attribute">Amount Per Serving</span>
-                                {/* Place calorie count here */}
-                                <span id="calories-value" className="value "> {kcalTwo}kcal/cup</span>
-                            </div>
-                        </div>
-                        <div className="percent-daily-value-note">% Value</div>
-                        <ul className="nutrients">
-                            <li className="total-fat">
-
-                                <div className="total-fat---cr">
-                                    <div className="heading">Crude Protien</div>
-                                    <div className="amount-per-serving">
-                                        {/* Placeholder */}
-                                    </div>
-                                    <div className="percent-daily-value">
-                                        {/* Place protien % here */}
-                                        {proteinTwo}%
-                                        <span className="value"></span>
-                                    </div>
-                                </div>
-
-                            </li>
-                            <li className="cholesterol">
-                                <div className="heading">Crude Fat</div>
-                                <div className="amount-per-serving">
-                                    {/* Placeholder */}
-                                </div>
-                                <div className="percent-daily-value">
-                                    {/* Place fat % here */}
-                                    {fatTwo}%
-                                    <span className="value"></span>
-                                </div>
-                            </li>
-                            <li className="sodium">
-                                <div className="heading">Crude Fiber</div>
-                                <div className="amount-per-serving">
-                                    {/* Placeholder */}
-                                </div>
-                                <div className="percent-daily-value">
-                                    {/* Place fiber % here */}
-                                    {fiberTwo}%
-                                    <span className="value"></span>
-                                </div>
-                            </li>
-                            <li className="total-carbohydrate">
-                                <div className="total-carbohydrate---cr">
-                                    <div className="heading">Moisture</div>
-                                    <div className="amount-per-serving">
-                                        {/* Placeholder */}
-                                    </div>
-                                    <div className="percent-daily-value">
-                                        {/* Place moisture % here */}
-                                        {moistureTwo}%
-                                        <span className="value"></span>
-                                    </div>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div className="nutrients-declaration-requirement">
-                        {/* Placeholder */}
-                    </div>
-                </div>
-                <div>
-                    <div className="daily-value-note"> 
-                        {createAnchorTags(ingredientsTwo)}
-                    </div>
-                    <p className="ingredients-instructions"> *Click any ingredient for more information</p>
-
-                </div>
-            </div>
+            {/* ///////////////////////////// FOOD TWO ///////////////////////////////////////// */}
+            <FoodLabel 
+                brand={foodSelection.brandTwo}
+                name={nameTwo}
+                grainStatus={grainStatusTwo}
+                protein={proteinTwo}
+                fat={fatTwo}
+                fiber={fiberTwo}
+                moisture={moistureTwo}
+                kcal={kcalTwo}
+                ingredients={ingredientsTwo}
+                selectionNum={"TWO"}
+            />
         </div>
     )
 }
