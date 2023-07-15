@@ -28,13 +28,15 @@ function SearchForm() {
         navigate(-1)
     }
 
+
     const [currentSelections, setCurrentSelections] = useState(null)
     const navigate = useNavigate();
-     const brands = foodData ? foodData.map((brand, index) => {
+    let brands = foodData ? foodData.map((brand, index) => {
         return (
             <option key={index} value={brand.brandName}> {brand.brandName} </option>
         )
     }) : []
+    brands = brands.sort((a, b) => a.props.value.localeCompare(b.props.value))
     
 
     function handleSubmit(event) {

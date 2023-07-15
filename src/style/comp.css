@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 30px;
-    align-items: center;
 }
 
 
@@ -179,4 +178,11 @@
       }
 
     
+}
+
+@media screen and (min-width: 981px) {
+    .overview-container {
+        margin-top: 30px;
+        height: 390px;
+    }
 }
