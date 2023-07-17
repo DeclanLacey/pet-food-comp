@@ -57,6 +57,7 @@ function Catalog() {
             const ingredients = food.ingredients
             food.ingredients = ingredients.toString().split(",")            
         })
+
     }
     ////////// Making sure food data is a truthy value before the above function is ran
     if (foodData) {
@@ -83,6 +84,7 @@ function Catalog() {
 
 
         ///// Output of sorted products
+        console.log(combinedBrands)
         let output = sortJSON(combinedBrands, sortBySelectionValue, sortBySelectionOrder)
         /// Changing the output depending on the selections made by the user in the form
         output = output.map((food, index) => {
@@ -93,10 +95,16 @@ function Catalog() {
             }
         })
         output = output.filter(food => food != undefined)
-        if (!grainStatusSelection) {
+        if (grainStatusSelection === "") {
 
         }else {
-            output = output.filter(food => food.grainStatus === grainStatusSelection)
+            if (grainStatusSelection === "true") {
+                grainStatusSelection = Boolean(grainStatusSelection)
+            }else {
+                grainStatusSelection = !grainStatusSelection
+            }
+            console.log(grainStatusSelection)
+            output = output.filter(food => food.grainStatus == Boolean(grainStatusSelection))
         }
         
         
@@ -119,7 +127,8 @@ function Catalog() {
             )
         })
     }
-
+    ///////// This sorts the brands in to alphabetical order
+    foodData = foodData.sort((a, b) => a.brandName.localeCompare(b.brandName))
     ///////// This renders the unsorted brands upon the inital load of the page
     const brands = foodData ? foodData.map((brand, index) => {
         const productsList = brand.products
@@ -213,14 +222,15 @@ function Catalog() {
                                 <option value="Salmon">Salmon</option>
                                 <option value="Trout">Trout</option>
                                 <option value="Whitefish">Whitefish</option>
+                                <option value="Rosemary Extract"> Rosemary Extract</option>
                             </select>
                         </div>
                         <div>
                             <label className="grain-status-checkbox-label">Grain</label>
-                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value="grain"/>
+                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={true}/>
 
                             <label className="grain-status-checkbox-label">Grain Free</label>
-                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value="grain free"/>
+                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={false}/>
                         
                             <label>Both</label>
                             <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value=""/>

@@ -105,9 +105,9 @@ function Comp() {
                             <p className="overview-data"> {kcalTwo}/cup </p>
                         </div>
                         <div className="overview-info-container">
-                            <p className="overview-data"> {grainStatusOne === "grain" ? "Yes" : "No"} </p>
+                            <p className="overview-data"> {grainStatusOne === true ? "Yes" : "No"} </p>
                             <p> Grain </p>
-                            <p className="overview-data"> {grainStatusTwo === "grain" ? "Yes" : "No"} </p>
+                            <p className="overview-data"> {grainStatusTwo === true ? "Yes" : "No"} </p>
                         </div>
                         <div className="overview-info-container">
                             <p className="overview-data"> {proteinOne}% </p>

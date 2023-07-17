@@ -58,7 +58,10 @@ function SearchForm() {
         const brandOneCurrentSelection = event.target.value
         let brandOne = Object.values(foodData).filter((brand) => brand.brandName === brandOneCurrentSelection)[0]
         let brandOneProducts = brandOne.products;
-
+        console.log(brandOneProducts)
+        brandOneProducts = brandOneProducts.sort((a, b) => a.name.localeCompare(b.name))
+        console.log(brandOneProducts)
+        
         setCurrentSelections({
             ...currentSelections,
             brandOneSelection: brandOneCurrentSelection 
