@@ -223,6 +223,7 @@ function Catalog() {
                                 <option value="Trout">Trout</option>
                                 <option value="Whitefish">Whitefish</option>
                                 <option value="Rosemary Extract"> Rosemary Extract</option>
+                                <option value="Whole Grain Corn"> Corn </option>
                             </select>
                         </div>
                         <div>
