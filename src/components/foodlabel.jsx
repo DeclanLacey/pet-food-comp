@@ -57,12 +57,12 @@ function foodlabel({brand, name, grainStatus, protein, fat, fiber, moisture, kca
                             <li className="total-fat">
 
                                 <div className="total-fat---cr">
-                                    <div className="heading">Crude Protien</div>
+                                    <div className="heading">Crude Protein</div>
                                     <div className="amount-per-serving">
                                         {/* Placeholder */}
                                     </div>
                                     <div className="percent-daily-value">
-                                        {/* Place protien % here */}
+                                        {/* Place protein % here */}
                                         {protein}%
                                         <span className="value"></span>
                                     </div>

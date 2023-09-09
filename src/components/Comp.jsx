@@ -74,9 +74,6 @@ function Comp() {
 
     return (
         <div className="comp-page-container">
-            <div className="arrow-container">
-                <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
-            </div>
             {/* ////////////////////////////////////// FOOD ONE ///////////////////////////////////////// */}
             <FoodLabel 
                 brand={foodSelection.brandOne}

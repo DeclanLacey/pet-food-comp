@@ -7,13 +7,20 @@
   }
 
 .catalog-form {
-  margin-top: 120px;
+  margin-top: 110px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  height: 90px;
-  margin-bottom: 10px;
+  /* gap: 30px; */
+  height: 240px;
+}
+
+.top-selection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
 }
 
 .ingredients-dark-mode {
@@ -23,10 +30,20 @@
 .catalog-select {
   margin-left: 15px;
   height: 40px;
-  width: 100px;
+  width: 110px;
   text-align: center;
   cursor: pointer;
   border-radius: 20px;
+  /* need to transtion the color change */
+  transition: border 400ms;
+}
+
+.catalog-select:hover {
+  border: 1px solid #0cd7d1;
+}
+
+.wide-select {
+  width: 200px;
 }
 
 
@@ -37,11 +54,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
+  height: 150px;
+  gap: 15px;
 }
 
 .catalog-submit-btn {
-  background-color: #a22c29;
+  background-color: #0cd7d1;
   text-decoration: none;
   color: white;
   width: 110px;
@@ -57,6 +75,7 @@
   transform: scale(1);
   transition: transform, color, 400ms;
   border: none;
+  margin-top: 20px;
 }
 
 .catalog-submit-btn:hover {
@@ -93,26 +112,68 @@
   margin-right: 10px;
 }
 
+.checkbox-label {
+  margin-right: 10px;
+}
+
+.bottom-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 550px) {
-  .catalog-select {
-    width: 80px;
-  }
+
 
   .catalog-form-selection-container {
     font-size: 1em;
   }
 
   .catalog-submit-btn {
-    height: 30px;
-    width: 90px;
-    font-size: .7em;
+    height: 40px;
+    width: 110px;
+    font-size: .8em;
   }
 
   .catalog-form {
     gap: 15px;
   }
 
-  .wide-select {
+  /* .wide-select {
     width: 130px;
+  } */
+}
+
+@media screen and (min-width: 1000px){
+  .top-selection-container {
+    flex-direction: row;
+    gap: 40px;
   }
+
+  .catalog-form-selection-container {
+    height: 80px;
+  }
+
+  .catalog-form {
+    margin-top: 110px;
+  }
+
+  .catalog-submit-btn {
+    width: 190px;
+    height: 45px;
+    margin-top: 40px;
+  }
+
+  .bottom-section-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 645px;
+  }
+
+
 }

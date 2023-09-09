@@ -10,20 +10,27 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    font-family: 'Fredoka', sans-serif;
 }
 
 /* ////////////////////////// burger nav styling ///////////////// */
 
 
 .container {
-    /* max-width: 1050px; */
-    /* width: 90%; */
+    max-width: 1050px;
+    width: 100%;
     margin: auto;
   }
   
   .navbar {
     width: 100%;
-    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
+    /* height: 100%;
+    display: flex;
+    justify-content: center; */
+    height: 100%;
+    position: absolute;
+    z-index: 0;
   }
 
   
@@ -84,6 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 12px;
   }
   
   .nav-sub-container .hamburger-lines .line {
@@ -91,7 +99,8 @@
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    /* background: #0e2431; */
+    background: #0cd7d1;
   }
   
   .nav-sub-container .hamburger-lines .line1 {
@@ -146,27 +155,28 @@
     transform: rotate(-45deg);
   }
   
-  .nav-container input[type="checkbox"]:checked ~ .logo{
-    display: none;
-  }
+  
 
 
 
 /* //////////////////// Nav styling ///////////////////// */
 
 .nav-container {
-    background-color: #edf2f4;
     margin: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
     text-align: center;
     z-index: 100;
-    height: 50px;
-    border-bottom: 2px solid #a22c29;
-    
+    height: 90px;
+    background-color: #010101;
+    color: #0cd7d1;
+}
+
+.navbar-logo-img {
+  height: 130px;
 }
 
 .regular-navbar {
@@ -183,12 +193,13 @@
     cursor: pointer;
     transform: scale(1);
     transition: transform, text-decoration, 400ms;
-    color: black;
+    color: white;
 }
 
 .nav-item:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    color: #0cd7d1;
 }
 
 @media screen and (min-width: 700px) {
@@ -199,22 +210,32 @@
     .regular-navbar {
         display: inline;
     }
+
+    
   }
+
+@media screen and (max-width: 700px) {
+  .navbar-logo-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
 
 
 /* ////////////////// Footer styling //////////////////////////// */
 
 
 .footer-container {
-    background-color: #edf2f4;
-    border-top: 2px solid #a22c29;
+    background-color: black;
     height: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    color: black;
+    color: white;
     
 }
 

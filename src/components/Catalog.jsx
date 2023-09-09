@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, version } from "react";
 import dogFoodData from "../data/dogFood.json"
 import catFoodData from "../data/catFood.json"
 import { AnimalSelectionContext } from "../context/animalSelectionContext";
@@ -66,7 +66,7 @@ function Catalog() {
 
 
     ////////// This function renders the sorted data based on the selection made
-    function renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection)  {
+    function renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection, bapSelection)  {
         function sortJSON(arr, key, asc=true) {
             return arr.sort((a, b) => {
                 let x = a[key];
@@ -84,16 +84,42 @@ function Catalog() {
 
 
         ///// Output of sorted products
-        console.log(combinedBrands)
         let output = sortJSON(combinedBrands, sortBySelectionValue, sortBySelectionOrder)
-        /// Changing the output depending on the selections made by the user in the form
-        output = output.map((food, index) => {
-            if (food.ingredients.includes(ingredientSelection)) {
 
-            }else {
-                return food
-            }
-        })
+        /// Parsing the given string into an array
+        
+        if(ingredientSelection) {
+            ingredientSelection = JSON.parse(ingredientSelection)
+        }
+
+        /// Changing the output depending on the selections made by the user in the form
+        if (Array.isArray(ingredientSelection) && ingredientSelection !== null) {
+            output = output.map((food, index) => { 
+                const foodIngredientsArray = food.ingredients.map(function (ingredient) {
+                    return ingredient.trim()
+                })
+                let includedIngredientCount = 0
+
+                for(let i = 0; i < ingredientSelection.length; i++) {
+                    if(foodIngredientsArray.includes(ingredientSelection[i])) {
+                        includedIngredientCount++
+                    }
+                }
+
+                if(includedIngredientCount === 0) {
+                    return food
+                }
+                
+            })
+        }else {
+            output = output.map((food, index) => { 
+                if (food.ingredients.includes(ingredientSelection)) {
+                }else {
+                    return food
+                } 
+            })
+        }
+
         output = output.filter(food => food != undefined)
         if (grainStatusSelection === "") {
 
@@ -103,8 +129,13 @@ function Catalog() {
             }else {
                 grainStatusSelection = !grainStatusSelection
             }
-            console.log(grainStatusSelection)
             output = output.filter(food => food.grainStatus == Boolean(grainStatusSelection))
+        }
+
+        if (!bapSelection) {
+
+        }else {
+            output = output.filter(food => food.carriedByBAP == bapSelection)
         }
         
         
@@ -169,15 +200,17 @@ function Catalog() {
         const sortBySelectionOrder = event.target.sortBySelectionOrder.value
         const ingredientSelection = event.target.ingredientSelection.value
         const grainStatusSelection = event.target.grainStatusSelection.value
+        const bapSelection = event.target.carriedByBAPSelection.checked
 
         setFormSelection({
             sortBySelectionOne: sortBySelectionValue,
             sortBySelectionTwo: sortBySelectionOrder,
             ingredientSelection: ingredientSelection,
-            grainStatusSelection: grainStatusSelection
+            grainStatusSelection: grainStatusSelection,
+            bapSelection: bapSelection
         })
 
-        renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection )
+        renderSortedData(sortBySelectionValue, sortBySelectionOrder, ingredientSelection, grainStatusSelection, bapSelection )
     }
 
 
@@ -189,53 +222,65 @@ function Catalog() {
     return (
 
         <div className="catalog-container" >
-            <div className="arrow-container">
+            {/* <div className="arrow-container">
                 <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
-            </div>
+            </div> */}
             <div>
                 <form onSubmit={handleSubmit} className="catalog-form" >
                     <div className="catalog-form-selection-container">
-                        <div>
-                            <label> Sort by: </label>
-                            <select required name="sortBySelectionValue" className="catalog-select">
-                                <option value="" > -- Select</option>
-                                <option value="kcal"> Kcal </option>
-                                <option value="protein"> Protein</option>
-                                <option value="fat"> Fat </option>
-                                <option value="fiber"> Fiber </option>
-                                <option value="moisture"> Moisture </option>
-                            </select>
-                            <select required name="sortBySelectionOrder" className="catalog-select">
-                                <option value="" > -- Select</option>
-                                <option value={false} > High - Low </option>
-                                <option value={true}> Low - High </option>
-                            </select>
-                        </div>
-                        <div>
-                            <label> Without: </label>
-                            <select name="ingredientSelection" className="catalog-select wide-select">
-                                <option value=""> -- Select </option>
-                                <option value="Chicken">Chicken</option>
-                                <option value="Beef">Beef</option>
-                                <option value="Lamb">Lamb</option>
-                                <option value="Pork">Pork</option>
-                                <option value="Salmon">Salmon</option>
-                                <option value="Trout">Trout</option>
-                                <option value="Whitefish">Whitefish</option>
-                                <option value="Rosemary Extract"> Rosemary Extract</option>
-                                <option value="Whole Grain Corn"> Corn </option>
-                            </select>
-                        </div>
-                        <div>
-                            <label className="grain-status-checkbox-label">Grain</label>
-                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={true}/>
+                        <div className="top-selection-container">
+                            <div>
+                                <label> Sort by: </label>
+                                <select required name="sortBySelectionValue" className="catalog-select">
+                                    <option value="" > -- Select</option>
+                                    <option value="kcal"> Kcal </option>
+                                    <option value="protein"> Protein</option>
+                                    <option value="fat"> Fat </option>
+                                    <option value="fiber"> Fiber </option>
+                                    <option value="moisture"> Moisture </option>
+                                </select>
+                                <select required name="sortBySelectionOrder" className="catalog-select">
+                                    <option value="" > -- Select</option>
+                                    <option value={false} > High - Low </option>
+                                    <option value={true}> Low - High </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label> Without: </label>
+                                <select name="ingredientSelection" className="catalog-select wide-select">
+                                    <option value=""> -- Select </option>
+                                    <option value='["Chicken", "Chicken Meal", "Deboned Chicken", "Chicken Liver", "Chicken by-product Meal", "Boneless Chicken", "Dehydrated Chicken"]'>Chicken</option>
+                                    <option value='["Beef", "Beef Meal", "Deboned Beef", "Beef by-product Meal", "Dehydrated Beef"]'>Beef</option>
+                                    <option value='["Turkey", "Turkey Meal", "Deboned Turkey", "Smoke-flavored Turkey", "Turkey Liver", "Turkey by-product Meal", "Dehydrated Turkey"]'>Turkey</option>
+                                    <option value='["Lamb", "Lamb Meal", "Deboned Lamb", "Dehydrated Lamb"]'>Lamb</option>
+                                    <option value='["Pork", "Pork Meal", "Deboned Pork", "Pork Liver", "Dehydrated Pork]'>Pork</option>
+                                    <option value='["Salmon", "Salmon Meal", "Dehydrated Salmon"]'>Salmon</option>
+                                    <option value='["Trout", "Trout Meal", "Dehydrated Trout"]'>Trout</option>
+                                    <option value='["Whitefish", "Whitefish Meal", "Dehydrated Whitefish"]'>Whitefish</option>
+                                    <option value='["Rosemary Extract", "Oil of Rosemary", "Rosemary"]'> Rosemary </option>                                
+                                    <option value='["Corn", "Whole Grain Corn", "Corn Gluten Meal", "Ground Yellow Corn", "Corn Starch", "Ground Corn", "Corn Flour"]'> Corn </option>
 
-                            <label className="grain-status-checkbox-label">Grain Free</label>
-                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={false}/>
-                        
-                            <label>Both</label>
-                            <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value=""/>
+                                </select>
+
+                            </div>
                         </div>
+                        <div className="bottom-section-container">
+                            <div>
+                                <label className="grain-status-checkbox-label">Grain</label>
+                                <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={true}/>
+
+                                <label className="grain-status-checkbox-label">Grain Free</label>
+                                <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value={false}/>
+                            
+                                <label>Both</label>
+                                <input className="grain-status-checkbox" name="grainStatusSelection" type="radio" value=""/>
+                            </div>
+                            <div> 
+                                <label className="checkbox-lavek"> Carried by Bone-A-Patreat</label>
+                                <input type="checkbox" name="carriedByBAPSelection" />
+                            </div>
+                        </div>
+                       
                     </div>
                     <div className="catalog-form-submit-container">
                         <input type="submit" className="catalog-submit-btn"/>

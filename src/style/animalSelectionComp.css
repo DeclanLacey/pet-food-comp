@@ -1,7 +1,7 @@
 
 
 .food-comp-selection-container {
-    padding-top: 70px;
+    padding-top: 90px;
     text-align: center;
 }
 
@@ -22,7 +22,6 @@
 
 .form-image {
   height: 340px;
-  border: 2px solid #a22c29;
   margin-right: 50px;
   margin-left: 50px;
   margin-top: 25px;
@@ -31,7 +30,7 @@
   transform: scale(1);
   transition: transform 350ms;
   cursor: pointer;
-  box-shadow: -4px 4px 15px black;
+  box-shadow: -2px 2px 10px black;
 }
 
 .form-image:hover {
@@ -52,7 +51,7 @@
 }
 
 .selected {
-  border: 6px solid #a22c29;
+  border: 6px solid #0cd7d1;
 }
 
 .radio-container label {
@@ -78,7 +77,7 @@
 }
 
 input[type="radio"]:checked + label > img {
-  border: 6px solid #a22c29;
+  border: 6px solid #0cd7d1;
 }
 
 input[type="radio"]:checked:hover + label > img {
@@ -95,9 +94,9 @@ input[type="radio"]:hover + label > img {
 }
 
 .form-submit-btn {
-  background-color: #a22c29 ;
+  background-color: #0cd7d1 ;
   text-decoration: none;
-  color: white;
+  color: black;
   width: 180px;
   height: 40px;
   display: flex;
@@ -106,7 +105,6 @@ input[type="radio"]:hover + label > img {
   border-radius: 20px;
   margin-bottom: 60px;
   font-size: 18px;
-  text-transform: uppercase;
   letter-spacing: 3px;
   cursor: pointer;
   border: none;
@@ -116,12 +114,14 @@ input[type="radio"]:hover + label > img {
 
 .form-submit-btn:hover {
   transform: scale(1.1);
+  color: white;
 }
 
 @media screen and (min-width: 1150px) {
     .form-submit-btn {
-      width: 200px;
-      height: 45px;
+      width: 300px;
+      height: 65px;
+      font-size: 1.5em;
     }
 
     .form-image {

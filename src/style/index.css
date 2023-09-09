@@ -7,23 +7,26 @@ img {
 body {
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
     background-color: white;
+    font-family: 'Fredoka', sans-serif;
+
 }
 
 
 /* /////////////////////// Dark mode ////////////////////////// */
 
 .toggle-switch {
-  position: absolute;
+  /* position: absolute; */
   width: 76px;
-  top: 8px;
-  right: 50px;
+  /* top: 8px;
+  right: 50px; */
+  margin-right: 50px;
+  margin-bottom: 30px;
 }
 
 .toggle-label {
   position: absolute;
-  width: 100%;
+  width: 76px;
   height: 35px;
   background-color: #28292c;
   border-radius: 50px;
@@ -68,21 +71,25 @@ body {
 }
 
 .dark-mode-main {
-  background-color: #28292c;
+  background-color: #7f7f7f;
   color: whitesmoke;
 }
 
-.nav-container-dark-mode {
-  background-color: #5b5b5b;
-}
+
 
 .nav-item-dark-mode {
   color: whitesmoke;
 }
 
-.footer-container-dark-mode {
-  background-color: #5b5b5b;
-  color: whitesmoke;
+
+
+@media  screen and (max-width: 700px) {
+
+  .toggle-switch {
+    position: absolute;
+    right: 0px;
+  }
+  
 }
 
 

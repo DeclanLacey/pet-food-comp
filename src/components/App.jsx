@@ -59,32 +59,48 @@ function App() {
         setDarkModeStatus(prevState => !prevState)
     }
 
+    function changeZIndex() {
+        const navOverlay = document.getElementById("hamburger-navbar")
+        const currentZIndex = window.getComputedStyle(navOverlay).getPropertyValue("z-index")
+
+        console.log(currentZIndex)
+        if (currentZIndex === "0") {
+            navOverlay.style.zIndex = "100"
+            console.log("ran")
+        } else if (currentZIndex === "100") {
+            navOverlay.style.zIndex = "0"
+        }
+
+    }
+
 
     return (
         <div id="full-page-container" >
 
-            <div className="nav-container" id="nav">
-                <div className="regular-navbar" >
-                    <Link className="nav-item" to="/">Home</Link>
-                    <Link className="nav-item" to="/animal-selection-comp">Comparison</Link>
-                    <Link className="nav-item" to="/animal-selection-catalog">Catalog</Link>
-                </div>
+                <div className="nav-container" id="nav">
+                    <img className="navbar-logo-img" src="symbol-transparent.png"/>
+                    <div className="regular-navbar" >
+                        <Link className="nav-item" to="/">Home</Link>
+                        <Link className="nav-item" to="/animal-selection-comp">Comparison</Link>
+                        <Link className="nav-item" to="/animal-selection-catalog">Catalog</Link>
+                    </div>
 
-                <div className="navbar">
-                    <div className="container nav-sub-container">
-                        <input className="checkbox" type="checkbox" name="" id="" />
-                        <div className="hamburger-lines">
-                            <span className="line line1"></span>
-                            <span className="line line2"></span>
-                            <span className="line line3"></span>
-                        </div>  
-                        <div className="menu-items">
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/">Home</Link>
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-comp">Comparison</Link>
-                            <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-catalog">Catalog</Link>
+
+                    <div className="navbar" id="hamburger-navbar">
+                        <div className="container nav-sub-container" >
+                            <input className="checkbox" type="checkbox" name="" id="" onClick={changeZIndex}/>
+                            <div className="hamburger-lines" >
+                                <span className="line line1"></span>
+                                <span className="line line2"></span>
+                                <span className="line line3"></span>
+                            </div>  
+                            <div className="menu-items">
+                                <Link onClick={closeBurgerMenu} className="nav-item" to="/">Home</Link>
+                                <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-comp">Comparison</Link>
+                                <Link onClick={closeBurgerMenu} className="nav-item" to="/animal-selection-catalog">Catalog</Link>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div className='toggle-switch'>
                     <label className="toggle-label">

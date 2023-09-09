@@ -8,26 +8,56 @@ function Home() {
 
     return (
         <div className="home-page-container">
-            <div className="title-container">
+            {/* <div className="title-container">
                 <h1 className="title-part-one"> the </h1>
                 <div className="title-part-two-container">
                     <h3 className="title-part-two-top">Pet Food</h3>
                     <h3 className="title-part-two-bottom">Index</h3>
                 </div>
-            </div> 
+            </div>  */}
+            <img className="logo-img" src="logo-transparent.png"/>
 
             <div className="home-page-info">
                 <h4 className="home-page-info-title"> Welcome to THE Pet Food Index</h4>
-                <p className="home-page-info-content"> This tool was created to allow anyone and everyone to compare different pet foods to each other allowing them to make an informed decision about 
-                    what food is best for your pet. As having access to the facts about pet food is the most important thing that idividuals have in their search for the right food.
-                </p>
-                <p className="home-page-info-content"> 
-                    Along with this we understand that there are times when you are looking for something very specific in a food. Because of this we have an extensive catalog that allows you to search for pet food based on different
-                    criteria depending on your, and your pets needs.
-                </p>
-                <p className="home-page-info-content"> 
-                    This tool was created because there was a need for it, there is nothing else like it on the internet that has the facts so readily at your fingertips, without bias and for free. Thank you for using THE Pet Food Index!
-                </p>
+                <div className="home-page-content-one">
+                    <img className="home-page-content-img-one" src="ingredients.jpeg" />
+                    <div className="content-container"> 
+                        <h4 className="home-page-content-title"> Why do ingredients matter? </h4>
+                        <p className="home-page-content-text"> 
+                            The ingredients in your pets food are essential to their overall health. Just like with humans, it matters what you put in your
+                            body and it can have real impacts on everyday life for your four legged friend. Because of this, THE Pet Food Index was created to 
+                            provide anyone and everyone with the tools they need to access the facts. Of these facts one of the most important is the ingredients. 
+                            This tool allows you to compare hundreds of foods head to head to see which is a better fit for you and your pets needs. 
+                         </p>
+                    </div>
+                </div>
+                <div className="home-page-content-two">
+                    <img className="home-page-content-img-two" src="bags-of-food.jpeg" />
+                    <div className="content-container">
+                        <h4 className="home-page-content-title"> What do all of these numbers mean? </h4>
+                        <p className="home-page-content-text"> On every dog and cat food bag you will find the protein, fat, fiber, and moisture content listed. While some foods
+                            may list additonal info, the big four are required on every bag, and we provide that information for every food in our system.
+                            You may be wondering what all of these numbers mean, they are show as percentages which provide the nutrient makeup of the food. 
+                       </p>
+                       <p className="home-page-content-text"> 
+                            These numbers are important for many reasons, for example if someone has a working dog that is very active, they
+                            may want a food with high protein and fat to ensure the dog can maintain muscle mass and weight. Someones pet may also have 
+                            kidney or liver disease which may require their pet to instead be on a low protein diet. Because these numbers are important
+                            this tool allows you to view our entire catalog of foods and sort by all of these important metrics so you can find the right food
+                            for your pet.
+                       </p>
+                    </div>
+                </div>
+                <div className="home-page-content-three">
+                    <img className="home-page-content-img-three" src="dog-and-cat.jpeg"/>
+                    <div className="content-container">
+                        <h4 className="home-page-content-title"> I cant find a food I am looking for, when will it be added? </h4>
+                        <p className="home-page-content-text"> While our eventual goal is to have information available for every dog and cat food in America, but with over 22,000 dog food skus alone,
+                            it will be a continuous process to insure that accurate information is available for every food possible. We appreciate everyone who visits
+                            our website and we hope that this tool has been as helpful as we intended it to be!  
+                        </p>
+                    </div>
+                </div>
             </div>
 
             

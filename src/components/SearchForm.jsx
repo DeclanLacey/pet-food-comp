@@ -96,9 +96,9 @@ function SearchForm() {
 
     return (
         <div className="form-page-container">
-            <div className="arrow-container">
+            {/* <div className="arrow-container">
                 <button className="left arrow-button" type="button" onClick={goBackOnePage}></button>
-            </div>
+            </div> */}
             <form className="search-form" onSubmit={handleSubmit}>
                 <div className="search-form-selection-section-container">
                     <div className="search-form-sub-container">
