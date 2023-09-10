@@ -216,4 +216,12 @@
     }
 }
 
+@media screen and (max-width: 400px) {
+    .home-page-content-img-one,
+    .home-page-content-img-two,
+    .home-page-content-img-three {
+        height: 200px;
+    }
+}
+
 

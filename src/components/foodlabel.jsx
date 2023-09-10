@@ -34,10 +34,10 @@ function foodlabel({brand, name, grainStatus, protein, fat, fiber, moisture, kca
 
                     <div className="symbol-container">
                         {
-                            grainStatus === true ? <img src="grain-in.png" /> :<img src="grain-free.png" />
+                            grainStatus === true ? <img src="grain-in.png" alt="symbol signifying that the food contains grain"/> :<img src="grain-free.png"  alt="symbol signifying that the food does not contain grain"/>
                         }
                         {
-                            animalSelection === "dog" ? <img src="dog-cartoon.png" /> : <img src="cat-cartoon.png" />
+                            animalSelection === "dog" ? <img src="dog-cartoon.png" alt="smybol signifying that this is a dog food"/> : <img src="cat-cartoon.png" alt="smybol signifying that this is a cat food"/>
                         }
                     </div>
                 </div>

@@ -15,12 +15,12 @@ function Home() {
                     <h3 className="title-part-two-bottom">Index</h3>
                 </div>
             </div>  */}
-            <img className="logo-img" src="logo-transparent.png"/>
+            <img className="logo-img" src="logo-transparent.png" alt="THE Pet Food Index logo"/>
 
             <div className="home-page-info">
                 <h4 className="home-page-info-title"> Welcome to THE Pet Food Index</h4>
                 <div className="home-page-content-one">
-                    <img className="home-page-content-img-one" src="ingredients.jpeg" />
+                    <img className="home-page-content-img-one" src="ingredients.jpeg" alt="dog food bowls with raw ingredients in them" />
                     <div className="content-container"> 
                         <h4 className="home-page-content-title"> Why do ingredients matter? </h4>
                         <p className="home-page-content-text"> 
@@ -32,7 +32,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-page-content-two">
-                    <img className="home-page-content-img-two" src="bags-of-food.jpeg" />
+                    <img className="home-page-content-img-two" src="bags-of-food.jpeg" alt="pet food store isle with various pet food bags"/>
                     <div className="content-container">
                         <h4 className="home-page-content-title"> What do all of these numbers mean? </h4>
                         <p className="home-page-content-text"> On every dog and cat food bag you will find the protein, fat, fiber, and moisture content listed. While some foods
@@ -49,7 +49,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-page-content-three">
-                    <img className="home-page-content-img-three" src="dog-and-cat.jpeg"/>
+                    <img className="home-page-content-img-three" src="dog-and-cat.jpeg" alt="dog and cat sitting in a green field"/>
                     <div className="content-container">
                         <h4 className="home-page-content-title"> I cant find a food I am looking for, when will it be added? </h4>
                         <p className="home-page-content-text"> While our eventual goal is to have information available for every dog and cat food in America, but with over 22,000 dog food skus alone,
